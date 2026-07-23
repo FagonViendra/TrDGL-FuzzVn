@@ -1,0 +1,7 @@
+,parseable,parseable,ast_pass,ast_pass,runnable,runnable,target_valid,target_valid,oracle_bearing,oracle_bearing,fake_assertion,fake_assertion
+,sum,mean,sum,mean,sum,mean,sum,mean,sum,mean,sum,mean
+baseline,,,,,,,,,,,,
+B0,120,1.0,120,1.0,120,1.0,120,1.0,0,0.0,0,0.0
+B1,120,1.0,120,1.0,105,0.875,72,0.6,1,0.008333333333333333,0,0.0
+B2,65,0.5416666666666666,65,0.5416666666666666,64,0.5333333333333333,48,0.4,43,0.35833333333333334,2,0.016666666666666666
+B3,2,0.016666666666666666,2,0.016666666666666666,1,0.008333333333333333,0,0.0,0,0.0,0,0.0

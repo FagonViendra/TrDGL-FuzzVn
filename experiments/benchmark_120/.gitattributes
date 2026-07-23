@@ -1,0 +1,10 @@
+# These files are hashed empirical evidence. Preserve their exact bytes across
+# Windows checkouts so manifest SHA-256 values remain reproducible.
+trdgl_fair_benchmark_120_output.ipynb -text
+checkpoints/**/baseline_summary.csv -text
+checkpoints/**/checkpoint_manifest.json -text
+checkpoints/**/documentation_snapshot.json -text
+checkpoints/**/events.checkpoint.jsonl binary
+checkpoints/**/executed_notebook.ipynb -text
+checkpoints/**/handoff_summary.json -text
+checkpoints/**/run_manifest.json -text

@@ -1,0 +1,6 @@
+.gitattributes text eol=lf
+main.tex text eol=lf
+SUBMISSION_GAPS.md text eol=lf
+experiments/evidence_audit/*.py text eol=lf
+experiments/evidence_audit/*.json text eol=lf
+experiments/evidence_audit/*.md text eol=lf

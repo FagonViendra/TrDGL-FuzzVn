@@ -1,0 +1,55 @@
+{
+  "schema_version": "trdgl_atlas_checkpoint_blocker_v1",
+  "created_utc": "2026-07-10T13:41:44.9813414Z",
+  "evidence_label": "diagnostic_checkpoint",
+  "candidate_source": {
+    "path": "experiments/vn_funnel/two_seed_checkpoint/candidate_ledger.jsonl",
+    "sha256": "5a3406f84f8332e78ebfe10f6bac70844facf025d1942d3f5e298ebac7328acf",
+    "candidate_count": 1,
+    "candidate_id": "CAND-BENCH-TORCH-COMPILE-3407",
+    "candidate_status": "provisional_pending_pinned_replay"
+  },
+  "atlas_snapshot": {
+    "path": "experiments/vn_funnel/atlas_snapshot.json",
+    "sha256": "7b02dee78d37bcb5468095cdad2a1a22a9939b35d9a861689ad0d813bfc95e33",
+    "paper_reported_records": 7275,
+    "paper_reported_unique_issues": 5868,
+    "paper_reported_clusters": 2653,
+    "verification_status": "internally_consistent_not_independently_recomputed"
+  },
+  "source_recovery_audit": {
+    "path": "experiments/atlas_intervention/source_recovery_search.md",
+    "sha256": "3e66a50cd0ae11da6feb2ac1ef0e0f186d5374aaecee56f44482afa7431ac175",
+    "latest_search_date": "2026-07-10",
+    "raw_atlas_dataset_present": false,
+    "independent_manifest_present": false
+  },
+  "duplicate_triage": {
+    "eligible_provisional_candidates": 1,
+    "enabled_disabled_pair_count": 0,
+    "retrieval_matches": null,
+    "duplicates_detected": null,
+    "duplicates_rejected": null,
+    "retrieval_precision": null,
+    "candidate_duplicate_decision": null,
+    "reason": "The Atlas source and independent manifest are absent, so no enabled arm can be executed or verified."
+  },
+  "guided_planning": {
+    "enabled_disabled_pair_count": 0,
+    "atlas_guided_candidates": null,
+    "enabled_only_reproduced_candidates": null,
+    "unique_reproduced_per_1000_generations": null,
+    "reason": "No verified Atlas retrieval source exists and no paired prompt-generation intervention was run."
+  },
+  "ready_for_paper_result": false,
+  "effectiveness_claim_allowed": false,
+  "blockers": [
+    "raw_atlas_dataset_absent",
+    "independent_atlas_manifest_absent",
+    "paired_duplicate_triage_not_run",
+    "paired_guided_planning_not_run",
+    "provisional_candidate_not_reproduced",
+    "required_campaign_seeds_incomplete"
+  ],
+  "claim_boundary": "The artifact proves an Atlas evidence gap for the two-seed checkpoint. Null effectiveness metrics are unavailable measurements, not zero effects."
+}

@@ -1,0 +1,3 @@
+# Analyzer/review manifests hash these source files byte-for-byte.
+# Force LF so their SHA-256 pins survive Windows and cross-platform checkouts.
+*.py text eol=lf

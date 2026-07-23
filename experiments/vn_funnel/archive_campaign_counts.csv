@@ -1,0 +1,6 @@
+campaign,raw_unit,raw_count,parseable,ast_pass,runnable,target_valid,oracle_bearing,anomaly_hit,reproducible,non_duplicate,minimized,stable_nightly,promoted,evidence_source,interpretation
+E2B two-stage,API,24,,,18,,,"1 runtime label",,,,,,main.tex Table vn_archive_en,"Duplicate, minimization, and version status were not logged"
+40-API tuned,API,40,,,36,,,,,,,,,main.tex Table vn_archive_en,"Oracle and all novelty stages were not logged"
+18-prompt tuned A/B,prompt,18,,,11,,14,"3 divergences",,,,,,main.tex Table vn_archive_en,"The oracle-bearing and runnable sets are not asserted to be nested"
+Adaptive campaign,candidate,,,,,,,"12 initial candidates","11 retained classes",,,,,main.tex Table vn_archive_en,"Raw denominator and per-gate counters were not logged; 11 means retained classes, not Vn promotions"
+Common-GPU campaign,probe,40,,,40,,,"9 hits / 7 signatures",partial,,,,,main.tex Table vn_archive_en,"Stable/nightly and promotion decisions were not logged"

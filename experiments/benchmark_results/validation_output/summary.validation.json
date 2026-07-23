@@ -1,0 +1,1443 @@
+{
+  "schema_version": "trdgl_benchmark_result_summary_v1",
+  "evidence_label": "validation_only",
+  "benchmark": {
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+    "api_count": 120,
+    "api_group_count": 10,
+    "apis_per_group": 12,
+    "generation_seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ],
+    "baselines": [
+      "B0",
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "expected_task_count": 600,
+    "expected_event_count": 2400
+  },
+  "source": {
+    "events_path": "C:/Users/fagon/OneDrive/Documents/New project 2/tmp/colab_smoke_4baseline/events_latest.jsonl",
+    "notebook_path": "C:/Users/fagon/OneDrive/Documents/New project 2/TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+    "events_sha256": "f2d8b57c63c5f52556680ed21a2e647dd0984bf923780047cf5151955bbb2f62",
+    "all_run_signatures": [
+      "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3"
+    ],
+    "selected_run_signature": "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3",
+    "truncated_tail_ignored": false,
+    "parsed_event_count_all_signatures": 4
+  },
+  "coverage": {
+    "observed_event_count": 4,
+    "missing_event_count": 2396,
+    "unexpected_task_count": 0,
+    "metadata_mismatch_count": 0,
+    "missing_events_sample": [
+      {
+        "baseline": "B0",
+        "task_id": "trdgl_pytorch_120_v1|torch.as_tensor|3407"
+      },
+      {
+        "baseline": "B1",
+        "task_id": "trdgl_pytorch_120_v1|torch.as_tensor|3407"
+      },
+      {
+        "baseline": "B2",
+        "task_id": "trdgl_pytorch_120_v1|torch.as_tensor|3407"
+      },
+      {
+        "baseline": "B3",
+        "task_id": "trdgl_pytorch_120_v1|torch.as_tensor|3407"
+      },
+      {
+        "baseline": "B0",
+        "task_id": "trdgl_pytorch_120_v1|torch.from_numpy|3407"
+      },
+      {
+        "baseline": "B1",
+        "task_id": "trdgl_pytorch_120_v1|torch.from_numpy|3407"
+      },
+      {
+        "baseline": "B2",
+        "task_id": "trdgl_pytorch_120_v1|torch.from_numpy|3407"
+      },
+      {
+        "baseline": "B3",
+        "task_id": "trdgl_pytorch_120_v1|torch.from_numpy|3407"
+      },
+      {
+        "baseline": "B0",
+        "task_id": "trdgl_pytorch_120_v1|torch.arange|3407"
+      },
+      {
+        "baseline": "B1",
+        "task_id": "trdgl_pytorch_120_v1|torch.arange|3407"
+      },
+      {
+        "baseline": "B2",
+        "task_id": "trdgl_pytorch_120_v1|torch.arange|3407"
+      },
+      {
+        "baseline": "B3",
+        "task_id": "trdgl_pytorch_120_v1|torch.arange|3407"
+      },
+      {
+        "baseline": "B0",
+        "task_id": "trdgl_pytorch_120_v1|torch.linspace|3407"
+      },
+      {
+        "baseline": "B1",
+        "task_id": "trdgl_pytorch_120_v1|torch.linspace|3407"
+      },
+      {
+        "baseline": "B2",
+        "task_id": "trdgl_pytorch_120_v1|torch.linspace|3407"
+      },
+      {
+        "baseline": "B3",
+        "task_id": "trdgl_pytorch_120_v1|torch.linspace|3407"
+      },
+      {
+        "baseline": "B0",
+        "task_id": "trdgl_pytorch_120_v1|torch.logspace|3407"
+      },
+      {
+        "baseline": "B1",
+        "task_id": "trdgl_pytorch_120_v1|torch.logspace|3407"
+      },
+      {
+        "baseline": "B2",
+        "task_id": "trdgl_pytorch_120_v1|torch.logspace|3407"
+      },
+      {
+        "baseline": "B3",
+        "task_id": "trdgl_pytorch_120_v1|torch.logspace|3407"
+      }
+    ],
+    "unexpected_task_ids": [],
+    "metadata_mismatches_sample": [],
+    "by_baseline": {
+      "B0": {
+        "expected_events": 600,
+        "observed_events": 1,
+        "complete": false,
+        "completion_rate": 0.0016666666666666668,
+        "parseable_count": 1,
+        "parseable_rate": 1.0,
+        "ast_pass_count": 1,
+        "ast_pass_rate": 1.0,
+        "runnable_count": 1,
+        "runnable_rate": 1.0,
+        "target_valid_count": 1,
+        "target_valid_rate": 1.0,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": 0.0,
+        "generation_seconds_total": 0.0,
+        "subprocess_seconds_total": 4.026,
+        "event_wall_seconds_total": 4.029105,
+        "events_per_hour_event_wall": 893.498680227991
+      },
+      "B1": {
+        "expected_events": 600,
+        "observed_events": 1,
+        "complete": false,
+        "completion_rate": 0.0016666666666666668,
+        "parseable_count": 0,
+        "parseable_rate": 0.0,
+        "ast_pass_count": 0,
+        "ast_pass_rate": 0.0,
+        "runnable_count": 0,
+        "runnable_rate": 0.0,
+        "target_valid_count": 0,
+        "target_valid_rate": 0.0,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": 0.0,
+        "generation_seconds_total": 2.591,
+        "subprocess_seconds_total": 0.0,
+        "event_wall_seconds_total": 2.644134,
+        "events_per_hour_event_wall": 1361.5043715636195
+      },
+      "B2": {
+        "expected_events": 600,
+        "observed_events": 1,
+        "complete": false,
+        "completion_rate": 0.0016666666666666668,
+        "parseable_count": 1,
+        "parseable_rate": 1.0,
+        "ast_pass_count": 1,
+        "ast_pass_rate": 1.0,
+        "runnable_count": 1,
+        "runnable_rate": 1.0,
+        "target_valid_count": 1,
+        "target_valid_rate": 1.0,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": 0.0,
+        "generation_seconds_total": 2.819,
+        "subprocess_seconds_total": 8.53,
+        "event_wall_seconds_total": 11.352553,
+        "events_per_hour_event_wall": 317.1092881046228
+      },
+      "B3": {
+        "expected_events": 600,
+        "observed_events": 1,
+        "complete": false,
+        "completion_rate": 0.0016666666666666668,
+        "parseable_count": 1,
+        "parseable_rate": 1.0,
+        "ast_pass_count": 1,
+        "ast_pass_rate": 1.0,
+        "runnable_count": 1,
+        "runnable_rate": 1.0,
+        "target_valid_count": 1,
+        "target_valid_rate": 1.0,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": 0.0,
+        "generation_seconds_total": 3.489,
+        "subprocess_seconds_total": 8.594,
+        "event_wall_seconds_total": 12.132337,
+        "events_per_hour_event_wall": 296.7276626094379
+      }
+    },
+    "by_seed": {
+      "3407": {
+        "expected_events": 480,
+        "observed_events": 4,
+        "complete": false,
+        "completion_rate": 0.008333333333333333,
+        "parseable_count": 3,
+        "parseable_rate": 0.75,
+        "ast_pass_count": 3,
+        "ast_pass_rate": 0.75,
+        "runnable_count": 3,
+        "runnable_rate": 0.75,
+        "target_valid_count": 3,
+        "target_valid_rate": 0.75,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": 0.0,
+        "generation_seconds_total": 8.899000000000001,
+        "subprocess_seconds_total": 21.15,
+        "event_wall_seconds_total": 30.158129000000002,
+        "events_per_hour_event_wall": 477.483201958583
+      },
+      "7711": {
+        "expected_events": 480,
+        "observed_events": 0,
+        "complete": false,
+        "completion_rate": 0.0,
+        "parseable_count": 0,
+        "parseable_rate": null,
+        "ast_pass_count": 0,
+        "ast_pass_rate": null,
+        "runnable_count": 0,
+        "runnable_rate": null,
+        "target_valid_count": 0,
+        "target_valid_rate": null,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": null,
+        "generation_seconds_total": null,
+        "subprocess_seconds_total": null,
+        "event_wall_seconds_total": null,
+        "events_per_hour_event_wall": null
+      },
+      "12011": {
+        "expected_events": 480,
+        "observed_events": 0,
+        "complete": false,
+        "completion_rate": 0.0,
+        "parseable_count": 0,
+        "parseable_rate": null,
+        "ast_pass_count": 0,
+        "ast_pass_rate": null,
+        "runnable_count": 0,
+        "runnable_rate": null,
+        "target_valid_count": 0,
+        "target_valid_rate": null,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": null,
+        "generation_seconds_total": null,
+        "subprocess_seconds_total": null,
+        "event_wall_seconds_total": null,
+        "events_per_hour_event_wall": null
+      },
+      "19001": {
+        "expected_events": 480,
+        "observed_events": 0,
+        "complete": false,
+        "completion_rate": 0.0,
+        "parseable_count": 0,
+        "parseable_rate": null,
+        "ast_pass_count": 0,
+        "ast_pass_rate": null,
+        "runnable_count": 0,
+        "runnable_rate": null,
+        "target_valid_count": 0,
+        "target_valid_rate": null,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": null,
+        "generation_seconds_total": null,
+        "subprocess_seconds_total": null,
+        "event_wall_seconds_total": null,
+        "events_per_hour_event_wall": null
+      },
+      "27103": {
+        "expected_events": 480,
+        "observed_events": 0,
+        "complete": false,
+        "completion_rate": 0.0,
+        "parseable_count": 0,
+        "parseable_rate": null,
+        "ast_pass_count": 0,
+        "ast_pass_rate": null,
+        "runnable_count": 0,
+        "runnable_rate": null,
+        "target_valid_count": 0,
+        "target_valid_rate": null,
+        "oracle_bearing_count": 0,
+        "oracle_bearing_rate": null,
+        "generation_seconds_total": null,
+        "subprocess_seconds_total": null,
+        "event_wall_seconds_total": null,
+        "events_per_hour_event_wall": null
+      }
+    }
+  },
+  "fairness": {
+    "same_harness_run_signature": true,
+    "configuration_equivalence_verified": false,
+    "harness_equivalence_verified": true,
+    "observed_run_signature_counts": {
+      "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3": 4
+    },
+    "run_signatures_by_seed": {
+      "3407": [
+        "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3"
+      ],
+      "7711": [],
+      "12011": [],
+      "19001": [],
+      "27103": []
+    },
+    "logical_schedule_balanced": true,
+    "expected_logical_position_count": 150,
+    "logical_position_counts": {
+      "B0@0": 150,
+      "B0@1": 150,
+      "B0@2": 150,
+      "B0@3": 150,
+      "B1@0": 150,
+      "B1@1": 150,
+      "B1@2": 150,
+      "B1@3": 150,
+      "B2@0": 150,
+      "B2@1": 150,
+      "B2@2": 150,
+      "B2@3": 150,
+      "B3@0": 150,
+      "B3@1": 150,
+      "B3@2": 150,
+      "B3@3": 150
+    },
+    "b2_events": 1,
+    "b3_events": 1,
+    "complete_b2_b3_pairs": 1,
+    "expected_b2_b3_pairs": 600,
+    "pair_complete": false,
+    "prompt_hash_mismatch_count": 0,
+    "prompt_hash_mismatch_task_ids": [],
+    "pair_order_mismatch_count": 0,
+    "pair_order_mismatch_task_ids": [],
+    "paired_outcomes": {
+      "eligibility": "complete B2/B3 pair with identical prompt hash and A/B order metadata",
+      "eligible_pair_count": 1,
+      "metrics": {
+        "parseable": {
+          "eligible_pairs": 1,
+          "both_pass": 1,
+          "b2_only_pass": 0,
+          "b3_only_pass": 0,
+          "both_fail": 0,
+          "b2_pass_rate": 1.0,
+          "b3_pass_rate": 1.0,
+          "b3_minus_b2_paired_rate": 0.0,
+          "discordant_pairs": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "ast_pass": {
+          "eligible_pairs": 1,
+          "both_pass": 1,
+          "b2_only_pass": 0,
+          "b3_only_pass": 0,
+          "both_fail": 0,
+          "b2_pass_rate": 1.0,
+          "b3_pass_rate": 1.0,
+          "b3_minus_b2_paired_rate": 0.0,
+          "discordant_pairs": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "runnable": {
+          "eligible_pairs": 1,
+          "both_pass": 1,
+          "b2_only_pass": 0,
+          "b3_only_pass": 0,
+          "both_fail": 0,
+          "b2_pass_rate": 1.0,
+          "b3_pass_rate": 1.0,
+          "b3_minus_b2_paired_rate": 0.0,
+          "discordant_pairs": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "target_valid": {
+          "eligible_pairs": 1,
+          "both_pass": 1,
+          "b2_only_pass": 0,
+          "b3_only_pass": 0,
+          "both_fail": 0,
+          "b2_pass_rate": 1.0,
+          "b3_pass_rate": 1.0,
+          "b3_minus_b2_paired_rate": 0.0,
+          "discordant_pairs": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        },
+        "oracle_bearing": {
+          "eligible_pairs": 1,
+          "both_pass": 0,
+          "b2_only_pass": 0,
+          "b3_only_pass": 0,
+          "both_fail": 1,
+          "b2_pass_rate": 0.0,
+          "b3_pass_rate": 0.0,
+          "b3_minus_b2_paired_rate": 0.0,
+          "discordant_pairs": 0,
+          "mcnemar_exact_two_sided_p": 1.0
+        }
+      },
+      "by_api_group": {
+        "tensor_creation": {
+          "eligible_pair_count": 1,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "ast_pass": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "runnable": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "target_valid": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 1,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 1,
+              "b2_pass_rate": 0.0,
+              "b3_pass_rate": 0.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            }
+          }
+        },
+        "shape_and_composition": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "reduction_and_statistics": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "linear_algebra": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "convolution_and_pooling": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "normalization_activation_and_loss": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "indexing_gather_and_scatter": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "sparse": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "fft_and_spectral": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "autograd_transform_compile_and_export": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        }
+      },
+      "by_generation_seed": {
+        "3407": {
+          "eligible_pair_count": 1,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "ast_pass": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "runnable": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "target_valid": {
+              "eligible_pairs": 1,
+              "both_pass": 1,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": 1.0,
+              "b3_pass_rate": 1.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 1,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 1,
+              "b2_pass_rate": 0.0,
+              "b3_pass_rate": 0.0,
+              "b3_minus_b2_paired_rate": 0.0,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": 1.0
+            }
+          }
+        },
+        "7711": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "12011": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "19001": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        },
+        "27103": {
+          "eligible_pair_count": 0,
+          "metrics": {
+            "parseable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "ast_pass": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "runnable": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "target_valid": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            },
+            "oracle_bearing": {
+              "eligible_pairs": 0,
+              "both_pass": 0,
+              "b2_only_pass": 0,
+              "b3_only_pass": 0,
+              "both_fail": 0,
+              "b2_pass_rate": null,
+              "b3_pass_rate": null,
+              "b3_minus_b2_paired_rate": null,
+              "discordant_pairs": 0,
+              "mcnemar_exact_two_sided_p": null
+            }
+          }
+        }
+      }
+    },
+    "expected_pair_order_counts": {
+      "B2_then_B3": 300,
+      "B3_then_B2": 300
+    },
+    "observed_complete_pair_order_counts": {
+      "B2_then_B3": 1
+    },
+    "full_order_balance_verified": false,
+    "seed_backend_failure_count": 0,
+    "seed_backend_failure_task_ids": [],
+    "raw_generation_failure_count": 0,
+    "raw_generation_failure_task_ids": [],
+    "model_labels_by_baseline": {
+      "B0": [
+        "typed_random_template_v1"
+      ],
+      "B1": [
+        "base_gemma4_26b_q3km"
+      ],
+      "B2": [
+        "base_gemma4_26b_q3km"
+      ],
+      "B3": [
+        "finetuned_gemma4_26b_q3km"
+      ]
+    },
+    "model_label_inconsistent_baselines": []
+  },
+  "runtime": {
+    "event_wall_seconds_total": 30.158129000000002,
+    "campaign_span_seconds": 1631.865965,
+    "events_per_hour_event_wall": 477.483201958583,
+    "events_per_hour_campaign_span": 8.824254141485206,
+    "campaign_span_includes_idle_or_restart_gaps": true
+  },
+  "full_benchmark_complete": false,
+  "ready_for_paper_result": false,
+  "blockers": [
+    "evidence_label_is_not_campaign",
+    "expected_events_missing",
+    "b2_b3_pairs_incomplete"
+  ]
+}

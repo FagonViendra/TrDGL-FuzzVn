@@ -1,0 +1,3 @@
+# Validation manifests hash these Python sources byte-for-byte.
+*.py text eol=lf
+validation_output/summary.validation.json binary

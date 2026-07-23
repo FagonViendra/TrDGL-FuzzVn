@@ -1,0 +1,274 @@
+{
+  "schema_version": "trdgl_two_seed_ablation_checkpoint_v1",
+  "evidence_label": "diagnostic_checkpoint",
+  "policy_version": "trdgl_ablation_replay_v1",
+  "collector_sha256": "daa236f488bdcaf2ede686234b6c6c6e54386dfc2cb80d5022a31c8a0d159372",
+  "replay_script_sha256": "4e92b038056e6ae57622a9a4940fed5bba9dfbd16e141331c903085ed5cafd9c",
+  "source": {
+    "campaign_index_path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/two_seed_checkpoint/campaign_shards.json",
+    "campaign_index_sha256": "e2c69c5a315a8119f96b2f400b4271a92f9e1cdc53914bd14192226f9246e391",
+    "campaign_index_hash_mode": "canonical_json_utf8",
+    "benchmark_summary_path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/two_seed_checkpoint/summary.json",
+    "benchmark_summary_sha256": "127a613aa5d8eaec68f42d76ec554098c153d8b0d7cf87869750f42ffbf00356",
+    "benchmark_summary_hash_mode": "canonical_json_utf8",
+    "combined_events_path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/two_seed_checkpoint/events.combined.jsonl",
+    "combined_events_sha256": "03bbd2b8d20901e521ab7bfbc3a4816a770c657c65ac32c79d058af159de5a8d",
+    "combined_events_hash_mode": "bytes",
+    "atlas_blocker_path": "TrDGL-FuzzVn_paper/experiments/atlas_intervention/two_seed_checkpoint/atlas_blocker_manifest.json",
+    "atlas_blocker_sha256": "a99b21884b4c6eab04d66f78bb29bb888b8fdea8108e10b140739b6fa708eaa2",
+    "atlas_blocker_hash_mode": "canonical_json_utf8"
+  },
+  "coverage": {
+    "observed_seeds": [
+      3407,
+      7711
+    ],
+    "required_seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ],
+    "complete_seed_shards": 2,
+    "required_seed_shards": 5,
+    "all_baseline_events": 960,
+    "planned_all_baseline_events": 2400,
+    "b3_events_replayed": 240,
+    "planned_b3_events": 600
+  },
+  "shards": [
+    {
+      "generation_seed": 3407,
+      "run_signature": "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475",
+      "events_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed3407_480/events.checkpoint.jsonl",
+      "events_sha256": "55e61acab475d370f6261be2041fdbb74ef5f06bd8197044df587c60a4f4af09",
+      "events": 480,
+      "baseline_counts": {
+        "B0": 120,
+        "B1": 120,
+        "B2": 120,
+        "B3": 120
+      },
+      "run_manifest_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed3407_480/run_manifest.json",
+      "run_manifest_sha256": "0e54a8546c34ad6087d7e7567c426333eb8d38b4968e45da356f8bbf779399c3",
+      "configuration_sha256": "d5ab450d5dd2343499917556a324d24524a47aa60799b8bec7eaebc8088e8b8e",
+      "b3_corpus_sha256": "97f86a2b67d49a8c0d9fe110c35648008e80068d3aec0ce7a4ccec84c74ff753",
+      "same_corpus_verified": true,
+      "complete_b2_b3_pairs": 120,
+      "prompt_hash_mismatches": 0
+    },
+    {
+      "generation_seed": 7711,
+      "run_signature": "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+      "events_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed7711_480/events.checkpoint.jsonl",
+      "events_sha256": "8a27a2280f550887be0cf031f900ad1aec16a3441719c17683185c027315d6bc",
+      "events": 480,
+      "baseline_counts": {
+        "B0": 120,
+        "B1": 120,
+        "B2": 120,
+        "B3": 120
+      },
+      "run_manifest_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed7711_480/run_manifest.json",
+      "run_manifest_sha256": "7a2b2089912f6ad40f160002bbc6391e9b68b3a09b17cf4e89d5ac93b6af780d",
+      "configuration_sha256": "d5ab450d5dd2343499917556a324d24524a47aa60799b8bec7eaebc8088e8b8e",
+      "b3_corpus_sha256": "a83d7501d22e80691b042061ab1e90e9584f3a205e1f2b49f1fac644a5a628a6",
+      "same_corpus_verified": true,
+      "complete_b2_b3_pairs": 120,
+      "prompt_hash_mismatches": 0
+    }
+  ],
+  "configuration_equivalence_verified": true,
+  "configuration_sha256": "d5ab450d5dd2343499917556a324d24524a47aa60799b8bec7eaebc8088e8b8e",
+  "baseline_replayed": "B3",
+  "conditions": [
+    "full",
+    "no_ast",
+    "no_oracle",
+    "no_vn",
+    "no_atlas"
+  ],
+  "condition_event_counts": {
+    "full": 240,
+    "no_ast": 240,
+    "no_oracle": 240,
+    "no_vn": 240,
+    "no_atlas": 240
+  },
+  "corpus_sha256": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e",
+  "condition_corpus_sha256": {
+    "full": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e",
+    "no_ast": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e",
+    "no_oracle": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e",
+    "no_vn": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e",
+    "no_atlas": "53335633a4835ee0f31ebad2036f6cdaddf0f385276c54dd4cba03a68d01763e"
+  },
+  "same_corpus_verified": true,
+  "component_effects": {
+    "ast_quality_policy": {
+      "comparison": "no_ast versus full on the same B3 programs",
+      "eligible_parseable_programs": 5,
+      "full_ast_pass": 5,
+      "no_ast_pass": 5,
+      "observed_pass_delta": 0,
+      "conclusive_effectiveness_estimate": null,
+      "reason": "Only five B3 programs are parseable in this 2/5-seed checkpoint; syntax and immutable safety remain enabled in both arms."
+    },
+    "oracle_gate": {
+      "comparison": "no_oracle versus full on the same B3 programs",
+      "eligible_target_valid_programs": 1,
+      "full_oracle_gate_pass": 0,
+      "no_oracle_gate_pass": 1,
+      "observed_pass_delta": 1,
+      "no_oracle_reproducible_pending": 1,
+      "confirmed_bug_yield_effect": null,
+      "reason": "The bypass admits one target-valid program counterfactually, but its anomaly/reproduction evidence is pending."
+    },
+    "verified_novelty_gate": {
+      "comparison": "no_vn versus full on the same B3 programs",
+      "eligible_oracle_bearing_programs": 0,
+      "full_reproducible_pass": 0,
+      "no_vn_reproducible_pass": 0,
+      "effectiveness_estimate": null,
+      "reason": "No B3 program reaches the oracle-bearing input boundary, so a zero delta is not an estimate of Vn effectiveness."
+    },
+    "atlas_duplicate_gate": {
+      "comparison": "no_atlas versus full on the same B3 programs",
+      "eligible_reproduced_programs": 0,
+      "full_non_duplicate_pass": 0,
+      "no_atlas_non_duplicate_pass": 0,
+      "effectiveness_estimate": null,
+      "raw_atlas_available": false,
+      "reason": "No reproduced B3 input reaches duplicate triage, and the independently verifiable raw Atlas source is absent.",
+      "atlas_blocker_ready_for_paper": false
+    }
+  },
+  "fine_tuning_contrast": {
+    "design": "paired B2 base versus B3 tuned generations with identical full-prompt hashes and the same benchmark harness",
+    "pair_audit": {
+      "method": "paired B2 base+full-prompt versus B3 tuned+same-full-prompt",
+      "regeneration_required": true,
+      "reason": "Fine-tuning changes generated programs; it is not a downstream gate and cannot be replayed from frozen B3 outputs.",
+      "pair_keys_seen": 240,
+      "complete_pairs": 240,
+      "incomplete_pairs": 0,
+      "prompt_hash_mismatches": 0,
+      "complete_same_prompt_pairs": 240,
+      "fair_comparison_ready": true
+    },
+    "metrics": [
+      {
+        "stage": "parseable",
+        "eligible_pairs": 240,
+        "b2_pass": 140,
+        "b3_pass": 5,
+        "b2_cumulative_ablation_policy_pass": 140,
+        "b3_cumulative_ablation_policy_pass": 5,
+        "b2_pass_rate": 0.5833333333333334,
+        "b3_pass_rate": 0.020833333333333332,
+        "b3_minus_b2_paired_rate": -0.5625,
+        "both_pass": 4,
+        "b2_only_pass": 136,
+        "b3_only_pass": 1,
+        "both_fail": 99,
+        "mcnemar_exact_two_sided_p": 1.5841623087253484e-39,
+        "metric_semantics": "paired benchmark-harness outcome; cumulative ablation-policy counts are separate audit columns",
+        "evidence_label": "diagnostic_checkpoint"
+      },
+      {
+        "stage": "ast_pass",
+        "eligible_pairs": 240,
+        "b2_pass": 140,
+        "b3_pass": 5,
+        "b2_cumulative_ablation_policy_pass": 139,
+        "b3_cumulative_ablation_policy_pass": 5,
+        "b2_pass_rate": 0.5833333333333334,
+        "b3_pass_rate": 0.020833333333333332,
+        "b3_minus_b2_paired_rate": -0.5625,
+        "both_pass": 4,
+        "b2_only_pass": 136,
+        "b3_only_pass": 1,
+        "both_fail": 99,
+        "mcnemar_exact_two_sided_p": 1.5841623087253484e-39,
+        "metric_semantics": "paired benchmark-harness outcome; cumulative ablation-policy counts are separate audit columns",
+        "evidence_label": "diagnostic_checkpoint"
+      },
+      {
+        "stage": "runnable",
+        "eligible_pairs": 240,
+        "b2_pass": 134,
+        "b3_pass": 4,
+        "b2_cumulative_ablation_policy_pass": 133,
+        "b3_cumulative_ablation_policy_pass": 4,
+        "b2_pass_rate": 0.5583333333333333,
+        "b3_pass_rate": 0.016666666666666666,
+        "b3_minus_b2_paired_rate": -0.5416666666666666,
+        "both_pass": 3,
+        "b2_only_pass": 131,
+        "b3_only_pass": 1,
+        "both_fail": 105,
+        "mcnemar_exact_two_sided_p": 4.885648395605132e-38,
+        "metric_semantics": "paired benchmark-harness outcome; cumulative ablation-policy counts are separate audit columns",
+        "evidence_label": "diagnostic_checkpoint"
+      },
+      {
+        "stage": "target_valid",
+        "eligible_pairs": 240,
+        "b2_pass": 95,
+        "b3_pass": 1,
+        "b2_cumulative_ablation_policy_pass": 94,
+        "b3_cumulative_ablation_policy_pass": 1,
+        "b2_pass_rate": 0.3958333333333333,
+        "b3_pass_rate": 0.004166666666666667,
+        "b3_minus_b2_paired_rate": -0.39166666666666666,
+        "both_pass": 0,
+        "b2_only_pass": 95,
+        "b3_only_pass": 1,
+        "both_fail": 144,
+        "mcnemar_exact_two_sided_p": 2.4486242498060206e-27,
+        "metric_semantics": "paired benchmark-harness outcome; cumulative ablation-policy counts are separate audit columns",
+        "evidence_label": "diagnostic_checkpoint"
+      },
+      {
+        "stage": "oracle_bearing",
+        "eligible_pairs": 240,
+        "b2_pass": 88,
+        "b3_pass": 0,
+        "b2_cumulative_ablation_policy_pass": 87,
+        "b3_cumulative_ablation_policy_pass": 0,
+        "b2_pass_rate": 0.36666666666666664,
+        "b3_pass_rate": 0.0,
+        "b3_minus_b2_paired_rate": -0.36666666666666664,
+        "both_pass": 0,
+        "b2_only_pass": 88,
+        "b3_only_pass": 0,
+        "both_fail": 152,
+        "mcnemar_exact_two_sided_p": 6.462348535570529e-27,
+        "metric_semantics": "paired benchmark-harness outcome; cumulative ablation-policy counts are separate audit columns",
+        "evidence_label": "diagnostic_checkpoint"
+      }
+    ],
+    "improvement_claim_supported": false,
+    "reason": "At this two-seed checkpoint B3 is worse than B2 on every early validity metric; the five-seed campaign remains incomplete."
+  },
+  "full_campaign_complete": false,
+  "ready_for_paper_result": false,
+  "blockers": [
+    "three_required_seed_shards_missing",
+    "b3_oracle_bearing_count_zero",
+    "vn_has_no_eligible_b3_input",
+    "atlas_has_no_eligible_b3_input",
+    "raw_atlas_dataset_absent",
+    "post_oracle_candidate_triage_incomplete"
+  ],
+  "claim_boundary": "Complete two-seed ablation diagnostic checkpoint only. It reports observed gate pass-through counts and unavailable effects; it is not the planned five-seed ablation and not evidence of confirmed bug yield.",
+  "artifact_sha256": {
+    "ablation_decisions.jsonl": "a3f99c230697c8278b0ff36dc033033931227d77eee5d6cd32353faa002d7980",
+    "ablation_summary.csv": "75615106df07b8d522ae623a0e31642d57f68deae5ede0c7d046c9f13e6f7186",
+    "ablation_table.tex": "b49b59a7af420c86b3c733d559234731e31881d278d7f468e5238501640aa85e",
+    "fine_tuning_pairs.csv": "2b6a78e65138cc6f4c26da934bf88021a74f31a3a44a57c70fd0f02dd3a4c37c",
+    "fine_tuning_contrast.csv": "6e6814c8661369b1bf0037888d0068eec080532f2f146b51744a9361960f8168",
+    "checkpoint.md": "7c70edee1ad2f73772b8db0f8be7ae04490dcabe64174dfb14b74aff3867ac50"
+  }
+}

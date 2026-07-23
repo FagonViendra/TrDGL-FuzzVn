@@ -1,0 +1,46 @@
+{
+  "schema_version": "trdgl_assertion_signal_triage_v1",
+  "tool_sha256": "e9953f17ccee693ff9bdfd21936efe14a7376c630ad1670541042afdbe64e398",
+  "input_path": "TrDGL-FuzzVn_paper\\experiments\\benchmark_results\\two_seed_checkpoint\\events.combined.jsonl",
+  "input_sha256": "03bbd2b8d20901e521ab7bfbc3a4816a770c657c65ac32c79d058af159de5a8d",
+  "input_records": 960,
+  "documentation_path": "TrDGL-FuzzVn_paper\\experiments\\benchmark_120\\checkpoints\\seed7711_480\\documentation_snapshot.json",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "assertion_signal_count": 4,
+  "signals_by_baseline": {
+    "B1": 1,
+    "B2": 3
+  },
+  "signals_by_api": {
+    "torch.compile": 1,
+    "torch.reshape": 2,
+    "torch.sparse.log_softmax": 1
+  },
+  "decision_evidence": {
+    "path": "TrDGL-FuzzVn_paper\\experiments\\vn_funnel\\two_seed_checkpoint\\triage\\triage_decisions.jsonl",
+    "sha256": "6a28d2f85444f65cc82122d0bfbfd366e6678eb6b9dd891c9f0220abe116c989",
+    "records": 4,
+    "decision_counts": {
+      "pending_pinned_environment_replay": 1,
+      "rejected_invalid_oracle": 3
+    },
+    "anomaly_counts": {
+      "true": 0,
+      "false": 3,
+      "unknown": 1
+    },
+    "provisional_candidate_count": 1,
+    "provisional_candidate_ids": [
+      "CAND-BENCH-TORCH-COMPILE-3407"
+    ],
+    "promoted_count": 0,
+    "independent_review_complete": false
+  },
+  "downstream_policy": "All Vn steps remain null until a separate reviewed decision and evidence-bearing workflow update exist.",
+  "outputs": [
+    "assertion_signals.jsonl",
+    "assertion_signals.csv",
+    "probe_results.json",
+    "triage_summary.json"
+  ]
+}

@@ -1,0 +1,2 @@
+api,generation_seed,has_b2,has_b3,same_prompt_hash,b2_event_id,b3_event_id,evidence_label
+torch.tensor,3407,True,True,True,B2:trdgl_pytorch_120_v1|torch.tensor|3407,B3:trdgl_pytorch_120_v1|torch.tensor|3407,validation_only

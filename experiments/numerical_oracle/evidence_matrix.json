@@ -1,0 +1,95 @@
+{
+  "schema_version": "trdgl_numerical_oracle_evidence_audit_v1",
+  "audit_date": "2026-07-10",
+  "status_definitions": {
+    "observed_domain_specific": "A source result artifact exists, but it covers only the Blackwell NVFP4 campaign rather than the requested matched factorial.",
+    "validation_only": "The new protocol was executed locally to validate logging and oracle behavior; it is not a paper campaign result.",
+    "unsupported_validation": "The new protocol was executed locally and the cell was recorded as unsupported; it is useful engineering evidence but not measured factorial coverage.",
+    "paper_only": "A number appears in main.tex but its source result artifact was not located.",
+    "missing": "No source result artifact for this dimension was located."
+  },
+  "source_artifacts": [
+    {
+      "path": "blackwell_nvfp4_fuzz/nvfp4_fuzz.py",
+      "sha256": "4adb1aeb39363a817191521a58ba2fced1e0649d9a917d5d0336ce25e0090d4e",
+      "evidence": "CUDA-only NVFP4 forward/property runner; includes eager/compiled paths, FP64 references, 0.035 domain threshold, and program-specific forward bounds."
+    },
+    {
+      "path": "blackwell_nvfp4_fuzz/results/nvfp4-final-validation-20260630-report.md",
+      "sha256": "60d66319ef3ea7169998527f1b7a251792925161f5789bec439cf88babb2da27",
+      "evidence": "Paper-adjacent report for Blackwell CUDA NVFP4 only; reports 189,455 supported continuation cases and zero numerical findings."
+    },
+    {
+      "path": "blackwell_nvfp4_fuzz/results/nvfp4-crafted-validate-20260630-102927.analysis.json",
+      "sha256": "9340112814b9d38b735974f10311b31b5638abed117f306f19ce826a97b704bc",
+      "evidence": "Completed crafted CUDA campaign: summary passes=44,838, findings=0."
+    },
+    {
+      "path": "blackwell_nvfp4_fuzz/results/nvfp4-tile-sweep-validate-20260630-103941.analysis.json",
+      "sha256": "a26dede596c8e60d8526d9e8563ad6b3bd045a944f0bd0bef8fcc02d06f281c0",
+      "evidence": "Completed CUDA tile sweep: passes=73,486, findings=0, max relative L2=0.0059334361 under a 0.035 threshold."
+    },
+    {
+      "path": "blackwell_nvfp4_fuzz/results/nvfp4-compile-repro-validate-20260630-212951.analysis.json",
+      "sha256": "edb22f284ace29f468bc64c81ece88c4a58d3697702a45435e524515365b106f",
+      "evidence": "Completed one-case eager/compiled CUDA reproducer with explicit forward metrics and deterministic digests."
+    },
+    {
+      "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local.json",
+      "sha256": "e288eb3ae08a148e3a2279d26c372ebc2ae7b42280580d0f5c0a40145bdfa7bd",
+      "evidence": "Local validation only: CPU eager, forward/gradient, float32/float64, clean/injected, and fixed 1e-3/1e-4/1e-5; ready_for_paper_result=false."
+    },
+    {
+      "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local_cpu_eager_compiled.json",
+      "sha256": "3ded963faf91611b2ee5a9c2f8cfa41c27d3bd5314e6587d77d8d7da2dc32363",
+      "evidence": "Local validation only: CPU eager cells are measured as in the previous smoke run, while CPU compiled cells are explicitly unsupported on this Windows/PyTorch host; ready_for_paper_result=false."
+    },
+    {
+      "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/five_seed_local_checkpoint/diagnostic_manifest.json",
+      "sha256": "74e68e9623bb1733c3c6e44ccc40f8ff453e401827a8068819071c7e0a427548",
+      "evidence": "Five-seed local diagnostic: all 480 design cells are present; 240 CPU/CUDA eager cells are measured, 240 compiled cells are unsupported, clean false positives are 0/120, and ready_for_paper_result=false."
+    }
+  ],
+  "factorial_matrix": [
+    {"device": "cpu", "mode": "eager", "check": "forward", "dtype": "float32", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cpu", "mode": "eager", "check": "forward", "dtype": "float64", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cpu", "mode": "eager", "check": "gradient", "dtype": "float32", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cpu", "mode": "eager", "check": "gradient", "dtype": "float64", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cpu", "mode": "compiled", "check": "forward", "dtype": "float32", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "Five-seed local preflight recorded this Windows/PyTorch compiled backend as unsupported; rerun on Linux/Colab or a container."},
+    {"device": "cpu", "mode": "compiled", "check": "forward", "dtype": "float64", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "Five-seed local preflight recorded this Windows/PyTorch compiled backend as unsupported; rerun on Linux/Colab or a container."},
+    {"device": "cpu", "mode": "compiled", "check": "gradient", "dtype": "float32", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "Five-seed local preflight recorded this Windows/PyTorch compiled backend as unsupported; rerun on Linux/Colab or a container."},
+    {"device": "cpu", "mode": "compiled", "check": "gradient", "dtype": "float64", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "Five-seed local preflight recorded this Windows/PyTorch compiled backend as unsupported; rerun on Linux/Colab or a container."},
+    {"device": "cuda", "mode": "eager", "check": "forward", "dtype": "float32", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cuda", "mode": "eager", "check": "forward", "dtype": "float64", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cuda", "mode": "eager", "check": "gradient", "dtype": "float32", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cuda", "mode": "eager", "check": "gradient", "dtype": "float64", "status": "validation_only", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cuda", "mode": "compiled", "check": "forward", "dtype": "float32", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "The matched local compiled backend is unsupported; the separate NVFP4 compiled artifact remains domain-specific evidence only."},
+    {"device": "cuda", "mode": "compiled", "check": "forward", "dtype": "float64", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json", "note": "The matched local compiled backend is unsupported; the separate NVFP4 compiled artifact remains domain-specific evidence only."},
+    {"device": "cuda", "mode": "compiled", "check": "gradient", "dtype": "float32", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json"},
+    {"device": "cuda", "mode": "compiled", "check": "gradient", "dtype": "float64", "status": "unsupported_validation", "source": "five_seed_local_checkpoint/summary.local_factorial.json"}
+  ],
+  "domain_specific_path_coverage": [
+    {"device": "cuda", "mode": "eager", "check": "forward", "status": "observed_domain_specific", "input_domain": "NVFP4 packed inputs with bfloat16 outputs and FP32/FP64 references"},
+    {"device": "cuda", "mode": "compiled", "check": "forward", "status": "observed_domain_specific", "input_domain": "NVFP4 packed inputs with bfloat16 outputs and FP64 forward reference"}
+  ],
+  "oracle_feature_coverage": {
+    "absolute_error": "observed_domain_specific_and_validation_only",
+    "relative_error": "observed_domain_specific_and_validation_only",
+    "ulp_error": "validation_only",
+    "fixed_1e_3": "validation_only",
+    "fixed_1e_4": "validation_only; paper-only 29/30 claim has no located source artifact",
+    "fixed_1e_5": "validation_only",
+    "certified_bound": "implemented_domain_specific; no located artifact for the paper's 29/30 fault-injection table",
+    "clean_controls": "domain_specific_and_validation_only",
+    "injected_controls": "validation_only",
+    "matched_full_factorial": "local_design_complete; eager measured; compiled unsupported; certified bound missing"
+  },
+  "paper_claim_boundary": {
+    "claim": "main.tex reports 29/30 certified, 28/30 fixed-1e-4, and 0/20 false positives.",
+    "source_result_artifact_found": false,
+    "status": "paper_only",
+    "rule": "Do not import these values into generated result tables until the source certificate/result file is recovered."
+  },
+  "overall_status": "partial",
+  "completion_gate": "Run the protocol in campaign mode on a matched CPU/CUDA x eager/compiled x forward/gradient matrix, across declared seeds and dtypes, retain 1e-3/1e-4/1e-5 and certified-bound events, and preserve immutable JSONL plus environment/artifact hashes."
+}

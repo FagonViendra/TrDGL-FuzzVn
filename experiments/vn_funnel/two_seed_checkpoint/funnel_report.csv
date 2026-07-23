@@ -1,0 +1,12 @@
+stage,pass,fail,unknown,total,pass_rate_all_raw,transition_from,transition_eligible,transition_known,transition_pass,transition_rate_known
+raw,960,0,0,960,1.0,,,,,
+parseable,625,335,0,960,0.6510416666666666,raw,960,960,625,0.6510416666666666
+ast_pass,625,335,0,960,0.6510416666666666,parseable,625,625,625,1.0
+runnable,595,365,0,960,0.6197916666666666,ast_pass,625,625,595,0.952
+target_valid,482,478,0,960,0.5020833333333333,runnable,595,595,482,0.8100840336134454
+oracle_bearing,89,871,0,960,0.09270833333333334,target_valid,482,482,89,0.18464730290456433
+reproducible,0,0,960,960,,oracle_bearing,89,0,0,
+non_duplicate,0,0,960,960,,reproducible,0,0,0,
+minimized,0,0,960,960,,non_duplicate,0,0,0,
+stable_nightly,0,0,960,960,,minimized,0,0,0,
+promoted,0,0,960,960,,stable_nightly,0,0,0,

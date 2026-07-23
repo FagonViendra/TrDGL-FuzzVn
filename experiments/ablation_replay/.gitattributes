@@ -1,0 +1,7 @@
+# Python source hashes are recorded in the diagnostic manifest.
+.gitattributes text eol=lf
+README.md text eol=lf
+*.py text eol=lf
+
+# Generated checkpoint artifacts are hashed byte-for-byte; preserve their EOLs.
+two_seed_checkpoint/* -text

@@ -1,0 +1,36 @@
+{
+  "schema_version": "trdgl_atlas_validation_bundle_v1",
+  "evidence_label": "validation_only",
+  "purpose": "Executable contract validation; not an Atlas effectiveness experiment.",
+  "artifact_sha256": {
+    "experiments/atlas_intervention/collect_atlas_intervention.py": "a9624f9b6a0a8cbd3281d9df09aec8fe2db0f435b4e62a716a4b4a90b4f169a0",
+    "experiments/atlas_intervention/atlas_intervention_event.schema.json": "56773b9260d8fc8ee70dd16d26592a04b5f8d70ac06e8e012175b411790fe71b",
+    "experiments/atlas_intervention/atlas_intervention_summary.schema.json": "971489b711cbd555b83e9469eabcd527a658f1a919f3b1476b6e101d5064b5f7",
+    "experiments/atlas_intervention/atlas_source_manifest.schema.json": "a6f583fda99b6f2a114ac1d4a5507e6d8128008c42b6b4645f08f8d30a471ec4",
+    "experiments/atlas_intervention/source_recovery_search.md": "3e66a50cd0ae11da6feb2ac1ef0e0f186d5374aaecee56f44482afa7431ac175",
+    "experiments/atlas_intervention/test_atlas_intervention.py": "a55d358950e90416f9ae7d315d88d527026a56ad39223b07e421c3e0fa5ad4de",
+    "experiments/atlas_intervention/test_two_seed_atlas_checkpoint.py": "524216b0d340a9e20e7a94ece77db431c0f6edea598e68f006459c51d3c51bc7",
+    "experiments/atlas_intervention/verify_two_seed_atlas_checkpoint.py": "2c1cd8dc157dd6d19d8a9cfdca86b936b8adf58126bdde41106f2f80dec855f1",
+    "experiments/atlas_intervention/two_seed_checkpoint/atlas_blocker_manifest.json": "cc1b3e5c20183cc4cc24fdde43242e032aeb02926df8a5ea6009279506a13590",
+    "experiments/atlas_intervention/testdata/validation_events.jsonl": "d3b25de8324862a51ee00bfcf117c456e5444c5042a31b0b9edb08ed29e1e355",
+    "experiments/vn_funnel/atlas_snapshot.json": "7b02dee78d37bcb5468095cdad2a1a22a9939b35d9a861689ad0d813bfc95e33",
+    "experiments/atlas_intervention/validation_output/summary.validation.json": "4987eead9a6034d42a5fdef0e6a0be948db9662840f1a4067ccc34ff69a777fa"
+  },
+  "contract_tests": {
+    "command": "python -m unittest discover -s experiments/atlas_intervention -p test_*.py -v",
+    "result": "pass",
+    "test_count": 17
+  },
+  "summary_path": "experiments/atlas_intervention/validation_output/summary.validation.json",
+  "summary_ready_for_paper_result": false,
+  "summary_blockers": [
+    "evidence_label_is_not_campaign",
+    "raw_atlas_dataset_absent",
+    "independent_atlas_manifest_absent",
+    "required_seeds_incomplete"
+  ],
+  "raw_atlas_included": false,
+  "independent_atlas_manifest_included": false,
+  "effectiveness_claim_allowed": false,
+  "claim_boundary": "Synthetic fixture counts validate aggregation only and must not be reported as empirical counts or effect sizes."
+}

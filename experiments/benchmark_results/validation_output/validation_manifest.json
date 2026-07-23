@@ -1,0 +1,28 @@
+{
+  "schema_version": "trdgl_benchmark_validation_bundle_v1",
+  "evidence_label": "validation_only",
+  "purpose": "Executable single-stream and five-shard aggregation contract validation; not a completed benchmark campaign.",
+  "artifact_sha256": {
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/collect_benchmark_results.py": "e6e50e78a8ca4f29e7c7bd86aff3762de4c4e6fdc8a7c328375e6f06d1bd6f95",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/collect_benchmark_campaign.py": "9254940d077e44d79e9d1ecf8edef453534aee545df6805bcab13acf91d79a80",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/audit_checkpoint_provenance.py": "dc23faf8146e85d7307f614cc77711bc75a5a4456153d58580d612fd33a135f6",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/benchmark_result_summary.schema.json": "10b14bb9cd18d8dc8ee9f2df61b32299c6fbaa2e99a4160842057c7cb70f3c9c",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_shard_index.schema.json": "b50ad3309e745438b44fc96c908a48bb622c911072032ee49a483d6ebb422d4b",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_shards.template.json": "aae115fed9090001db66ebf8191cbbf89248def66585a7a917821a8d24ef09f1",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/test_benchmark_results.py": "a9a6ff32a7ee1cfd56f95d70c47155b7155742a36252e0e0f92a6c5d1acbed25",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+    "tmp/colab_smoke_4baseline/events_latest.jsonl": "f2d8b57c63c5f52556680ed21a2e647dd0984bf923780047cf5151955bbb2f62",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/summary.validation.json": "414366d81703caea62c365eb7db63a640775113ffee67aea1ed5ab6337751ece",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/baseline_group_seed.validation.csv": "b2e11a670e27e9feb0932635b1527068ab799e7423c7022e68297591bca2a469",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/event_coverage.validation.csv": "e6c55df92f24462e231f4c8af3c4eefdf36b4ead081d6ff61ba824f7588dce2e"
+  },
+  "contract_tests": {
+    "command": "python -m unittest discover -s experiments/benchmark_results -p test_*.py -v",
+    "result": "pass",
+    "test_count": 19
+  },
+  "smoke_observed_events": 4,
+  "full_benchmark_complete": false,
+  "ready_for_paper_result": false,
+  "claim_boundary": "Synthetic complete-shard tests validate the gate only; smoke/checkpoint counts must not be promoted to a completed campaign."
+}

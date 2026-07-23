@@ -1,0 +1,2 @@
+# Preserve the long audit JSONL records exactly and suppress impractical text diffs.
+event_classification.jsonl binary

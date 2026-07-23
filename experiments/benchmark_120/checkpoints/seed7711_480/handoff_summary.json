@@ -1,0 +1,55 @@
+{
+  "schema_version": "trdgl_seed_handoff_v1",
+  "created_utc": "2026-07-10T09:23:51.450490+00:00",
+  "seed": 7711,
+  "seed_index": 1,
+  "observed_events": 480,
+  "expected_events": 480,
+  "baseline_counts": {
+    "B0": 120,
+    "B1": 120,
+    "B2": 120,
+    "B3": 120
+  },
+  "run_signature": "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+  "events_sha256": "8a27a2280f550887be0cf031f900ad1aec16a3441719c17683185c027315d6bc",
+  "prompt_mismatch_count": 0,
+  "frozen_notebook_sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+  "notebook_code_source_sha256": "a070d6518e2876ee56d88de676236f59d61f6cd10fc7a20a0e301ffa8ed9c650",
+  "runner_version": "four_baseline_runner_v1",
+  "environment_equivalent_to_seed3407": true,
+  "ready_as_complete_seed_shard": true,
+  "ready_as_full_campaign_result": false,
+  "claim_boundary": "Complete one-seed shard / diagnostic checkpoint; not the final five-seed campaign result.",
+  "artifacts": {
+    "events.jsonl": {
+      "bytes": 2180347,
+      "sha256": "8a27a2280f550887be0cf031f900ad1aec16a3441719c17683185c027315d6bc"
+    },
+    "run_manifest.json": {
+      "bytes": 1476,
+      "sha256": "7a2b2089912f6ad40f160002bbc6391e9b68b3a09b17cf4e89d5ac93b6af780d"
+    },
+    "documentation_snapshot.json": {
+      "bytes": 220422,
+      "sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b"
+    },
+    "baseline_summary.csv": {
+      "bytes": 502,
+      "sha256": "c62dfbf2a657dd7cbf06413cc9161bf8d947fb85a45597b56a1dc37b10e55ac4"
+    },
+    "events_compact.json": {
+      "bytes": 798811,
+      "sha256": "3813950c7549c1ae9ebb3633033712e0cfc505c07cdc598ecdbbdb9cf07c5b49"
+    },
+    "executed_notebook.ipynb": {
+      "bytes": 87404,
+      "sha256": "eb114dc9ed761d1c53094bd4c65e9eb35c397a2825fe15fc6d88214bc91d94bf"
+    }
+  },
+  "bundle": {
+    "path": "C:\\Users\\fagon\\OneDrive\\Documents\\New project 2\\tmp\\trdgl_campaign_continuation\\seed7711\\trdgl_seed7711_handoff.zip",
+    "bytes": 351949,
+    "sha256": "c3f3ff7e73543f827e9d43676f2dffda038cd197aa8527922ba2fb7e36a06291"
+  }
+}

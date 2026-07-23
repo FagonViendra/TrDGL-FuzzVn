@@ -1,0 +1,266 @@
+{
+  "schema_version": "trdgl_generation_error_analysis_v20",
+  "analyzer_sha256": "ec616d70d6229762b82b3f068c861db3380edfe3543dc8acb451281a32a50ec9",
+  "review_tool_sha256": "a388d28603b69b9562111b5292c597c1ec1028e19de3d20011f2a7d4156c53f3",
+  "status": "awaiting_two_independent_reviewers",
+  "source": {
+    "path": "C:\\Users\\fagon\\OneDrive\\Documents\\New project 2\\TrDGL-FuzzVn_paper\\experiments\\benchmark_results\\two_seed_checkpoint\\events.combined.jsonl",
+    "label": "events.combined",
+    "role": "campaign_checkpoint",
+    "sha256": "03bbd2b8d20901e521ab7bfbc3a4816a770c657c65ac32c79d058af159de5a8d",
+    "bytes": 4373073,
+    "records": 960
+  },
+  "population_records": 960,
+  "requested_sample_size": 24,
+  "selected_records": 24,
+  "selection": "deterministic round-robin over all baseline:positive-auto-label and harness-disagreement strata with record de-duplication; no-detected-failure is a fallback stratum; SHA-256 order within stratum",
+  "population_stratum_candidate_counts": {
+    "B0:missing_oracle": 240,
+    "B1:argument_signature_error": 6,
+    "B1:assertion_failure": 1,
+    "B1:broad_exception_swallowing": 5,
+    "B1:harness_disagreement_wrong_or_missing_target_api": 70,
+    "B1:index_or_bounds_error": 2,
+    "B1:missing_oracle": 231,
+    "B1:runtime_error_other": 7,
+    "B1:shape_or_dtype_error": 9,
+    "B1:undefined_name_error": 1,
+    "B1:wrong_or_missing_target_api": 12,
+    "B2:assertion_failure": 3,
+    "B2:broad_exception_swallowing": 1,
+    "B2:fake_assertion": 4,
+    "B2:harness_disagreement_fake_assertion": 1,
+    "B2:harness_disagreement_wrong_or_missing_target_api": 38,
+    "B2:missing_oracle": 6,
+    "B2:no_detected_failure": 9,
+    "B2:oracle_not_executed": 113,
+    "B2:runtime_error_other": 2,
+    "B2:syntax_error": 100,
+    "B2:target_not_executed": 118,
+    "B2:truncated_generation": 219,
+    "B2:undefined_name_error": 1,
+    "B2:wrong_or_missing_target_api": 1,
+    "B3:harness_disagreement_wrong_or_missing_target_api": 4,
+    "B3:missing_oracle": 5,
+    "B3:syntax_error": 235,
+    "B3:target_not_executed": 3,
+    "B3:truncated_generation": 240,
+    "B3:undefined_name_error": 1
+  },
+  "stratum_counts": {
+    "B0:missing_oracle": 2,
+    "B1:argument_signature_error": 1,
+    "B1:assertion_failure": 1,
+    "B1:broad_exception_swallowing": 1,
+    "B1:harness_disagreement_wrong_or_missing_target_api": 1,
+    "B1:index_or_bounds_error": 1,
+    "B1:missing_oracle": 1,
+    "B1:shape_or_dtype_error": 1,
+    "B1:undefined_name_error": 1,
+    "B1:wrong_or_missing_target_api": 1,
+    "B2:assertion_failure": 1,
+    "B2:broad_exception_swallowing": 1,
+    "B2:fake_assertion": 1,
+    "B2:harness_disagreement_wrong_or_missing_target_api": 1,
+    "B2:missing_oracle": 1,
+    "B2:no_detected_failure": 1,
+    "B2:runtime_error_other": 1,
+    "B2:syntax_error": 1,
+    "B2:undefined_name_error": 1,
+    "B3:harness_disagreement_wrong_or_missing_target_api": 1,
+    "B3:syntax_error": 1,
+    "B3:target_not_executed": 1,
+    "B3:undefined_name_error": 1
+  },
+  "population_auto_label_counts": {
+    "syntax_error": {
+      "false": 625,
+      "true": 335
+    },
+    "wrong_or_missing_target_api": {
+      "false": 612,
+      "true": 13,
+      "unknown": 335
+    },
+    "missing_import": {
+      "false": 625,
+      "unknown": 335
+    },
+    "shape_or_dtype_error": {
+      "false": 616,
+      "true": 9,
+      "unknown": 335
+    },
+    "index_or_bounds_error": {
+      "false": 623,
+      "true": 2,
+      "unknown": 335
+    },
+    "undefined_name_error": {
+      "false": 622,
+      "true": 3,
+      "unknown": 335
+    },
+    "argument_signature_error": {
+      "false": 619,
+      "true": 6,
+      "unknown": 335
+    },
+    "dependency_import_error": {
+      "false": 625,
+      "unknown": 335
+    },
+    "setup_or_environment_error": {
+      "false": 625,
+      "unknown": 335
+    },
+    "resource_exhaustion": {
+      "false": 625,
+      "unknown": 335
+    },
+    "runtime_error_other": {
+      "false": 616,
+      "true": 9,
+      "unknown": 335
+    },
+    "assertion_failure": {
+      "false": 621,
+      "true": 4,
+      "unknown": 335
+    },
+    "timeout": {
+      "false": 960
+    },
+    "missing_oracle": {
+      "false": 143,
+      "true": 482,
+      "unknown": 335
+    },
+    "oracle_not_executed": {
+      "false": 512,
+      "true": 113,
+      "unknown": 335
+    },
+    "fake_assertion": {
+      "false": 621,
+      "true": 4,
+      "unknown": 335
+    },
+    "broad_exception_swallowing": {
+      "false": 619,
+      "true": 6,
+      "unknown": 335
+    },
+    "target_not_executed": {
+      "false": 504,
+      "true": 121,
+      "unknown": 335
+    },
+    "truncated_generation": {
+      "false": 501,
+      "true": 459
+    },
+    "nondeterministic_failure": {
+      "unknown": 960
+    }
+  },
+  "sample_auto_label_counts": {
+    "syntax_error": {
+      "false": 22,
+      "true": 2
+    },
+    "wrong_or_missing_target_api": {
+      "false": 19,
+      "true": 3,
+      "unknown": 2
+    },
+    "missing_import": {
+      "false": 22,
+      "unknown": 2
+    },
+    "shape_or_dtype_error": {
+      "false": 20,
+      "true": 2,
+      "unknown": 2
+    },
+    "index_or_bounds_error": {
+      "false": 21,
+      "true": 1,
+      "unknown": 2
+    },
+    "undefined_name_error": {
+      "false": 19,
+      "true": 3,
+      "unknown": 2
+    },
+    "argument_signature_error": {
+      "false": 21,
+      "true": 1,
+      "unknown": 2
+    },
+    "dependency_import_error": {
+      "false": 22,
+      "unknown": 2
+    },
+    "setup_or_environment_error": {
+      "false": 22,
+      "unknown": 2
+    },
+    "resource_exhaustion": {
+      "false": 22,
+      "unknown": 2
+    },
+    "runtime_error_other": {
+      "false": 20,
+      "true": 2,
+      "unknown": 2
+    },
+    "assertion_failure": {
+      "false": 20,
+      "true": 2,
+      "unknown": 2
+    },
+    "timeout": {
+      "false": 24
+    },
+    "missing_oracle": {
+      "false": 9,
+      "true": 13,
+      "unknown": 2
+    },
+    "oracle_not_executed": {
+      "false": 19,
+      "true": 3,
+      "unknown": 2
+    },
+    "fake_assertion": {
+      "false": 21,
+      "true": 1,
+      "unknown": 2
+    },
+    "broad_exception_swallowing": {
+      "false": 20,
+      "true": 2,
+      "unknown": 2
+    },
+    "target_not_executed": {
+      "false": 17,
+      "true": 5,
+      "unknown": 2
+    },
+    "truncated_generation": {
+      "false": 15,
+      "true": 9
+    },
+    "nondeterministic_failure": {
+      "unknown": 24
+    }
+  },
+  "allowed_review_labels": [
+    "true",
+    "false",
+    "unknown"
+  ],
+  "instructions": "Make two copies of review_sample.csv. Each reviewer independently fills reviewer_id, review_<category> with true/false/unknown, and optional review_notes. Do not edit auto_* columns."
+}

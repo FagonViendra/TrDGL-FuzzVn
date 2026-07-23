@@ -1,0 +1,33 @@
+{
+  "schema_version": "trdgl_generation_error_analysis_v19",
+  "rows": [
+    {
+      "source": "events.checkpoint",
+      "source_role": "campaign_checkpoint",
+      "records": 480,
+      "missing_task_id_records": 0,
+      "duplicate_task_baseline_records": 0,
+      "unexpected_baseline_records": 0,
+      "run_signatures": [
+        "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475"
+      ],
+      "generation_seeds": [
+        "3407"
+      ]
+    },
+    {
+      "source": "colab_smoke_4baseline_events_latest",
+      "source_role": "smoke_validation",
+      "records": 4,
+      "missing_task_id_records": 0,
+      "duplicate_task_baseline_records": 0,
+      "unexpected_baseline_records": 0,
+      "run_signatures": [
+        "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3"
+      ],
+      "generation_seeds": [
+        "3407"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/atlas_intervention_summary.schema.json",
+  "title": "TrDGL-FuzzVn paired Atlas intervention summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evidence_label", "experiment_id", "source", "atlas_source", "pairing", "required_generation_seeds", "observed_seeds_by_intervention", "metrics", "paired_effects", "ready_for_paper_result", "blockers", "interpretation"],
+  "properties": {
+    "schema_version": {"const": "trdgl_atlas_intervention_summary_v2"},
+    "evidence_label": {"enum": ["validation_only", "campaign"]},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "source": {"type": "object", "required": ["events_path", "events_sha256", "event_count"]},
+    "atlas_source": {"type": "object", "required": ["raw_atlas_dataset_present", "independent_manifest_present", "verified", "verification_errors", "enabled_snapshot_hashes", "event_snapshot_matches_verified_dataset"]},
+    "pairing": {"type": "object", "required": ["pair_count", "duplicate_arm_rows", "incomplete_pairs", "pair_contract_mismatches", "single_harness", "single_model", "single_decoding_config", "pair_order_counts", "pair_order_balanced"]},
+    "required_generation_seeds": {"type": "array", "items": {"type": "integer"}, "minItems": 1, "uniqueItems": true},
+    "observed_seeds_by_intervention": {"type": "object", "required": ["duplicate_triage", "guided_planning"]},
+    "metrics": {"type": "object", "required": ["duplicate_triage", "guided_planning"]},
+    "paired_effects": {"type": "object", "required": ["duplicate_triage", "guided_planning"]},
+    "ready_for_paper_result": {"type": "boolean"},
+    "blockers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "interpretation": {"type": "string", "minLength": 1}
+  }
+}

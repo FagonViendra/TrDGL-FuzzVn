@@ -1,0 +1,75 @@
+{
+  "schema_version": "trdgl-checkpoint-v1",
+  "created_utc": "2026-07-10T09:23:51.450490+00:00",
+  "evidence_label": "complete_seed_shard_checkpoint",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "seed": 7711,
+  "seed_index": 1,
+  "expected_events": 480,
+  "observed_events": 480,
+  "baseline_counts": {
+    "B0": 120,
+    "B1": 120,
+    "B2": 120,
+    "B3": 120
+  },
+  "bad_json_rows": 0,
+  "prompt_mismatch_count": 0,
+  "run_signature": "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+  "generation_seeds": [
+    7711
+  ],
+  "last_event": {
+    "finished_utc": "2026-07-10T09:22:57.264348+00:00",
+    "baseline": "B2",
+    "api": "torch.export.export",
+    "task_id": "trdgl_pytorch_120_v1|torch.export.export|7711"
+  },
+  "artifacts": {
+    "events.checkpoint.jsonl": {
+      "bytes": 2180347,
+      "sha256": "8a27a2280f550887be0cf031f900ad1aec16a3441719c17683185c027315d6bc"
+    },
+    "run_manifest.json": {
+      "bytes": 1476,
+      "sha256": "7a2b2089912f6ad40f160002bbc6391e9b68b3a09b17cf4e89d5ac93b6af780d"
+    },
+    "baseline_summary.csv": {
+      "bytes": 502,
+      "sha256": "c62dfbf2a657dd7cbf06413cc9161bf8d947fb85a45597b56a1dc37b10e55ac4"
+    },
+    "executed_notebook.ipynb": {
+      "bytes": 87404,
+      "sha256": "eb114dc9ed761d1c53094bd4c65e9eb35c397a2825fe15fc6d88214bc91d94bf"
+    },
+    "documentation_snapshot.json": {
+      "bytes": 220422,
+      "sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b"
+    },
+    "handoff_summary.json": {
+      "bytes": 2097,
+      "sha256": "2f3b12a4072911dce97b7042583444a4d7fbe9f8c4f38b3c34351e84c2735051"
+    },
+    "../../trdgl_fair_benchmark_120.ipynb": {
+      "bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d"
+    }
+  },
+  "frozen_benchmark_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "notebook_code_source_sha256": "a070d6518e2876ee56d88de676236f59d61f6cd10fc7a20a0e301ffa8ed9c650",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "runner_version": "four_baseline_runner_v1",
+  "environment_equivalent_to_seed3407": true,
+  "completed_slices": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "partial_slices": [],
+  "pending_events": 0,
+  "pending_slices": [],
+  "source_note": "Persisted by the exact frozen notebook through run_remaining_campaign.py; the local handoff stream and immutable checkpoint have identical SHA-256 8a27a2280f550887be0cf031f900ad1aec16a3441719c17683185c027315d6bc.",
+  "resume_policy": "Append-only; resume skips existing (baseline, task_id) keys with the same run_signature.",
+  "claim_boundary": "This is one complete 120-API x four-baseline seed shard (480 events). Together with seed 3407 it forms a two-seed 960/2,400 diagnostic checkpoint, not the complete five-seed campaign."
+}

@@ -1,0 +1,54 @@
+--- a/runner/frozen_notebook_code.py
++++ b/runner/frozen_notebook_code.py
+@@ -575,16 +575,22 @@
+     chunks.append('<start_of_turn>model\n')
+     return '\n'.join(chunks)
+ 
++TURN_STOP_STRINGS = ['<end_of_turn>', '<start_of_turn>']
++
+ def generate_seeded(messages, seed):
+     set_true_generation_seed(seed)
+     common = dict(max_tokens=MAX_TOKENS, temperature=TEMPERATURE, top_p=TOP_P, top_k=TOP_K, min_p=MIN_P, repeat_penalty=REPEAT_PENALTY, seed=seed)
+     started = time.time()
++    generation_path = 'create_chat_completion'
++    chat_exception_type = None
+     try:
+-        response = llm.create_chat_completion(messages=messages, **common)
++        response = llm.create_chat_completion(messages=messages, stop=TURN_STOP_STRINGS, **common)
+         raw = response['choices'][0]['message']['content']
+         finish_reason = response['choices'][0].get('finish_reason')
+     except (ValueError, RuntimeError) as chat_exc:
+-        response = llm(manual_gemma_prompt(messages), stop=['<end_of_turn>', '<start_of_turn>'], echo=False, **common)
++        generation_path = 'manual_gemma_completion_fallback'
++        chat_exception_type = type(chat_exc).__name__
++        response = llm(manual_gemma_prompt(messages), stop=TURN_STOP_STRINGS, echo=False, **common)
+         raw = response['choices'][0]['text']
+         finish_reason = response['choices'][0].get('finish_reason')
+     elapsed = round(time.time() - started, 3)
+@@ -593,11 +599,24 @@
+         token_count = len(llm.tokenize(raw.encode('utf-8'), add_bos=False))
+     except Exception:
+         pass
+-    return raw, {'generation_seconds': elapsed, 'raw_token_count': token_count, 'finish_reason': finish_reason, 'seed_backend': 'host+torch+cuda+llama_cpp.set_seed+completion(seed)'}
++    chat_template = (getattr(llm, 'metadata', {}) or {}).get('tokenizer.chat_template', '')
++    return raw, {
++        'generation_seconds': elapsed,
++        'raw_token_count': token_count,
++        'finish_reason': finish_reason,
++        'seed_backend': 'host+torch+cuda+llama_cpp.set_seed+completion(seed)',
++        'generation_path': generation_path,
++        'chat_exception_type': chat_exception_type,
++        'llama_chat_format': getattr(llm, 'chat_format', None),
++        'chat_template_sha256': sha256_text(chat_template) if chat_template else None,
++        'eos_token_id': llm.token_eos(),
++        'response_usage': response.get('usage'),
++        'contains_turn_stop_text': any(stop in raw for stop in TURN_STOP_STRINGS),
++    }
+ 
+ 
+ # ---- notebook code cell 10 ----
+-RUNNER_VERSION = 'four_baseline_runner_v1'
++RUNNER_VERSION = 'four_baseline_runner_v1_b3diag_stop1'
+ run_signature_payload = {k: v for k, v in run_manifest.items() if k != 'created_utc'}
+ run_signature_payload.update({'runner_version': RUNNER_VERSION, 'minimal_system_prompt': MINIMAL_SYSTEM_PROMPT, 'full_system_prompt': FULL_SYSTEM_PROMPT, 'selected_task_ids': [task['task_id'] for task in selected_tasks], 'run_baselines': RUN_BASELINES})
+ run_signature = sha256_text(json.dumps(run_signature_payload, ensure_ascii=False, sort_keys=True, separators=(',', ':')))

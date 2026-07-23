@@ -1,0 +1,62 @@
+{
+  "schema_version": "trdgl-checkpoint-v1",
+  "created_utc": "2026-07-09T11:19:35Z",
+  "evidence_label": "complete_seed_shard_checkpoint",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "seed": 3407,
+  "expected_events": 480,
+  "observed_events": 480,
+  "baseline_counts": {
+    "B0": 120,
+    "B1": 120,
+    "B2": 120,
+    "B3": 120
+  },
+  "bad_json_rows": 0,
+  "run_signature": "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475",
+  "generation_seeds": [
+    3407
+  ],
+  "last_event": {
+    "finished_utc": "2026-07-09T11:10:33.438251+00:00",
+    "baseline": "B3",
+    "api": "torch.export.export",
+    "task_id": "trdgl_pytorch_120_v1|torch.export.export|3407"
+  },
+  "artifacts": {
+    "events.checkpoint.jsonl": {
+      "bytes": 2191766,
+      "sha256": "55e61acab475d370f6261be2041fdbb74ef5f06bd8197044df587c60a4f4af09"
+    },
+    "run_manifest.json": {
+      "bytes": 1476,
+      "sha256": "0e54a8546c34ad6087d7e7567c426333eb8d38b4968e45da356f8bbf779399c3"
+    },
+    "baseline_summary.csv": {
+      "bytes": 543,
+      "sha256": "0c89c2ee6840887b8b19a3b4c7580d6e4181013b427c122df170c9b881bc5b0f"
+    },
+    "executed_notebook.ipynb": {
+      "bytes": 72632,
+      "sha256": "048aafd52ab8098a58abc310c32819977dbcc80374022a5e1f07baf2cbf4f51a"
+    },
+    "../../trdgl_fair_benchmark_120.ipynb": {
+      "bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d"
+    }
+  },
+  "frozen_benchmark_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "completed_slices": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "partial_slices": [],
+  "pending_events": 0,
+  "pending_slices": [],
+  "source_note": "Recovered from Colab CLI session trdgl-seed3407-r8 after OAuth account switch; direct remote events.jsonl and watcher backup have matching SHA-256 55e61acab475d370f6261be2041fdbb74ef5f06bd8197044df587c60a4f4af09.",
+  "resume_policy": "Append-only; resume skips existing (baseline, task_id) keys with the same run_signature.",
+  "claim_boundary": "This is one complete 120-API x four-baseline seed shard (480 events). It is not the complete five-seed 2,400-event campaign."
+}

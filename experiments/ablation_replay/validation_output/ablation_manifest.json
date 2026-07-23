@@ -1,0 +1,53 @@
+{
+  "policy_version": "trdgl_ablation_replay_v1",
+  "replay_script_sha256": "035ed9f51652f30ddfdd8a8e78ca9170f7845332b32bece0d00872b985f1665e",
+  "evidence_label": "validation_only",
+  "events_path": "C:\\Users\\fagon\\OneDrive\\Documents\\New project 2\\tmp\\colab_smoke_4baseline\\events_latest.jsonl",
+  "events_file_sha256": "f2d8b57c63c5f52556680ed21a2e647dd0984bf923780047cf5151955bbb2f62",
+  "run_signature": "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3",
+  "baseline_replayed": "B3",
+  "raw_event_count": 1,
+  "decoding_seed_evidence_complete": true,
+  "corpus_sha256": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b",
+  "condition_corpus_sha256": {
+    "full": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b",
+    "no_ast": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b",
+    "no_oracle": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b",
+    "no_vn": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b",
+    "no_atlas": "a008e7fd296b79137dd025c9b06a3fcaa0fc1143ad9174dba2a6402e9b237f1b"
+  },
+  "condition_event_counts": {
+    "full": 1,
+    "no_ast": 1,
+    "no_oracle": 1,
+    "no_vn": 1,
+    "no_atlas": 1
+  },
+  "conditions": [
+    "full",
+    "no_ast",
+    "no_oracle",
+    "no_vn",
+    "no_atlas"
+  ],
+  "same_corpus_verified": true,
+  "atlas_path": null,
+  "atlas_sha256": null,
+  "pending_semantics": "Missing triage fields are pending, never false or zero.",
+  "promotion_semantics": "promoted_counterfactual means gate eligibility under that condition, not a confirmed framework bug.",
+  "atlas_planning_ablation": {
+    "regeneration_required": true,
+    "reason": "Atlas-guided surface planning changes generation inputs; same-corpus no_atlas isolates duplicate triage only."
+  },
+  "fine_tuning_ablation": {
+    "method": "paired B2 base+full-prompt versus B3 tuned+same-full-prompt",
+    "regeneration_required": true,
+    "reason": "Fine-tuning changes generated programs; it is not a downstream gate and cannot be replayed from frozen B3 outputs.",
+    "pair_keys_seen": 1,
+    "complete_pairs": 1,
+    "incomplete_pairs": 0,
+    "prompt_hash_mismatches": 0,
+    "complete_same_prompt_pairs": 1,
+    "fair_comparison_ready": true
+  }
+}

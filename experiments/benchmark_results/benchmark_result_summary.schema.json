@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/benchmark_result_summary.schema.json",
+  "title": "TrDGL-FuzzVn benchmark coverage and fairness summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evidence_label", "benchmark", "source", "coverage", "fairness", "runtime", "full_benchmark_complete", "ready_for_paper_result", "blockers"],
+  "properties": {
+    "schema_version": {"const": "trdgl_benchmark_result_summary_v1"},
+    "evidence_label": {"enum": ["validation_only", "campaign"]},
+    "benchmark": {
+      "type": "object",
+      "required": ["benchmark_id", "manifest_sha256", "api_count", "api_group_count", "apis_per_group", "generation_seeds", "baselines", "expected_task_count", "expected_event_count"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["events_path", "notebook_path", "events_sha256", "all_run_signatures", "selected_run_signature", "truncated_tail_ignored", "parsed_event_count_all_signatures"]
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["observed_event_count", "missing_event_count", "unexpected_task_count", "metadata_mismatch_count", "missing_events_sample", "unexpected_task_ids", "metadata_mismatches_sample", "by_baseline"]
+    },
+    "fairness": {
+      "type": "object",
+      "required": ["same_harness_run_signature", "b2_events", "b3_events", "complete_b2_b3_pairs", "expected_b2_b3_pairs", "pair_complete", "prompt_hash_mismatch_count", "pair_order_mismatch_count", "expected_pair_order_counts", "observed_complete_pair_order_counts", "full_order_balance_verified", "seed_backend_failure_count"]
+    },
+    "runtime": {
+      "type": "object",
+      "required": ["event_wall_seconds_total", "campaign_span_seconds", "events_per_hour_event_wall", "events_per_hour_campaign_span", "campaign_span_includes_idle_or_restart_gaps"]
+    },
+    "full_benchmark_complete": {"type": "boolean"},
+    "ready_for_paper_result": {"type": "boolean"},
+    "blockers": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+    ,"campaign_shards": {"type": "object"}
+  }
+}

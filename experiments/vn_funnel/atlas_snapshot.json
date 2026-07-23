@@ -1,0 +1,24 @@
+{
+  "snapshot_id": "dl_issue_atlas_archived_july_2026",
+  "records": 7275,
+  "unique_issues": 5868,
+  "canonical_clusters": 2653,
+  "framework_records": {
+    "PyTorch": 5285,
+    "TensorFlow": 1990
+  },
+  "measured_duplicate_candidates": null,
+  "measured_atlas_guided_candidates": null,
+  "retrieval_intervention_logged": false,
+  "evidence_source": "main.tex Sections 3.6, 4.5, and 4.6; first present in git commit b1f01553",
+  "source_audit": {
+    "audit_date": "2026-07-08",
+    "raw_atlas_dataset_present_in_workspace": false,
+    "independent_manifest_present_in_workspace": false,
+    "original_import_commit_578c69ff_contains_counts": false,
+    "reorganized_commit_b1f01553_contains_counts": true,
+    "framework_sum_check": "5285 + 1990 = 7275",
+    "verification_status": "internally_consistent_not_independently_recomputed"
+  },
+  "interpretation": "These are paper-reported corpus statistics, not a recomputation from a raw Atlas artifact. They do not measure duplicate-removal yield or causal planning benefit."
+}

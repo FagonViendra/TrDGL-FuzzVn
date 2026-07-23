@@ -1,0 +1,223 @@
+{
+  "schema_version": "trdgl_artifact_manifest_v2",
+  "evidence_label": "campaign",
+  "collection": {
+    "collector_version": "trdgl_repro_collector_v2",
+    "collected_at_utc": "2026-07-08T17:31:03.226964+00:00",
+    "path_base": "workspace_root",
+    "exact_command": [
+      "python.exe",
+      "experiments/reproducibility/collect_artifact_manifest.py",
+      "--mode",
+      "campaign",
+      "--run-dir",
+      "../tmp/colab_smoke_4baseline",
+      "--output",
+      "experiments/reproducibility/validation_output/artifact_manifest.smoke.json"
+    ]
+  },
+  "source_scope": {
+    "mode": "campaign",
+    "run_environment_observed": true,
+    "claim_boundaries": [
+      "campaign fields are copied or deterministically aggregated from the supplied run directory",
+      "null and pending mean not evidenced; they are never interpreted as zero",
+      "event-span throughput excludes setup before the first persisted event"
+    ]
+  },
+  "environment": {
+    "status": "observed",
+    "scope": "campaign_run",
+    "os": null,
+    "python": {
+      "version": "3.12.13",
+      "implementation": null
+    },
+    "libraries": {
+      "torch": "2.11.0+cu128",
+      "llama-cpp-python": "0.3.23",
+      "huggingface-hub": "1.20.1",
+      "numpy": "2.0.2",
+      "pandas": "2.2.2"
+    },
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "driver_version": null,
+    "gpus": [
+      {
+        "index": 0,
+        "name": "Tesla T4",
+        "memory_bytes": null
+      }
+    ]
+  },
+  "benchmark": {
+    "notebook": {
+      "role": "benchmark_notebook",
+      "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+      "present": true,
+      "size_bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+      "status": "observed"
+    },
+    "embedded_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "api_count": 120,
+    "api_group_count": 10,
+    "generation_seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ]
+  },
+  "run": {
+    "status": "observed",
+    "run_manifest": {
+      "role": "run_manifest",
+      "path": "tmp/colab_smoke_4baseline/run_manifest.json",
+      "present": true,
+      "size_bytes": 1468,
+      "sha256": "46732dd9d708b59460acff52203698484d0601d1a844f40044b46e2e5c4a7b91",
+      "status": "observed"
+    },
+    "run_signature": "735f5cc836c1a3585b799d1cfa62172497ffa873fabe43fd7387714966e90ae3",
+    "generation_seeds": [
+      3407
+    ],
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "benchmark_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+    "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+    "models": {
+      "base": {
+        "repo_id": "unsloth/gemma-4-26B-A4B-it-GGUF",
+        "filename": "gemma-4-26B-A4B-it-UD-Q3_K_M.gguf",
+        "revision": "3bb10d594514ef4edb7f3a65d41a7e4eb8c5767a",
+        "file_sha256": "985f740c7b928d15ecd8bf2bf4506d12ae6080c488f11eb8a4a97b215274bf7d",
+        "file_size": 12728495904
+      },
+      "tuned": {
+        "repo_id": "trdgl/gemma4-26b-a4b-qa-GGUF",
+        "filename": "gemma4-26b-a4b-qa.Q3_K_M.gguf",
+        "revision": "7e25063a37552beb994259e80c993b2edf41edbf",
+        "file_sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+        "file_size": 13286716704
+      }
+    },
+    "decoding": {
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "top_k": 40,
+      "min_p": 0.05,
+      "repeat_penalty": 1.08,
+      "max_tokens": 64
+    },
+    "subprocess_timeout_seconds": 60,
+    "execution_command": null,
+    "counts": {
+      "selected_tasks": 1,
+      "expected_events": 4,
+      "generation_events": 4,
+      "identified_unique_events": 4,
+      "duplicate_identity_events": 0,
+      "missing_identity_events": 0,
+      "baseline_unique_events": {
+        "B0": 1,
+        "B1": 1,
+        "B2": 1,
+        "B3": 1
+      },
+      "executed_tests": 3,
+      "selected_task_matrix_complete": true,
+      "full_benchmark_complete": false
+    },
+    "timing": {
+      "status": "observed",
+      "basis": "event_span_excludes_pre_first-event_setup",
+      "started_at_utc": "2026-07-08T03:44:21.863360+00:00",
+      "ended_at_utc": "2026-07-08T04:11:33.729325+00:00",
+      "duration_seconds": 1631.865965,
+      "generation_seconds_sum": 8.899000000000001,
+      "subprocess_seconds_sum": 21.15
+    },
+    "throughput": {
+      "status": "observed",
+      "generations_per_hour": 8.824254141485206,
+      "executed_tests_per_hour": 6.618190606113903
+    },
+    "resources": {
+      "status": "pending",
+      "gpu_hours": null,
+      "cpu_hours": null,
+      "peak_vram_bytes": null
+    }
+  },
+  "release": {
+    "environment_lock": {
+      "role": "environment_lock",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    "public_artifact_url_or_doi": null
+  },
+  "artifacts": [
+    {
+      "role": "benchmark_notebook",
+      "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+      "present": true,
+      "size_bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+      "status": "observed"
+    },
+    {
+      "role": "run_manifest",
+      "path": "tmp/colab_smoke_4baseline/run_manifest.json",
+      "present": true,
+      "size_bytes": 1468,
+      "sha256": "46732dd9d708b59460acff52203698484d0601d1a844f40044b46e2e5c4a7b91",
+      "status": "observed"
+    },
+    {
+      "role": "raw_events",
+      "path": "tmp/colab_smoke_4baseline/events_latest.jsonl",
+      "present": true,
+      "size_bytes": 10108,
+      "sha256": "f2d8b57c63c5f52556680ed21a2e647dd0984bf923780047cf5151955bbb2f62",
+      "status": "observed"
+    },
+    {
+      "role": "baseline_summary",
+      "path": "tmp/colab_smoke_4baseline/baseline_summary.csv",
+      "present": true,
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "observed"
+    },
+    {
+      "role": "environment_lock",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    }
+  ],
+  "completeness": {
+    "status": "pending",
+    "ready_for_release": false,
+    "missing_fields": [
+      "environment.driver_version",
+      "environment.os",
+      "release.environment_lock",
+      "release.public_artifact_url_or_doi",
+      "run.counts.full_benchmark_complete",
+      "run.execution_command",
+      "run.resources.cpu_hours",
+      "run.resources.gpu_hours"
+    ]
+  }
+}

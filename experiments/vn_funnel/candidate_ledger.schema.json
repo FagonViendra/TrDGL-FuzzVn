@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trdgl.local/schemas/candidate_ledger.schema.json",
+  "title": "TrDGL-FuzzVn candidate ledger row",
+  "type": "object",
+  "required": ["candidate_id", "candidate_family", "framework", "reproduced", "duplicate_checked", "minimized", "stable_tested", "nightly_tested", "promoted", "evidence_level", "artifact_paths", "evidence_source"],
+  "properties": {
+    "candidate_id": {"type": "string", "minLength": 1},
+    "candidate_family": {"type": "string", "minLength": 1},
+    "framework": {"type": "string", "minLength": 1},
+    "apis": {"type": "array", "items": {"type": "string"}},
+    "reproduced": {"enum": ["yes", "no", "partial", "pending", "not_applicable"]},
+    "duplicate_checked": {"enum": ["yes", "no", "partial", "pending", "not_applicable"]},
+    "minimized": {"enum": ["yes", "no", "partial", "pending", "not_applicable"]},
+    "stable_tested": {"enum": ["yes", "no", "partial", "pending", "not_applicable"]},
+    "nightly_tested": {"enum": ["yes", "no", "partial", "pending", "not_applicable"]},
+    "promoted": {"enum": ["yes", "no", "pending"]},
+    "evidence_level": {"enum": ["workspace_artifact", "paper_only"]},
+    "artifact_paths": {"type": "array", "items": {"type": "string"}},
+    "evidence_source": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/atlas_intervention_event.schema.json",
+  "title": "TrDGL-FuzzVn paired Atlas intervention event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "experiment_id", "event_id", "evidence_label", "intervention", "arm", "unit_id",
+    "generation_seed", "harness_sha256", "model_sha256", "decoding_config_sha256", "pair_order",
+    "base_prompt_sha256", "effective_prompt_sha256", "candidate_summary_sha256", "atlas_snapshot_sha256",
+    "retrieval_performed", "retrieved_cluster_id", "duplicate_decision", "duplicate_verified",
+    "duplicate_verification_method", "duplicate_verification_artifact_sha256", "rejected_as_duplicate",
+    "atlas_guided", "generated_candidate_id", "reproduced", "reproduction_artifact_sha256",
+    "unique_signature", "triage_seconds", "status", "error"
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nullableSha256": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]}
+  },
+  "properties": {
+    "schema_version": {"const": "trdgl_atlas_intervention_event_v2"},
+    "experiment_id": {"type": "string", "minLength": 1},
+    "event_id": {"type": "string", "minLength": 1},
+    "evidence_label": {"enum": ["validation_only", "campaign"]},
+    "intervention": {"enum": ["duplicate_triage", "guided_planning"]},
+    "arm": {"enum": ["enabled", "disabled"]},
+    "unit_id": {"type": "string", "minLength": 1},
+    "generation_seed": {"type": "integer"},
+    "harness_sha256": {"$ref": "#/$defs/sha256"},
+    "model_sha256": {"$ref": "#/$defs/sha256"},
+    "decoding_config_sha256": {"$ref": "#/$defs/sha256"},
+    "pair_order": {"enum": ["enabled_first", "disabled_first"]},
+    "base_prompt_sha256": {"$ref": "#/$defs/sha256"},
+    "effective_prompt_sha256": {"$ref": "#/$defs/sha256"},
+    "candidate_summary_sha256": {"$ref": "#/$defs/nullableSha256"},
+    "atlas_snapshot_sha256": {"$ref": "#/$defs/nullableSha256"},
+    "retrieval_performed": {"type": "boolean"},
+    "retrieved_cluster_id": {"type": ["string", "null"]},
+    "duplicate_decision": {"enum": ["duplicate", "non_duplicate", "unknown", "not_applicable"]},
+    "duplicate_verified": {"type": ["boolean", "null"]},
+    "duplicate_verification_method": {"type": ["string", "null"]},
+    "duplicate_verification_artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+    "rejected_as_duplicate": {"type": "boolean"},
+    "atlas_guided": {"type": "boolean"},
+    "generated_candidate_id": {"type": ["string", "null"]},
+    "reproduced": {"type": ["boolean", "null"]},
+    "reproduction_artifact_sha256": {"$ref": "#/$defs/nullableSha256"},
+    "unique_signature": {"$ref": "#/$defs/nullableSha256"},
+    "triage_seconds": {"type": "number", "minimum": 0},
+    "status": {"enum": ["complete", "error", "pending"]},
+    "error": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"arm": {"const": "disabled"}}},
+      "then": {"properties": {
+        "retrieval_performed": {"const": false}, "retrieved_cluster_id": {"type": "null"},
+        "atlas_snapshot_sha256": {"type": "null"}, "atlas_guided": {"const": false}
+      }}
+    },
+    {
+      "if": {"properties": {"arm": {"const": "enabled"}}},
+      "then": {"properties": {
+        "retrieval_performed": {"const": true}, "atlas_snapshot_sha256": {"$ref": "#/$defs/sha256"}
+      }}
+    },
+    {
+      "if": {"properties": {"intervention": {"const": "duplicate_triage"}}},
+      "then": {"properties": {
+        "candidate_summary_sha256": {"$ref": "#/$defs/sha256"},
+        "duplicate_decision": {"enum": ["duplicate", "non_duplicate", "unknown"]},
+        "atlas_guided": {"const": false}, "generated_candidate_id": {"type": "null"},
+        "reproduced": {"type": "null"}, "reproduction_artifact_sha256": {"type": "null"},
+        "unique_signature": {"type": "null"}
+      }}
+    },
+    {
+      "if": {"properties": {"intervention": {"const": "guided_planning"}}},
+      "then": {"properties": {
+        "candidate_summary_sha256": {"type": "null"}, "duplicate_decision": {"const": "not_applicable"},
+        "duplicate_verified": {"type": "null"}, "duplicate_verification_method": {"type": "null"},
+        "duplicate_verification_artifact_sha256": {"type": "null"}, "rejected_as_duplicate": {"const": false}
+      }}
+    }
+  ]
+}

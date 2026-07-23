@@ -1,0 +1,217 @@
+{
+  "schema_version": "trdgl_five_seed_local_numerical_checkpoint_v1",
+  "evidence_label": "diagnostic_checkpoint",
+  "source": {
+    "events_path": "experiments/numerical_oracle/five_seed_local_checkpoint/events.local_factorial.jsonl",
+    "events_sha256": "ba2226e15ff7e4e7e1cd74583bfaf8602208faaca1587172240513af5fd4e400",
+    "run_manifest_path": "experiments/numerical_oracle/five_seed_local_checkpoint/run_manifest.json",
+    "run_manifest_sha256": "606a056fd4ced311ab3d0479ab166dd8789e87aebf0de592dcb36585a8fda58d",
+    "summary_path": "experiments/numerical_oracle/five_seed_local_checkpoint/summary.local_factorial.json",
+    "summary_sha256": "36ea918acb461904475e925db58f4ed7fd9ad5308d0c8fdedacaed754f1e3f54"
+  },
+  "tools": {
+    "protocol_sha256": "98fb4e3b95812865ffd0d20d6e946392ff59bbb78b283ad9096ab1a440b98c1d",
+    "collector_sha256": "8dec1e4a3b2ff30004c9876906d67f98f749c963b18ffd4e71c915b05d13c4da",
+    "packager_sha256": "1c6a1e21997cb0c5fcb31a44d70adb2cb4b1a694273f9fcbfcdd08a1e70923c8"
+  },
+  "run_id": "numerical-oracle-20260710T140821Z",
+  "design": {
+    "seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ],
+    "devices": [
+      "cpu",
+      "cuda"
+    ],
+    "modes": [
+      "eager",
+      "compiled"
+    ],
+    "checks": [
+      "forward",
+      "gradient"
+    ],
+    "dtypes": [
+      "float32",
+      "float64"
+    ],
+    "fixed_tolerances": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "controls": [
+      "clean",
+      "injected"
+    ],
+    "inject_delta": 0.0002,
+    "certified_bound": null,
+    "certified_bound_source": null,
+    "certified_bound_source_sha256": null
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "python": "3.11.9",
+    "torch": "2.6.0+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "driver_version": "592.27",
+    "deterministic_algorithms": false,
+    "compiled_preflight": {
+      "cpu": {
+        "status": "unsupported",
+        "error": "BackendCompilerFailed: backend='inductor' raised:\nRuntimeError: Compiler: cl is not found.\n\nSet TORCH_LOGS=\"+dynamo\" and TORCHDYNAMO_VERBOSE=1 for more information\n\n\nYou can suppress this exception and fall back to eager by setting:\n    import torch._dynamo\n    torch._dynamo.config.suppress_errors = True\n"
+      },
+      "cuda": {
+        "status": "unsupported",
+        "error": "BackendCompilerFailed: backend='inductor' raised:\nRuntimeError: Cannot find a working triton installation. Either the package is not installed or it is too old. More information on installing Triton can be found at https://github.com/openai/triton\n\nSet TORCH_LOGS=\"+dynamo\" and TORCHDYNAMO_VERBOSE=1 for more information\n\n\nYou can suppress this exception and fall back to eager by setting:\n    import torch._dynamo\n    torch._dynamo.config.suppress_errors = True\n"
+      }
+    }
+  },
+  "runtime": {
+    "wall_seconds": 4.256953600000088,
+    "events_per_second": 112.7566906061626,
+    "scope": "argument-validated protocol body through event-file flush; interpreter/module import excluded"
+  },
+  "results": {
+    "status_counts": {
+      "fail": 80,
+      "pass": 160,
+      "unsupported": 240
+    },
+    "eager": {
+      "measured_events": 240,
+      "clean_events": 120,
+      "clean_false_positives": 0,
+      "clean_false_positive_rate": 0.0,
+      "injected_events": 120,
+      "detection_by_tolerance": [
+        {
+          "tolerance": 1e-05,
+          "injected_events": 40,
+          "detected": 40,
+          "missed": 0,
+          "detection_rate": 1.0
+        },
+        {
+          "tolerance": 0.0001,
+          "injected_events": 40,
+          "detected": 40,
+          "missed": 0,
+          "detection_rate": 1.0
+        },
+        {
+          "tolerance": 0.001,
+          "injected_events": 40,
+          "detected": 0,
+          "missed": 40,
+          "detection_rate": 0.0
+        }
+      ],
+      "clean_error_bounds": [
+        {
+          "device": "cpu",
+          "check": "forward",
+          "dtype": "float32",
+          "events": 15,
+          "max_abs_error": 9.482325080689691e-08,
+          "max_rel_error": 6.20428577254853e-07,
+          "max_ulp_error": 6
+        },
+        {
+          "device": "cpu",
+          "check": "forward",
+          "dtype": "float64",
+          "events": 15,
+          "max_abs_error": 0.0,
+          "max_rel_error": 0.0,
+          "max_ulp_error": 0
+        },
+        {
+          "device": "cpu",
+          "check": "gradient",
+          "dtype": "float32",
+          "events": 15,
+          "max_abs_error": 1.163951814930897e-07,
+          "max_rel_error": 4.2655313927105e-06,
+          "max_ulp_error": 57
+        },
+        {
+          "device": "cpu",
+          "check": "gradient",
+          "dtype": "float64",
+          "events": 15,
+          "max_abs_error": 0.0,
+          "max_rel_error": 0.0,
+          "max_ulp_error": 0
+        },
+        {
+          "device": "cuda",
+          "check": "forward",
+          "dtype": "float32",
+          "events": 15,
+          "max_abs_error": 1.2323179177098353e-07,
+          "max_rel_error": 3.949800743304633e-07,
+          "max_ulp_error": 4
+        },
+        {
+          "device": "cuda",
+          "check": "forward",
+          "dtype": "float64",
+          "events": 15,
+          "max_abs_error": 2.220446049250313e-16,
+          "max_rel_error": 3.817964418117293e-16,
+          "max_ulp_error": 2
+        },
+        {
+          "device": "cuda",
+          "check": "gradient",
+          "dtype": "float32",
+          "events": 15,
+          "max_abs_error": 1.0761586355378938e-07,
+          "max_rel_error": 4.2655313927105e-06,
+          "max_ulp_error": 69
+        },
+        {
+          "device": "cuda",
+          "check": "gradient",
+          "dtype": "float64",
+          "events": 15,
+          "max_abs_error": 2.220446049250313e-16,
+          "max_rel_error": 3.561434690325234e-15,
+          "max_ulp_error": 32
+        }
+      ]
+    },
+    "compiled": {
+      "events": 240,
+      "measured_events": 0,
+      "unsupported_events": 240,
+      "effect_estimate": null
+    }
+  },
+  "all_designed_dimensions_present": true,
+  "all_designed_dimensions_measured": false,
+  "certified_bound_present": false,
+  "ready_for_paper_result": false,
+  "blockers": [
+    "local_validation_not_campaign",
+    "cpu_compiled_unsupported",
+    "cuda_compiled_unsupported",
+    "certified_bound_source_absent"
+  ],
+  "claim_boundary": "Complete five-seed local diagnostic design only. CPU/CUDA eager cells are measured; compiled cells are unsupported and certified-bound evidence is absent, so this is not the matched paper result.",
+  "artifact_sha256": {
+    "events.local_factorial.jsonl": "ba2226e15ff7e4e7e1cd74583bfaf8602208faaca1587172240513af5fd4e400",
+    "run_manifest.json": "606a056fd4ced311ab3d0479ab166dd8789e87aebf0de592dcb36585a8fda58d",
+    "summary.local_factorial.json": "36ea918acb461904475e925db58f4ed7fd9ad5308d0c8fdedacaed754f1e3f54",
+    "checkpoint.md": "6b59382bff7e8ca4256524ccec162096406045eb27095c16e3285f13617b131e"
+  }
+}

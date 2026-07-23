@@ -1,0 +1,5 @@
+# Preserve long JSONL evidence records exactly across Windows checkouts.
+normalized_events.jsonl binary
+triage/assertion_signals.jsonl binary
+triage/triage_decisions.jsonl -text
+candidate_ledger.jsonl -text

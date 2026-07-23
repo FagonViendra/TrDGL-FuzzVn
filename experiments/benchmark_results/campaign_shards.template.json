@@ -1,0 +1,12 @@
+{
+  "schema_version": "trdgl_campaign_shard_index_v1",
+  "evidence_label": "campaign",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "shards": [
+    {"generation_seed": 3407, "run_signature": "0000000000000000000000000000000000000000000000000000000000000000", "events_path": "seed3407/events.jsonl", "run_manifest_path": "seed3407/run_manifest.json", "executed_notebook_path": "seed3407/executed.ipynb"},
+    {"generation_seed": 7711, "run_signature": "0000000000000000000000000000000000000000000000000000000000000000", "events_path": "seed7711/events.jsonl", "run_manifest_path": "seed7711/run_manifest.json", "executed_notebook_path": "seed7711/executed.ipynb"},
+    {"generation_seed": 12011, "run_signature": "0000000000000000000000000000000000000000000000000000000000000000", "events_path": "seed12011/events.jsonl", "run_manifest_path": "seed12011/run_manifest.json", "executed_notebook_path": "seed12011/executed.ipynb"},
+    {"generation_seed": 19001, "run_signature": "0000000000000000000000000000000000000000000000000000000000000000", "events_path": "seed19001/events.jsonl", "run_manifest_path": "seed19001/run_manifest.json", "executed_notebook_path": "seed19001/executed.ipynb"},
+    {"generation_seed": 27103, "run_signature": "0000000000000000000000000000000000000000000000000000000000000000", "events_path": "seed27103/events.jsonl", "run_manifest_path": "seed27103/run_manifest.json", "executed_notebook_path": "seed27103/executed.ipynb"}
+  ]
+}

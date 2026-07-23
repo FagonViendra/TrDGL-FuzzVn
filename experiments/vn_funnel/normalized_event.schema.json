@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trdgl.local/schemas/normalized_event.schema.json",
+  "title": "TrDGL-FuzzVn normalized funnel event",
+  "type": "object",
+  "required": ["schema_version", "candidate_id", "run_id", "stages", "stage_evidence"],
+  "properties": {
+    "schema_version": {"const": "trdgl_vn_funnel_v1"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": ["string", "null"]},
+    "task_id": {"type": ["string", "null"]},
+    "baseline": {"type": ["string", "null"]},
+    "api": {"type": ["string", "null"]},
+    "generation_seed": {"type": ["integer", "null"]},
+    "source_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-fA-F]{64}$"},
+    "source_record_index": {"type": ["integer", "null"], "minimum": 1},
+    "importer_version": {"type": ["string", "null"]},
+    "stages": {
+      "type": "object",
+      "required": ["raw", "parseable", "ast_pass", "runnable", "target_valid", "oracle_bearing", "reproducible", "non_duplicate", "minimized", "stable_nightly", "promoted"],
+      "properties": {
+        "raw": {"const": true},
+        "parseable": {"type": ["boolean", "null"]},
+        "ast_pass": {"type": ["boolean", "null"]},
+        "runnable": {"type": ["boolean", "null"]},
+        "target_valid": {"type": ["boolean", "null"]},
+        "oracle_bearing": {"type": ["boolean", "null"]},
+        "reproducible": {"type": ["boolean", "null"]},
+        "non_duplicate": {"type": ["boolean", "null"]},
+        "minimized": {"type": ["boolean", "null"]},
+        "stable_nightly": {"type": ["boolean", "null"]},
+        "promoted": {"type": ["boolean", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "stage_evidence": {
+      "type": "object",
+      "required": ["raw", "parseable", "ast_pass", "runnable", "target_valid", "oracle_bearing", "reproducible", "non_duplicate", "minimized", "stable_nightly", "promoted"],
+      "propertyNames": {"enum": ["raw", "parseable", "ast_pass", "runnable", "target_valid", "oracle_bearing", "reproducible", "non_duplicate", "minimized", "stable_nightly", "promoted"]},
+      "additionalProperties": {"type": ["string", "null"]}
+    }
+  },
+  "additionalProperties": true
+}

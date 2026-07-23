@@ -1,0 +1,2 @@
+# Triage manifests hash these Python tools byte-for-byte.
+*.py text eol=lf

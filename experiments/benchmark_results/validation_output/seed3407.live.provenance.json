@@ -1,0 +1,37 @@
+{
+  "schema_version": "trdgl_checkpoint_provenance_audit_v1",
+  "evidence_label": "validation_only",
+  "artifacts": {
+    "events_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed3407_480/events.checkpoint.jsonl",
+    "events_sha256": "55e61acab475d370f6261be2041fdbb74ef5f06bd8197044df587c60a4f4af09",
+    "run_manifest_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed3407_480/run_manifest.json",
+    "run_manifest_sha256": "0e54a8546c34ad6087d7e7567c426333eb8d38b4968e45da356f8bbf779399c3",
+    "frozen_notebook_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+    "frozen_notebook_sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+    "executed_notebook_path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/checkpoints/seed3407_480/executed_notebook.ipynb",
+    "executed_notebook_sha256": "048aafd52ab8098a58abc310c32819977dbcc80374022a5e1f07baf2cbf4f51a"
+  },
+  "run_signature": "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475",
+  "generation_seeds": [
+    3407
+  ],
+  "persisted_raw_event_count": 480,
+  "persisted_baseline_counts": {
+    "B0": 120,
+    "B1": 120,
+    "B2": 120,
+    "B3": 120
+  },
+  "expected_seed_event_count": 480,
+  "persisted_seed_completion_rate": 1.0,
+  "executed_notebook_transcript": {
+    "observed_events": 480,
+    "expected_events": 480
+  },
+  "transcript_matches_persisted_raw_stream": true,
+  "paper_evidence_event_count": 480,
+  "paper_evidence_rule": "Only validated persisted JSONL rows count; notebook stdout is provenance, not a substitute for raw events.",
+  "contract_errors": [],
+  "ready_for_campaign_index": true,
+  "blockers": []
+}

@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-07-10T08:45:25.041206+00:00",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "torch_version": "2.11.0+cu128",
+  "torch_cuda": "12.8",
+  "python": "3.12.13",
+  "packages": {
+    "llama-cpp-python": "0.3.23",
+    "huggingface-hub": "1.20.1",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2"
+  },
+  "gpu": "Tesla T4",
+  "base_model": {
+    "repo_id": "unsloth/gemma-4-26B-A4B-it-GGUF",
+    "filename": "gemma-4-26B-A4B-it-UD-Q3_K_M.gguf",
+    "revision": "3bb10d594514ef4edb7f3a65d41a7e4eb8c5767a",
+    "file_sha256": "985f740c7b928d15ecd8bf2bf4506d12ae6080c488f11eb8a4a97b215274bf7d",
+    "file_size": 12728495904
+  },
+  "tuned_model": {
+    "repo_id": "trdgl/gemma4-26b-a4b-qa-GGUF",
+    "filename": "gemma4-26b-a4b-qa.Q3_K_M.gguf",
+    "revision": "7e25063a37552beb994259e80c993b2edf41edbf",
+    "file_sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+    "file_size": 13286716704
+  },
+  "decoding": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "min_p": 0.05,
+    "repeat_penalty": 1.08,
+    "max_tokens": 600
+  },
+  "subprocess_timeout_s": 60,
+  "selected_task_count": 120,
+  "run_signature": "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+  "event_log": "/content/trdgl_benchmark_seed_7711/events.jsonl"
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/atlas_source_manifest.schema.json",
+  "title": "Immutable DL-Issue Atlas source manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_id", "evidence_label", "dataset_file_name", "dataset_format", "dataset_sha256", "dataset_bytes", "record_count", "created_utc", "created_by", "source_system", "export_command"],
+  "properties": {
+    "schema_version": {"const": "trdgl_atlas_source_manifest_v1"},
+    "snapshot_id": {"type": "string", "minLength": 1},
+    "evidence_label": {"const": "campaign"},
+    "dataset_file_name": {"type": "string", "minLength": 1},
+    "dataset_format": {"enum": ["jsonl", "json", "csv"]},
+    "dataset_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "dataset_bytes": {"type": "integer", "minimum": 1},
+    "record_count": {"type": "integer", "minimum": 1},
+    "created_utc": {"type": "string", "format": "date-time"},
+    "created_by": {"type": "string", "minLength": 1},
+    "source_system": {"type": "string", "minLength": 1},
+    "export_command": {"type": "string", "minLength": 1}
+  }
+}

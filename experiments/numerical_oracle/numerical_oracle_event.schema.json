@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/numerical_oracle_event.schema.json",
+  "title": "TrDGL-FuzzVn numerical-oracle event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "event_id", "evidence_label", "case_id", "seed", "device", "execution_mode", "execution_backend", "check_kind", "input_dtype", "reference_dtype", "control_kind", "injected_delta", "tolerance_kind", "atol", "rtol", "certified_bound", "certified_bound_source_sha256", "status", "abs_error_max", "rel_error_max", "ulp_error_max", "duration_seconds", "environment", "error"],
+  "properties": {
+    "schema_version": {"const": "trdgl_numerical_oracle_event_v2"},
+    "run_id": {"type": "string", "minLength": 1},
+    "event_id": {"type": "string", "minLength": 1},
+    "evidence_label": {"enum": ["local_validation", "campaign"]},
+    "case_id": {"type": "string", "minLength": 1},
+    "seed": {"type": "integer"},
+    "device": {"enum": ["cpu", "cuda"]},
+    "execution_mode": {"enum": ["eager", "compiled"]},
+    "execution_backend": {"type": "string", "minLength": 1},
+    "check_kind": {"enum": ["forward", "gradient"]},
+    "input_dtype": {"enum": ["float32", "float64"]},
+    "reference_dtype": {"const": "float64"},
+    "control_kind": {"enum": ["clean", "injected"]},
+    "injected_delta": {"type": ["number", "null"]},
+    "tolerance_kind": {"enum": ["fixed", "certified"]},
+    "atol": {"type": ["number", "null"], "minimum": 0},
+    "rtol": {"type": ["number", "null"], "minimum": 0},
+    "certified_bound": {"type": ["number", "null"], "minimum": 0},
+    "certified_bound_source_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["pass", "fail", "error", "unsupported", "pending"]},
+    "abs_error_max": {"type": ["number", "null"], "minimum": 0},
+    "rel_error_max": {"type": ["number", "null"], "minimum": 0},
+    "ulp_error_max": {"type": ["integer", "null"], "minimum": 0},
+    "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["platform", "cpu", "python", "torch", "cuda_runtime", "cudnn", "cuda_available", "gpu", "driver_version", "deterministic_algorithms"],
+      "properties": {
+        "platform": {"type": "string"},
+        "cpu": {"type": ["string", "null"]},
+        "python": {"type": "string"},
+        "torch": {"type": "string"},
+        "cuda_runtime": {"type": ["string", "null"]},
+        "cudnn": {"type": ["integer", "null"]},
+        "cuda_available": {"type": "boolean"},
+        "gpu": {"type": ["string", "null"]},
+        "driver_version": {"type": ["string", "null"]},
+        "deterministic_algorithms": {"type": "boolean"}
+      }
+    },
+    "error": {"type": ["string", "null"]}
+  }
+}

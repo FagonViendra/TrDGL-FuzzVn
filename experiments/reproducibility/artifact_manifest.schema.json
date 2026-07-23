@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/artifact_manifest.schema.json",
+  "title": "TrDGL-FuzzVn reproducibility artifact manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evidence_label", "collection", "source_scope", "environment", "benchmark", "run", "release", "artifacts", "completeness"],
+  "properties": {
+    "schema_version": {"const": "trdgl_artifact_manifest_v2"},
+    "evidence_label": {"enum": ["local_validation", "campaign"]},
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["collector_version", "collected_at_utc", "path_base", "exact_command"],
+      "properties": {
+        "collector_version": {"type": "string", "minLength": 1},
+        "collected_at_utc": {"type": "string", "format": "date-time"},
+        "path_base": {"type": "string", "minLength": 1},
+        "exact_command": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "source_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "run_environment_observed", "claim_boundaries"],
+      "properties": {
+        "mode": {"enum": ["local_validation", "campaign"]},
+        "run_environment_observed": {"type": "boolean"},
+        "claim_boundaries": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "scope", "os", "python", "libraries", "cuda_runtime", "cuda_available", "driver_version", "gpus"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "scope": {"enum": ["collector_host", "campaign_run"]},
+        "os": {"type": ["string", "null"]},
+        "python": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["version", "implementation"],
+          "properties": {
+            "version": {"type": ["string", "null"]},
+            "implementation": {"type": ["string", "null"]}
+          }
+        },
+        "libraries": {"type": "object", "additionalProperties": {"type": ["string", "null"]}},
+        "cuda_runtime": {"type": ["string", "null"]},
+        "cuda_available": {"type": ["boolean", "null"]},
+        "driver_version": {"type": ["string", "null"]},
+        "gpus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["index", "name", "memory_bytes"],
+            "properties": {
+              "index": {"type": "integer", "minimum": 0},
+              "name": {"type": ["string", "null"]},
+              "memory_bytes": {"type": ["integer", "null"], "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notebook", "embedded_manifest_sha256", "benchmark_id", "api_count", "api_group_count", "generation_seeds"],
+      "properties": {
+        "notebook": {"$ref": "#/$defs/artifact"},
+        "embedded_manifest_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "benchmark_id": {"type": ["string", "null"]},
+        "api_count": {"type": ["integer", "null"], "minimum": 0},
+        "api_group_count": {"type": ["integer", "null"], "minimum": 0},
+        "generation_seeds": {"type": "array", "items": {"type": "integer"}, "uniqueItems": true}
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "run_manifest", "run_signature", "generation_seeds", "benchmark_id", "benchmark_manifest_sha256", "documentation_sha256", "models", "decoding", "subprocess_timeout_seconds", "execution_command", "counts", "timing", "throughput", "resources"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "run_manifest": {"$ref": "#/$defs/artifact"},
+        "run_signature": {"type": ["string", "null"]},
+        "generation_seeds": {"type": "array", "items": {"type": "integer"}, "uniqueItems": true},
+        "benchmark_id": {"type": ["string", "null"]},
+        "benchmark_manifest_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "documentation_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "models": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["base", "tuned"],
+          "properties": {
+            "base": {"type": ["object", "null"]},
+            "tuned": {"type": ["object", "null"]}
+          }
+        },
+        "decoding": {"type": ["object", "null"]},
+        "subprocess_timeout_seconds": {"type": ["number", "null"], "minimum": 0},
+        "execution_command": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "items": {"type": "string"}, "minItems": 1},
+            {"type": "string", "minLength": 1}
+          ]
+        },
+        "counts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["selected_tasks", "expected_events", "generation_events", "identified_unique_events", "duplicate_identity_events", "missing_identity_events", "baseline_unique_events", "executed_tests", "selected_task_matrix_complete", "full_benchmark_complete"],
+          "properties": {
+            "selected_tasks": {"type": ["integer", "null"], "minimum": 0},
+            "expected_events": {"type": ["integer", "null"], "minimum": 0},
+            "generation_events": {"type": ["integer", "null"], "minimum": 0},
+            "identified_unique_events": {"type": ["integer", "null"], "minimum": 0},
+            "duplicate_identity_events": {"type": ["integer", "null"], "minimum": 0},
+            "missing_identity_events": {"type": ["integer", "null"], "minimum": 0},
+            "baseline_unique_events": {
+              "type": ["object", "null"],
+              "additionalProperties": false,
+              "required": ["B0", "B1", "B2", "B3"],
+              "properties": {
+                "B0": {"type": "integer", "minimum": 0},
+                "B1": {"type": "integer", "minimum": 0},
+                "B2": {"type": "integer", "minimum": 0},
+                "B3": {"type": "integer", "minimum": 0}
+              }
+            },
+            "executed_tests": {"type": ["integer", "null"], "minimum": 0},
+            "selected_task_matrix_complete": {"type": ["boolean", "null"]},
+            "full_benchmark_complete": {"type": ["boolean", "null"]}
+          }
+        },
+        "timing": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "basis", "started_at_utc", "ended_at_utc", "duration_seconds", "generation_seconds_sum", "subprocess_seconds_sum"],
+          "properties": {
+            "status": {"$ref": "#/$defs/status"},
+            "basis": {"type": ["string", "null"]},
+            "started_at_utc": {"type": ["string", "null"], "format": "date-time"},
+            "ended_at_utc": {"type": ["string", "null"], "format": "date-time"},
+            "duration_seconds": {"type": ["number", "null"], "minimum": 0},
+            "generation_seconds_sum": {"type": ["number", "null"], "minimum": 0},
+            "subprocess_seconds_sum": {"type": ["number", "null"], "minimum": 0}
+          }
+        },
+        "throughput": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "generations_per_hour", "executed_tests_per_hour"],
+          "properties": {
+            "status": {"$ref": "#/$defs/status"},
+            "generations_per_hour": {"type": ["number", "null"], "minimum": 0},
+            "executed_tests_per_hour": {"type": ["number", "null"], "minimum": 0}
+          }
+        },
+        "resources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "gpu_hours", "cpu_hours", "peak_vram_bytes"],
+          "properties": {
+            "status": {"$ref": "#/$defs/status"},
+            "gpu_hours": {"type": ["number", "null"], "minimum": 0},
+            "cpu_hours": {"type": ["number", "null"], "minimum": 0},
+            "peak_vram_bytes": {"type": ["integer", "null"], "minimum": 0}
+          }
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["environment_lock", "public_artifact_url_or_doi"],
+      "properties": {
+        "environment_lock": {"$ref": "#/$defs/artifact"},
+        "public_artifact_url_or_doi": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "artifacts": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "completeness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "ready_for_release", "missing_fields"],
+      "properties": {
+        "status": {"$ref": "#/$defs/status"},
+        "ready_for_release": {"type": "boolean"},
+        "missing_fields": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    }
+  },
+  "$defs": {
+    "status": {"enum": ["observed", "pending", "not_applicable"]},
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "path", "present", "size_bytes", "sha256", "status"],
+      "properties": {
+        "role": {"type": "string", "minLength": 1},
+        "path": {"type": ["string", "null"]},
+        "present": {"type": "boolean"},
+        "size_bytes": {"type": ["integer", "null"], "minimum": 0},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+        "status": {"$ref": "#/$defs/status"}
+      }
+    }
+  }
+}

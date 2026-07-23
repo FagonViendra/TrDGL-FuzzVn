@@ -1,0 +1,207 @@
+{
+  "schema_version": "trdgl_artifact_manifest_v2",
+  "evidence_label": "local_validation",
+  "collection": {
+    "collector_version": "trdgl_repro_collector_v2",
+    "collected_at_utc": "2026-07-08T17:31:02.573719+00:00",
+    "path_base": "workspace_root",
+    "exact_command": [
+      "python.exe",
+      "experiments/reproducibility/collect_artifact_manifest.py",
+      "--mode",
+      "local_validation",
+      "--output",
+      "experiments/reproducibility/validation_output/artifact_manifest.local.json"
+    ]
+  },
+  "source_scope": {
+    "mode": "local_validation",
+    "run_environment_observed": false,
+    "claim_boundaries": [
+      "local_validation describes the collector host, not the Colab campaign runtime",
+      "null and pending mean not evidenced; they are never interpreted as zero",
+      "event-span throughput excludes setup before the first persisted event"
+    ]
+  },
+  "environment": {
+    "status": "observed",
+    "scope": "collector_host",
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": {
+      "version": "3.11.9",
+      "implementation": "CPython"
+    },
+    "libraries": {
+      "torch": "2.6.0+cu124",
+      "llama-cpp-python": null,
+      "huggingface-hub": "1.11.0",
+      "numpy": "2.4.4",
+      "pandas": "3.0.3"
+    },
+    "cuda_runtime": "12.4",
+    "cuda_available": true,
+    "driver_version": "592.27",
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+        "memory_bytes": 4294443008
+      }
+    ]
+  },
+  "benchmark": {
+    "notebook": {
+      "role": "benchmark_notebook",
+      "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+      "present": true,
+      "size_bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+      "status": "observed"
+    },
+    "embedded_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "api_count": 120,
+    "api_group_count": 10,
+    "generation_seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ]
+  },
+  "run": {
+    "status": "pending",
+    "run_manifest": {
+      "role": "run_manifest",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    "run_signature": null,
+    "generation_seeds": [],
+    "benchmark_id": null,
+    "benchmark_manifest_sha256": null,
+    "documentation_sha256": null,
+    "models": {
+      "base": null,
+      "tuned": null
+    },
+    "decoding": null,
+    "subprocess_timeout_seconds": null,
+    "execution_command": null,
+    "counts": {
+      "selected_tasks": null,
+      "expected_events": null,
+      "generation_events": null,
+      "identified_unique_events": null,
+      "duplicate_identity_events": null,
+      "missing_identity_events": null,
+      "baseline_unique_events": null,
+      "executed_tests": null,
+      "selected_task_matrix_complete": null,
+      "full_benchmark_complete": null
+    },
+    "timing": {
+      "status": "pending",
+      "basis": null,
+      "started_at_utc": null,
+      "ended_at_utc": null,
+      "duration_seconds": null,
+      "generation_seconds_sum": null,
+      "subprocess_seconds_sum": null
+    },
+    "throughput": {
+      "status": "pending",
+      "generations_per_hour": null,
+      "executed_tests_per_hour": null
+    },
+    "resources": {
+      "status": "pending",
+      "gpu_hours": null,
+      "cpu_hours": null,
+      "peak_vram_bytes": null
+    }
+  },
+  "release": {
+    "environment_lock": {
+      "role": "environment_lock",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    "public_artifact_url_or_doi": null
+  },
+  "artifacts": [
+    {
+      "role": "benchmark_notebook",
+      "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+      "present": true,
+      "size_bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+      "status": "observed"
+    },
+    {
+      "role": "run_manifest",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    {
+      "role": "raw_events",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    {
+      "role": "baseline_summary",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    },
+    {
+      "role": "environment_lock",
+      "path": null,
+      "present": false,
+      "size_bytes": null,
+      "sha256": null,
+      "status": "pending"
+    }
+  ],
+  "completeness": {
+    "status": "pending",
+    "ready_for_release": false,
+    "missing_fields": [
+      "artifacts.baseline_summary",
+      "artifacts.raw_events",
+      "artifacts.run_manifest",
+      "release.environment_lock",
+      "release.public_artifact_url_or_doi",
+      "run.benchmark_id",
+      "run.benchmark_manifest_sha256",
+      "run.counts.full_benchmark_complete",
+      "run.counts.generation_events",
+      "run.decoding",
+      "run.documentation_sha256",
+      "run.execution_command",
+      "run.models.base",
+      "run.models.tuned",
+      "run.resources.cpu_hours",
+      "run.resources.gpu_hours",
+      "run.run_signature",
+      "run.subprocess_timeout_seconds",
+      "run.throughput.generations_per_hour",
+      "run.timing.duration_seconds"
+    ]
+  }
+}

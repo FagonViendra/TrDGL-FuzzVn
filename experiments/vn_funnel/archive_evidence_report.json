@@ -1,0 +1,250 @@
+{
+  "report_version": "trdgl_archive_evidence_v1",
+  "source_policy": "Missing means not logged, never zero. Campaign denominators are not pooled.",
+  "campaigns": [
+    {
+      "campaign": "E2B two-stage",
+      "raw_unit": "API",
+      "raw_count": "24",
+      "parseable": "",
+      "ast_pass": "",
+      "runnable": "18",
+      "target_valid": "",
+      "oracle_bearing": "",
+      "anomaly_hit": "1 runtime label",
+      "reproducible": "",
+      "non_duplicate": "",
+      "minimized": "",
+      "stable_nightly": "",
+      "promoted": "",
+      "evidence_source": "main.tex Table vn_archive_en",
+      "interpretation": "Duplicate, minimization, and version status were not logged"
+    },
+    {
+      "campaign": "40-API tuned",
+      "raw_unit": "API",
+      "raw_count": "40",
+      "parseable": "",
+      "ast_pass": "",
+      "runnable": "36",
+      "target_valid": "",
+      "oracle_bearing": "",
+      "anomaly_hit": "",
+      "reproducible": "",
+      "non_duplicate": "",
+      "minimized": "",
+      "stable_nightly": "",
+      "promoted": "",
+      "evidence_source": "main.tex Table vn_archive_en",
+      "interpretation": "Oracle and all novelty stages were not logged"
+    },
+    {
+      "campaign": "18-prompt tuned A/B",
+      "raw_unit": "prompt",
+      "raw_count": "18",
+      "parseable": "",
+      "ast_pass": "",
+      "runnable": "11",
+      "target_valid": "",
+      "oracle_bearing": "14",
+      "anomaly_hit": "3 divergences",
+      "reproducible": "",
+      "non_duplicate": "",
+      "minimized": "",
+      "stable_nightly": "",
+      "promoted": "",
+      "evidence_source": "main.tex Table vn_archive_en",
+      "interpretation": "The oracle-bearing and runnable sets are not asserted to be nested"
+    },
+    {
+      "campaign": "Adaptive campaign",
+      "raw_unit": "candidate",
+      "raw_count": "",
+      "parseable": "",
+      "ast_pass": "",
+      "runnable": "",
+      "target_valid": "",
+      "oracle_bearing": "",
+      "anomaly_hit": "12 initial candidates",
+      "reproducible": "11 retained classes",
+      "non_duplicate": "",
+      "minimized": "",
+      "stable_nightly": "",
+      "promoted": "",
+      "evidence_source": "main.tex Table vn_archive_en",
+      "interpretation": "Raw denominator and per-gate counters were not logged; 11 means retained classes, not Vn promotions"
+    },
+    {
+      "campaign": "Common-GPU campaign",
+      "raw_unit": "probe",
+      "raw_count": "40",
+      "parseable": "",
+      "ast_pass": "",
+      "runnable": "40",
+      "target_valid": "",
+      "oracle_bearing": "",
+      "anomaly_hit": "9 hits / 7 signatures",
+      "reproducible": "partial",
+      "non_duplicate": "",
+      "minimized": "",
+      "stable_nightly": "",
+      "promoted": "",
+      "evidence_source": "main.tex Table vn_archive_en",
+      "interpretation": "Stable/nightly and promotion decisions were not logged"
+    }
+  ],
+  "funnel_field_coverage": {
+    "raw": {
+      "campaigns_logged": 4,
+      "campaigns_missing": 1
+    },
+    "parseable": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "ast_pass": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "runnable": {
+      "campaigns_logged": 4,
+      "campaigns_missing": 1
+    },
+    "target_valid": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "oracle_bearing": {
+      "campaigns_logged": 1,
+      "campaigns_missing": 4
+    },
+    "reproducible": {
+      "campaigns_logged": 2,
+      "campaigns_missing": 3
+    },
+    "non_duplicate": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "minimized": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "stable_nightly": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    },
+    "promoted": {
+      "campaigns_logged": 0,
+      "campaigns_missing": 5
+    }
+  },
+  "candidate_ledger": {
+    "schema_version": "trdgl_candidate_ledger_v1",
+    "rows": 5,
+    "status_counts": {
+      "reproduced": {
+        "yes": 5
+      },
+      "duplicate_checked": {
+        "no": 1,
+        "partial": 4
+      },
+      "minimized": {
+        "no": 1,
+        "partial": 1,
+        "yes": 3
+      },
+      "stable_tested": {
+        "no": 1,
+        "not_applicable": 1,
+        "yes": 3
+      },
+      "nightly_tested": {
+        "pending": 3,
+        "yes": 2
+      },
+      "promoted": {
+        "no": 2,
+        "pending": 3
+      }
+    },
+    "evidence_level_counts": {
+      "paper_only": 3,
+      "workspace_artifact": 2
+    },
+    "duplicate_check_states": {
+      "no": 1,
+      "partial": 4
+    },
+    "promotion_states": {
+      "no": 2,
+      "pending": 3
+    },
+    "fully_promoted_candidates": 0,
+    "artifact_files_audited": [
+      {
+        "candidate_id": "CAND-SPARSE-DESERIALIZE-001",
+        "path": "Windsurf-data-backup-20260628-211158/dot-codeium/windsurf/code_tracker/active/th5_9cb55780b83f7ced6bf78509c0510a905ee5b47b/a6dd74c29c0c08cd5b31839fc6c83446_ADVISORY_DRAFT_PYTORCH_SPARSE.md",
+        "bytes": 14201,
+        "sha256": "aa242167b621304b033d9ee1a47cc90b348d471591216aa45267e66e49ead36d"
+      },
+      {
+        "candidate_id": "CAND-SPARSE-DESERIALIZE-001",
+        "path": "Windsurf-data-backup-20260628-211158/dot-codeium/windsurf/code_tracker/active/th5_9cb55780b83f7ced6bf78509c0510a905ee5b47b/869619c8f967a3b50e19761bdb1acd8d_00_PHAN_LOAI_TIER_S.md",
+        "bytes": 9923,
+        "sha256": "89827751cd4579555a43f05e8e92d340ecd2bc1b97b1874e6c570ae4b5ace22a"
+      },
+      {
+        "candidate_id": "CAND-NVFP4-CONTRACTION-001",
+        "path": "blackwell_nvfp4_fuzz/repro_nvfp4_contraction_dim.py",
+        "bytes": 1370,
+        "sha256": "cc14c3dd60fb3bf1119c2b0ba0d4ab4bfe5332671432d83b3f913af6595ec3bf"
+      },
+      {
+        "candidate_id": "CAND-NVFP4-CONTRACTION-001",
+        "path": "blackwell_nvfp4_fuzz/results/nvfp4-contraction-dim-validate-20260630-212645.analysis.json",
+        "bytes": 26678,
+        "sha256": "c1f3f17669b720a1d6eb266b4d608772959fc54e520c9939cda5304314286489"
+      },
+      {
+        "candidate_id": "CAND-NVFP4-CONTRACTION-001",
+        "path": "blackwell_nvfp4_fuzz/results/GITHUB_ISSUE_DRAFT_nvfp4_contraction_dim.md",
+        "bytes": 3879,
+        "sha256": "12a532f3b73ed9cb4f3784ef4a9fa0fb5b40aa55ae7aeedfdceb190b2c6e8c67"
+      }
+    ]
+  },
+  "atlas": {
+    "records": 7275,
+    "unique_issues": 5868,
+    "canonical_clusters": 2653,
+    "records_per_cluster": 2.7421786656615152,
+    "unique_issues_per_cluster": 2.211835657745948,
+    "pytorch_record_share": 0.7264604810996563,
+    "tensorflow_record_share": 0.27353951890034367,
+    "duplicate_candidates_detected": null,
+    "atlas_guided_candidates": null,
+    "causal_effect_available": false,
+    "source_audit": {
+      "audit_date": "2026-07-08",
+      "raw_atlas_dataset_present_in_workspace": false,
+      "independent_manifest_present_in_workspace": false,
+      "original_import_commit_578c69ff_contains_counts": false,
+      "reorganized_commit_b1f01553_contains_counts": true,
+      "framework_sum_check": "5285 + 1990 = 7275",
+      "verification_status": "internally_consistent_not_independently_recomputed"
+    }
+  },
+  "claims_supported": [
+    "Five candidate families have structured verification states.",
+    "No candidate in the local ledger has a recorded completed Vn promotion.",
+    "The paper reports an Atlas snapshot of 7,275 records, 5,868 unique issues, and 2,653 clusters."
+  ],
+  "claims_not_supported": [
+    "An aggregate archived raw-to-promoted conversion rate.",
+    "The number of candidates de-duplicated by the Atlas.",
+    "The number of generations planned or redirected by the Atlas.",
+    "Independent recomputation of Atlas corpus counts from a raw local artifact."
+  ]
+}

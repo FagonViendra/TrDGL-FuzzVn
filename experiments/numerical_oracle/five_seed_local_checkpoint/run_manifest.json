@@ -1,0 +1,78 @@
+{
+  "schema_version": "trdgl_numerical_oracle_run_v1",
+  "run_id": "numerical-oracle-20260710T140821Z",
+  "evidence_label": "local_validation",
+  "started_utc": "2026-07-10T14:08:21.894500+00:00",
+  "completed_utc": "2026-07-10T14:08:26.151379+00:00",
+  "wall_seconds": 4.256953600000088,
+  "events": 480,
+  "events_per_second": 112.7566906061626,
+  "status_counts": {
+    "fail": 80,
+    "pass": 160,
+    "unsupported": 240
+  },
+  "design": {
+    "seeds": [
+      3407,
+      7711,
+      12011,
+      19001,
+      27103
+    ],
+    "devices": [
+      "cpu",
+      "cuda"
+    ],
+    "modes": [
+      "eager",
+      "compiled"
+    ],
+    "checks": [
+      "forward",
+      "gradient"
+    ],
+    "dtypes": [
+      "float32",
+      "float64"
+    ],
+    "fixed_tolerances": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "controls": [
+      "clean",
+      "injected"
+    ],
+    "inject_delta": 0.0002,
+    "certified_bound": null,
+    "certified_bound_source": null,
+    "certified_bound_source_sha256": null
+  },
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+    "python": "3.11.9",
+    "torch": "2.6.0+cu124",
+    "cuda_runtime": "12.4",
+    "cudnn": 90100,
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "driver_version": "592.27",
+    "deterministic_algorithms": false,
+    "compiled_preflight": {
+      "cpu": {
+        "status": "unsupported",
+        "error": "BackendCompilerFailed: backend='inductor' raised:\nRuntimeError: Compiler: cl is not found.\n\nSet TORCH_LOGS=\"+dynamo\" and TORCHDYNAMO_VERBOSE=1 for more information\n\n\nYou can suppress this exception and fall back to eager by setting:\n    import torch._dynamo\n    torch._dynamo.config.suppress_errors = True\n"
+      },
+      "cuda": {
+        "status": "unsupported",
+        "error": "BackendCompilerFailed: backend='inductor' raised:\nRuntimeError: Cannot find a working triton installation. Either the package is not installed or it is too old. More information on installing Triton can be found at https://github.com/openai/triton\n\nSet TORCH_LOGS=\"+dynamo\" and TORCHDYNAMO_VERBOSE=1 for more information\n\n\nYou can suppress this exception and fall back to eager by setting:\n    import torch._dynamo\n    torch._dynamo.config.suppress_errors = True\n"
+      }
+    }
+  },
+  "protocol_script_sha256": "98fb4e3b95812865ffd0d20d6e946392ff59bbb78b283ad9096ab1a440b98c1d",
+  "events_path": "TrDGL-FuzzVn_paper\\experiments\\numerical_oracle\\five_seed_local_checkpoint\\events.local_factorial.jsonl",
+  "events_sha256": "ba2226e15ff7e4e7e1cd74583bfaf8602208faaca1587172240513af5fd4e400"
+}

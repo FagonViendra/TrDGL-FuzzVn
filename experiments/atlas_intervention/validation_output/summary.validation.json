@@ -1,0 +1,165 @@
+{
+  "schema_version": "trdgl_atlas_intervention_summary_v2",
+  "evidence_label": "validation_only",
+  "experiment_id": "validation-only",
+  "source": {
+    "events_path": "TrDGL-FuzzVn_paper/experiments/atlas_intervention/testdata/validation_events.jsonl",
+    "events_sha256": "d3b25de8324862a51ee00bfcf117c456e5444c5042a31b0b9edb08ed29e1e355",
+    "event_count": 4
+  },
+  "atlas_source": {
+    "audit_path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/atlas_snapshot.json",
+    "audit_sha256": "7b02dee78d37bcb5468095cdad2a1a22a9939b35d9a861689ad0d813bfc95e33",
+    "audit_declares_raw_present": false,
+    "audit_declares_manifest_present": false,
+    "dataset_path": null,
+    "manifest_path": null,
+    "raw_atlas_dataset_present": false,
+    "independent_manifest_present": false,
+    "verified": false,
+    "dataset_sha256": null,
+    "dataset_bytes": null,
+    "record_count": null,
+    "snapshot_id": null,
+    "verification_errors": [],
+    "enabled_snapshot_hashes": [
+      "9999999999999999999999999999999999999999999999999999999999999999"
+    ],
+    "event_snapshot_matches_verified_dataset": false
+  },
+  "pairing": {
+    "pair_count": 2,
+    "duplicate_arm_rows": [],
+    "incomplete_pairs": [],
+    "pair_contract_mismatches": [],
+    "single_harness": true,
+    "harness_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "single_model": true,
+    "model_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "single_decoding_config": true,
+    "decoding_config_sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+    "pair_order_counts": {
+      "duplicate_triage": {
+        "enabled_first": 1
+      },
+      "guided_planning": {
+        "disabled_first": 1
+      }
+    },
+    "pair_order_balanced": true
+  },
+  "required_generation_seeds": [
+    3407,
+    7711,
+    12011,
+    19001,
+    27103
+  ],
+  "observed_seeds_by_intervention": {
+    "duplicate_triage": [
+      3407
+    ],
+    "guided_planning": [
+      3407
+    ]
+  },
+  "metrics": {
+    "duplicate_triage": {
+      "disabled": {
+        "events": 1,
+        "complete": 1,
+        "pending": 0,
+        "error": 0,
+        "retrieval_matches": 0,
+        "duplicates_detected": 0,
+        "duplicates_rejected": 0,
+        "duplicate_verification_known": 0,
+        "duplicate_verification_unknown": 0,
+        "retrieval_precision": null,
+        "atlas_guided_candidates": 0,
+        "reproduced_candidates": 0,
+        "unique_reproduced_candidates": 0,
+        "unique_reproduced_per_1000_generations": null,
+        "triage_seconds_total": 2.0,
+        "triage_seconds_mean": 2.0
+      },
+      "enabled": {
+        "events": 1,
+        "complete": 1,
+        "pending": 0,
+        "error": 0,
+        "retrieval_matches": 1,
+        "duplicates_detected": 1,
+        "duplicates_rejected": 0,
+        "duplicate_verification_known": 0,
+        "duplicate_verification_unknown": 1,
+        "retrieval_precision": null,
+        "atlas_guided_candidates": 0,
+        "reproduced_candidates": 0,
+        "unique_reproduced_candidates": 0,
+        "unique_reproduced_per_1000_generations": null,
+        "triage_seconds_total": 1.0,
+        "triage_seconds_mean": 1.0
+      }
+    },
+    "guided_planning": {
+      "disabled": {
+        "events": 1,
+        "complete": 1,
+        "pending": 0,
+        "error": 0,
+        "retrieval_matches": 0,
+        "duplicates_detected": 0,
+        "duplicates_rejected": 0,
+        "duplicate_verification_known": 0,
+        "duplicate_verification_unknown": 0,
+        "retrieval_precision": null,
+        "atlas_guided_candidates": 0,
+        "reproduced_candidates": 0,
+        "unique_reproduced_candidates": 0,
+        "unique_reproduced_per_1000_generations": 0.0,
+        "triage_seconds_total": 4.0,
+        "triage_seconds_mean": 4.0
+      },
+      "enabled": {
+        "events": 1,
+        "complete": 1,
+        "pending": 0,
+        "error": 0,
+        "retrieval_matches": 1,
+        "duplicates_detected": 0,
+        "duplicates_rejected": 0,
+        "duplicate_verification_known": 0,
+        "duplicate_verification_unknown": 0,
+        "retrieval_precision": null,
+        "atlas_guided_candidates": 1,
+        "reproduced_candidates": 1,
+        "unique_reproduced_candidates": 1,
+        "unique_reproduced_per_1000_generations": 1000.0,
+        "triage_seconds_total": 3.0,
+        "triage_seconds_mean": 3.0
+      }
+    }
+  },
+  "paired_effects": {
+    "duplicate_triage": {
+      "complete_pairs": 1,
+      "enabled_minus_disabled_triage_seconds_mean": -1.0,
+      "enabled_only_duplicate_decisions": 1,
+      "enabled_only_duplicate_rejections": 0
+    },
+    "guided_planning": {
+      "complete_pairs": 1,
+      "enabled_minus_disabled_triage_seconds_mean": -1.0,
+      "enabled_only_reproduced_candidates": 1
+    }
+  },
+  "ready_for_paper_result": false,
+  "blockers": [
+    "evidence_label_is_not_campaign",
+    "raw_atlas_dataset_absent",
+    "independent_atlas_manifest_absent",
+    "required_seeds_incomplete"
+  ],
+  "interpretation": "Retrieval precision excludes unknown duplicate verifications; validation-only and unverified Atlas inputs cannot become paper results."
+}

@@ -1,0 +1,633 @@
+{
+  "schema_version": "trdgl_supervisor_evidence_gap_v2",
+  "audit_date": "2026-07-10",
+  "scope": "Current workspace and paper working tree; no external services or unmounted archives were assumed.",
+  "path_base": "C:/Users/fagon/OneDrive/Documents/New project 2",
+  "evidence_policy": "Statuses are based only on persisted, inspectable artifacts. Plans, definitions, empty result cells, paper-only transcriptions, and missing/null fields are not upgraded to measured results.",
+  "working_tree_base_commit": "43b53190722621d9786325fe5ac9d65fd5127b62",
+  "status_definitions": {
+    "done": "The requested reporting/result is present with inspectable evidence in the current workspace.",
+    "partial": "Some implementation or measurements exist, but the requested experiment/result is incomplete or uses an insufficient denominator.",
+    "missing": "No measurement answering the requested effect is present; a definition, plan, or resource count alone does not count."
+  },
+  "audited_file_sha256": {
+    "TrDGL-FuzzVn_paper/main.tex": "ad3714421fc7010df5803ef71a24b0dd6fbca9fa99f2e97382d4fb0846012ce3",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_checkpoint/summary.json": "d15feece743e7409985874447b4967cf1962b5dbb7e197d774ad3e6fefdd4d52",
+    "tmp/colab_smoke_4baseline/events_latest.jsonl": "f2d8b57c63c5f52556680ed21a2e647dd0984bf923780047cf5151955bbb2f62",
+    "TrDGL-FuzzVn_paper/experiments/ablation_replay/validation_output/ablation_manifest.json": "d82d81acea9224d9d43aa0810a0c7c75b4cb7a24435b966fa467e137074d9752",
+    "TrDGL-FuzzVn_paper/experiments/vn_funnel/archive_evidence_report.json": "5b9d4357c8571d32a226a23c65a532f559a756868facba17002ef6d45a30bfbb",
+    "TrDGL-FuzzVn_paper/experiments/reproducibility/artifact_manifest.schema.json": "3bd1d60a82ee1a2f62b667fac129e638872cc5e036bfa03ff5a9e2a36aab5f46",
+    "TrDGL-FuzzVn_paper/experiments/reproducibility/collect_artifact_manifest.py": "f8626ff3872129b5290de0034c96a49a1b2be7df4cf40f1ec78b89fe1e8f01d6",
+    "TrDGL-FuzzVn_paper/experiments/reproducibility/validation_output/artifact_manifest.local.json": "5ee88a6278bc7136aedf7319a129b107c7fd67f88c522661b8445d65ed6390e7",
+    "TrDGL-FuzzVn_paper/experiments/reproducibility/validation_output/artifact_manifest.smoke.json": "65e77a2adac5e8e3759e13866a0600fa2f49289186b3bb28f2119ccd0791a01c",
+    "TrDGL-FuzzVn_paper/experiments/numerical_oracle/evidence_matrix.json": "f7e157b97655c64f0b0814b5de4ccaf918093ea3e8c0b27eb1359f8ea4d142a4",
+    "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local.json": "384a0e3dfb2227b8fa6f13b0e4867b13547250d91dcf2f5f15165677d87ce49e",
+    "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local_cpu_eager_compiled.json": "3ded963faf91611b2ee5a9c2f8cfa41c27d3bd5314e6587d77d8d7da2dc32363",
+    "blackwell_nvfp4_fuzz/results/nvfp4-final-validation-20260630-report.md": "60d66319ef3ea7169998527f1b7a251792925161f5789bec439cf88babb2da27",
+    "TrDGL-FuzzVn_paper/experiments/atlas_intervention/collect_atlas_intervention.py": "a9624f9b6a0a8cbd3281d9df09aec8fe2db0f435b4e62a716a4b4a90b4f169a0",
+    "TrDGL-FuzzVn_paper/experiments/atlas_intervention/test_atlas_intervention.py": "a55d358950e90416f9ae7d315d88d527026a56ad39223b07e421c3e0fa5ad4de",
+    "TrDGL-FuzzVn_paper/experiments/atlas_intervention/validation_output/validation_manifest.json": "b4a81322eb322e9f772261e99ea1e80874e97e23fd0b8b6d50d36152da411361",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/audit_checkpoint_provenance.py": "dc23faf8146e85d7307f614cc77711bc75a5a4456153d58580d612fd33a135f6",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/seed3407.live.summary.json": "71578b3c912893e521179c1ceffa4f014845220e4d1ab36b5921f0f5508253f2",
+    "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/seed3407.live.provenance.json": "4b66c9e8351cbfa24989e2623ed54b7d61a64a1549f12c34ec8776798236a71f",
+    "TrDGL-FuzzVn_paper/experiments/generation_error_analysis/validation_output/failure_summary.json": "da71c0f680be3126e045bff7987ff64077a152631ef58077779a4029c6f5b2de",
+    "TrDGL-FuzzVn_paper/experiments/generation_error_analysis/validation_output/analysis_manifest.json": "bc5265da436d3680a2ed78d18ee1c385dd3290968b49a250de4337ed1fba381d"
+  },
+  "summary": {
+    "done": 1,
+    "partial": 9,
+    "missing": 0,
+    "strict_requirement_completion_rate": 0.1,
+    "requirements_with_any_inspectable_evidence_rate": 1.0,
+    "percentage_note": "Strict completion is 1/10=10%. All 10 requirements have some inspectable evidence, but partial items receive no invented fractional credit.",
+    "blocking_dependency": "A complete 120-API x 5-seed x 4-baseline campaign (2,400 events) with five independently signed, configuration-equivalent seed shards does not exist in the current artifact."
+  },
+  "validation": {
+    "json_parse": "pass",
+    "requirement_ids": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9",
+      "R10"
+    ],
+    "requirement_count": 10,
+    "status_count_recomputed": {
+      "done": 1,
+      "partial": 9
+    },
+    "evidence_entries": 53,
+    "unique_evidence_paths": 29,
+    "evidence_paths_checked": 29,
+    "missing_evidence_paths": [],
+    "audited_hashes_recomputed": "pass",
+    "notebook_json_parse": "pass",
+    "benchmark_result_tests": "19/19 pass",
+    "vn_funnel_tests": "23/23 pass",
+    "ablation_self_test": "pass",
+    "atlas_intervention_tests": "16/16 pass",
+    "evidence_audit_tests": "3/3 pass",
+    "campaign_semantic_crosscheck": "pass: immutable=480/2400, B0/B1/B2/B3=120, transcript=480, evidence ceiling=480",
+    "candidate_ledger_rows": 5,
+    "candidate_artifact_paths_listed": 5,
+    "candidate_artifact_paths_present": 5,
+    "validation_note": "Path existence validates location only; it does not independently validate paper-only claims or upgrade pending candidate states."
+  },
+  "observed_artifact_facts": {
+    "planned_api_count": 120,
+    "planned_api_groups": 10,
+    "planned_generation_seeds": 5,
+    "planned_baselines": 4,
+    "planned_events": 2400,
+    "persisted_output_notebook_selected_tasks": 120,
+    "persisted_output_notebook_planned_events": 480,
+    "persisted_output_notebook_seed": 3407,
+    "persisted_output_notebook_state": "completed 480/480 runtime transcript, with all 480 seed-3407 raw JSONL rows locally persisted and auditable",
+    "immutable_campaign_checkpoint_events": 480,
+    "immutable_campaign_checkpoint_expected_events": 2400,
+    "latest_validated_mutable_checkpoint_events": 480,
+    "latest_validated_mutable_checkpoint_baselines": {
+      "B0": 120,
+      "B1": 120,
+      "B2": 120,
+      "B3": 120
+    },
+    "executed_notebook_transcript_events": 480,
+    "transcript_events_without_persisted_jsonl": 0,
+    "generation_error_checkpoint_records": 480,
+    "generation_error_checkpoint_baselines": {
+      "B0": 120,
+      "B1": 120,
+      "B2": 120,
+      "B3": 120
+    },
+    "stable_smoke_event_count": 4,
+    "ablation_validation_raw_event_count": 1,
+    "atlas_measured_duplicate_candidates": null,
+    "atlas_measured_guided_candidates": null,
+    "recorded_promotions": 0,
+    "reproducibility_local_validation_ready_for_release": false,
+    "reproducibility_smoke_full_benchmark_complete": false
+  },
+  "negative_checks": [
+    {
+      "check": "Full benchmark event stream",
+      "result": "The immutable checkpoint contains 480 events (B0-B3 complete for seed 3407), and the executed notebook transcript also says 480/480. The provenance gate now counts the persisted JSONL, not stdout, as the evidence ceiling."
+    },
+    {
+      "check": "Persisted full-run manifest/summary",
+      "result": "The immutable 480-event checkpoint preserves a run manifest, executed notebook, campaign index, summary, and coverage tables. A validation-only audit hashes the raw stream and confirms the transcript matches the persisted JSONL; the five-seed campaign remains incomplete."
+    },
+    {
+      "check": "Atlas intervention",
+      "result": "A paired fail-closed protocol and validation-only bundle now exist, but measured_duplicate_candidates and measured_atlas_guided_candidates remain null; no real retrieval or planning intervention has run."
+    },
+    {
+      "check": "Numerical-oracle source artifacts",
+      "result": "No calm_v4_certificate.json, fault-injection result file, or matched CPU/CUDA x eager/compiled x gradient result matrix was found in the current workspace; R8 counts are paper-reported transcriptions only."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R1",
+      "request": "Expand the benchmark beyond 24 APIs to multiple PyTorch API groups.",
+      "status": "partial",
+      "verdict": "The frozen benchmark definition is complete at 120 APIs in 10 groups and validates at runtime. The immutable checkpoint preserves 480/480 seed-3407 events for all four baselines. The 2,400-event campaign remains incomplete because the other four generation seeds are not yet present.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+          "locator": "cells 0-3",
+          "claim": "Embeds the frozen 120-API manifest, asserts 10 groups x 12 APIs, five seeds, 600 paired tasks, and 2,400 planned baseline events."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120_output.ipynb",
+          "locator": "cell 2 output",
+          "claim": "Runtime API validation, 600-task matrix, 150-per-position Latin schedule, and 300/300 B2/B3 order balance pass."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120_output.ipynb",
+          "locator": "cells 6, 10, and 11 outputs",
+          "claim": "The executed snapshot says Tasks: 120 and completed the 480 planned events for seed 3407."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_checkpoint/summary.json",
+          "locator": "JSON pointers /coverage, /fairness, /ready_for_paper_result, and /blockers",
+          "claim": "The immutable real checkpoint contains 480/2,400 events (480/480 in seed 3407), one complete seed shard, ready=false, and explicit missing-event, missing-pair, and missing-shard blockers."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/seed3407.live.provenance.json",
+          "locator": "JSON pointers /persisted_raw_event_count, /executed_notebook_transcript, /paper_evidence_event_count, and /blockers",
+          "claim": "The validation-only audit counts 480 persisted rows, verifies the 480/480 stdout transcript matches the raw stream, and keeps the paper evidence ceiling at the validated JSONL."
+        }
+      ],
+      "gaps": [
+        "Run all 600 API-seed tasks for each baseline.",
+        "Report per-group and overall valid/runnable/oracle rates with paired uncertainty."
+      ],
+      "completion_gate": "Five configuration-equivalent seed shards contain 600 events per baseline; all 120 APIs x five seeds are represented and each shard retains its own verified signature."
+    },
+    {
+      "id": "R2",
+      "request": "Add random/template, base LLM, prompt-only LLM, and related-method baselines where compatible.",
+      "status": "partial",
+      "verdict": "B0-B3 are implemented in one harness. The immutable checkpoint has B0=120, B1=120, B2=120, and B3=120 for seed 3407. No persisted complete five-seed four-baseline campaign or compatible external rerun exists.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+          "locator": "cells 6, 8, and 10",
+          "claim": "Defines B0 typed templates, B1 minimal-prompt base, B2 full-prompt base, and B3 tuned generation in one runner."
+        },
+        {
+          "path": "tmp/colab_smoke_4baseline/events_latest.jsonl",
+          "locator": "JSONL rows 1-4",
+          "claim": "Exactly one smoke event exists for each B0-B3; B1 is a syntax failure and B0/B2/B3 are runnable but lack oracles."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_checkpoint/summary.json",
+          "locator": "JSON pointer /coverage/by_baseline",
+          "claim": "The immutable real checkpoint records B0=120, B1=120, B2=120, and B3=120 observed events for seed 3407 and keeps every incomplete five-seed denominator explicit."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/seed3407.live.summary.json",
+          "locator": "JSON pointer /coverage/by_baseline",
+          "claim": "The later validation-only stream records B0=120, B1=120, B2=120, and B3=120 for seed 3407; it is not promoted to a completed-campaign result."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 654-665",
+          "claim": "Defines the four baselines and explicitly states that compatible external methods were not rerun and the final B0/B2 campaign is absent."
+        }
+      ],
+      "gaps": [
+        "Complete 600 events for each B0-B3 baseline.",
+        "Declare a compatible API subset and execute at least one external method, or state that dependency/runtime incompatibility prevents it."
+      ],
+      "completion_gate": "All four internal baselines share the full task matrix; any external comparator has an explicit compatibility contract and measured output."
+    },
+    {
+      "id": "R3",
+      "request": "Evaluate base versus tuned on a larger prompt set, multiple seeds, and the same harness.",
+      "status": "partial",
+      "verdict": "The paired design and paired-analysis collector are implemented. The latest persisted stream contains one complete seed shard with 120 auditable B2/B3 pairs and zero prompt-hash mismatches. The remaining four seeds are absent, so the planned 600-pair five-seed inference is still unavailable. The archived 40-API comparison has only one seed.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+          "locator": "cells 2, 4, 6, and 10",
+          "claim": "Defines five decoding seeds, identical B2/B3 full-prompt bytes and harness, paired task IDs, and a 300/300 physical order counterbalance."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/ablation_replay/validation_output/ablation_manifest.json",
+          "locator": "/fine_tuning_ablation",
+          "claim": "The smoke audit has one complete B2/B3 pair, zero prompt-hash mismatches, and fair_comparison_ready=true for that one pair only."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_checkpoint/summary.json",
+          "locator": "JSON pointers /fairness/complete_b2_b3_pairs and /fairness/paired_outcomes",
+          "claim": "The real checkpoint has 120/600 complete B2/B3 pairs for seed 3407 with prompt-hash mismatch count 0; paired effects remain checkpoint-only rather than full-campaign inference."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/validation_output/seed3407.live.provenance.json",
+          "locator": "JSON pointer /paper_evidence_rule",
+          "claim": "Only validated JSONL rows count toward paired effects; the missing B3 raw rows keep the auditable pair count at zero despite the completed notebook transcript."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 704-721",
+          "claim": "Reports a same-harness 40-API archived result but explicitly says only one generation seed was archived."
+        }
+      ],
+      "gaps": [
+        "Generate all 600 B2 and all 600 B3 programs.",
+        "Compute paired API-seed effects and confidence intervals; do not relabel B3 outputs as no-fine-tuning."
+      ],
+      "completion_gate": "600 complete same-prompt B2/B3 pairs with no prompt/harness mismatches and paired statistical reporting."
+    },
+    {
+      "id": "R4",
+      "request": "Run ablations for AST check, oracle, Vn gate, DL-Issue Atlas, and fine-tuning.",
+      "status": "partial",
+      "verdict": "A deterministic same-corpus replay tool exists and is fail-closed, but its checked artifact is validation-only n=1. Fine-tuning and Atlas-guided planning correctly remain regeneration interventions.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/ablation_replay/replay_ablation.py",
+          "locator": "lines 26-27, 300-438, 531-620, and 622-704",
+          "claim": "Implements full/no_ast/no_oracle/no_vn/no_atlas replay, tri-state pending, identical corpus hashes, B2/B3 pair auditing, and fail-closed tests."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/ablation_replay/validation_output/ablation_manifest.json",
+          "locator": "JSON pointers /evidence_label, /raw_event_count, /condition_corpus_sha256, and /fine_tuning_ablation",
+          "claim": "All five condition hashes match, but evidence_label is validation_only and raw_event_count is 1."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1610-1644",
+          "claim": "Section 4.6 reports archived contrasts and explicitly denies causal claims from the n=1 replay."
+        }
+      ],
+      "gaps": [
+        "Replay the complete B3 corpus, not the smoke event.",
+        "Populate anomaly/reproduction/duplicate/minimization/version states before estimating Vn or Atlas-triage effects.",
+        "Use regenerated B2/B3 outputs for fine-tuning; use a separate generation intervention for Atlas-guided planning."
+      ],
+      "completion_gate": "Same-corpus component results cover all 600 B3 events; fine-tuning has 600 paired B2/B3 generations; planning effects use an enabled/disabled generation intervention."
+    },
+    {
+      "id": "R5",
+      "request": "Report the Vn funnel from raw generations to promoted candidates.",
+      "status": "partial",
+      "verdict": "The schema, importer, validators, archive coverage report, and tri-state semantics are implemented. No real campaign has every ordered field, so a raw-to-promoted conversion rate is unavailable.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/README.md",
+          "locator": "lines 5-16 and 18-42",
+          "claim": "Defines and operationalizes the ordered tri-state funnel, benchmark importer, fail-closed schemas, and archived-evidence boundary."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/archive_evidence_report.md",
+          "locator": "lines 5-25",
+          "claim": "Shows that parseable, AST-pass, target-valid, non-duplicate, minimized, stable/nightly, and promoted are absent from all five archived campaign records."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1560-1608",
+          "claim": "Reports available counters without pooling incompatible denominators and states that no archived campaign logged every ordered field."
+        }
+      ],
+      "gaps": [
+        "Import the complete 2,400-event benchmark stream.",
+        "Append post-oracle triage fields through stable/nightly and promotion for every candidate."
+      ],
+      "completion_gate": "A real run has pass/fail/pending counts at all eleven stages under one denominator and no synthetic test rows."
+    },
+    {
+      "id": "R6",
+      "request": "Clearly report whether every candidate passed reproducibility, duplicate check, minimization, and stable/nightly testing.",
+      "status": "done",
+      "status_scope": "Reporting requirement only; this does not mean candidate verification is complete.",
+      "verdict": "A structured five-row candidate ledger explicitly records yes/no/partial/pending/not-applicable states and provenance for every requested step. Three rows still have pending promotion, and only two rows have independent workspace artifacts.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/candidate_ledger.csv",
+          "locator": "rows 2-6",
+          "claim": "Five candidate/family rows contain reproduced, duplicate_checked, minimized, stable_tested, nightly_tested, promoted, evidence level, artifact paths, and disposition."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/candidate_ledger.schema.json",
+          "locator": "lines 1-25",
+          "claim": "Defines machine-readable candidate states and provenance constraints."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1648-1668",
+          "claim": "Paper table reports each row and states which verification steps remain partial/pending."
+        },
+        {
+          "path": "blackwell_nvfp4_fuzz/repro_nvfp4_contraction_dim.py",
+          "locator": "file SHA-256 cc14c3dd60fb3bf1119c2b0ba0d4ab4bfe5332671432d83b3f913af6595ec3bf",
+          "claim": "The reproducer file exists. Across the two workspace_artifact ledger rows, all five listed artifact paths exist; path existence does not by itself verify the candidate verdict."
+        }
+      ],
+      "remaining_operational_work": [
+        "Finish duplicate checks for four partial rows and one unchecked row.",
+        "Finish nightly/main tests for three pending rows and record final promotion decisions."
+      ],
+      "completion_gate": "Already satisfied for explicit reporting; candidate promotion remains governed by the ledger's pending states."
+    },
+    {
+      "id": "R7",
+      "request": "Analyze generation failures: wrong API, missing import, shape/dtype, no oracle, and fake assertion.",
+      "status": "partial",
+      "verdict": "The v19 taxonomy and tri-state analyzer now classify the immutable 480-event seed-3407 checkpoint by baseline, API group, and seed. It separates unknown from false, audits detector-versus-harness disagreements, and reports missing import, shape/dtype, missing oracle, fake assertion, syntax, truncation, and related categories. The other four seeds remain absent, so this is not the requested full multi-seed distribution.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+          "locator": "cell 7 inspect_program() and evaluate_code()",
+          "claim": "Detects syntax/AST-policy/runtime/timeout/wrong-API/no-oracle/fake-assertion outcomes and records error_labels."
+        },
+        {
+          "path": "tmp/colab_smoke_4baseline/events_latest.jsonl",
+          "locator": "JSONL rows 1-4, /baseline and /error_labels",
+          "claim": "Smoke labels: B1 syntax=1; B0, B2, and B3 no_oracle=1 each."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/generation_error_analysis/validation_output/failure_summary.json",
+          "locator": "rows with source=seed3407_progress and aggregation=source/baseline/group/seed",
+          "claim": "Classifies all 480 persisted seed-3407 events. Overall observed counts include syntax=173/480, wrong/missing target=6 of 307 known, shape/dtype=7 of 307 known, missing oracle=240 of 307 known, fake assertion=2 of 307 known, and truncation=230/480; unknown denominators remain explicit."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/generation_error_analysis/validation_output/analysis_manifest.json",
+          "locator": "JSON pointers /classification_semantics, /categories, /sources, and /input_integrity",
+          "claim": "Hashes the 480-row checkpoint input, records 20 tri-state categories, separates smoke from campaign rates, and reports zero missing task IDs, duplicate task-baseline rows, or unexpected baselines."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 669-674 and 704-721",
+          "claim": "Defines the requested error categories and reports target-miss/runtime-fail counts for the archived one-seed 40-API run."
+        }
+      ],
+      "gaps": [
+        "The post-labeler now separates missing-import and shape/dtype evidence, but its heuristic categories require the planned manual review sample before accuracy claims.",
+        "No complete B0-B3 x 120-API x five-seed error table exists by baseline and API group.",
+        "No manual audit sample or inter-rater agreement is reported."
+      ],
+      "completion_gate": "Every full-run event has deterministic multi-label error annotations, and aggregate/error examples are reported per baseline and group."
+    },
+    {
+      "id": "R8",
+      "request": "Add numerical-oracle results for CPU/GPU, eager/compiled, gradient checks, and tolerance thresholds.",
+      "status": "partial",
+      "verdict": "Source artifacts verify domain-specific Blackwell CUDA eager/compiled forward-oracle work, and local-validation protocols verify CPU eager forward/gradient logging with float32/float64, ULP, clean/injected controls, and 1e-3/1e-4/1e-5. A follow-up local run records CPU compiled cells as unsupported on the current Windows/PyTorch host. None of these is the requested matched campaign factorial. The paper's 29/30 fault-injection table remains paper-only because its source result file was not found.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 982-1033",
+          "claim": "Paper-reported transcription: 29/30 certified, 28/30 fixed-1e-4 detections, and 0/20 clean false positives; no underlying result artifact was located."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1035-1060",
+          "claim": "Reports Ampere/T4 program-prover paths, including compiled, layout, split-k, CPU, and T4 compiled-fusion execution."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/EXPERIMENT_PROTOCOL.md",
+          "locator": "lines 89-91",
+          "claim": "Specifies the still-required full matrix, error/ULP fields, reference dtypes, and fixed thresholds 1e-3/1e-4/1e-5."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1782 and 1794",
+          "claim": "Limitations/future work say eager/compiled findings need Linux rerun and stronger CPU/GPU, eager/compiled, gradient, and invariant oracles still need addition."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/evidence_matrix.json",
+          "locator": "JSON pointers /factorial_matrix, /domain_specific_path_coverage, /oracle_feature_coverage, and /paper_claim_boundary",
+          "claim": "Audits every device/mode/check/dtype cell without coercing domain-specific, local-validation, paper-only, or missing evidence into a campaign result."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local.json",
+          "locator": "JSON pointers /coverage and /completeness",
+          "claim": "Local CPU/eager protocol validation covers forward/gradient, float32/float64, clean/injected, ULP, and all fixed thresholds, but explicitly reports all_factorial_dimensions_present=false, certified_bound_present=false, ready_for_paper_result=false."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/summary.local_cpu_eager_compiled.json",
+          "locator": "JSON pointers /status_counts, /coverage, and /completeness",
+          "claim": "Local CPU eager+compiled validation records 48 events: eager cells are measured and CPU compiled cells are unsupported on the current Windows/PyTorch host, so compiled coverage remains unresolved for campaign claims."
+        },
+        {
+          "path": "blackwell_nvfp4_fuzz/results/nvfp4-final-validation-20260630-report.md",
+          "locator": "Environment and execution contract; Continuation results; Earlier validated campaigns",
+          "claim": "Source report verifies CUDA NVFP4 forward/property campaigns and mentions compiled paths; it does not provide CPU, gradient, ULP, or the matched fixed-threshold factorial."
+        }
+      ],
+      "gaps": [
+        "The underlying fault-injection and program-prover result artifacts cited by the paper were not located in this workspace.",
+        "No complete CPU/CUDA x eager/compiled table on matched programs.",
+        "The current Windows/PyTorch host records CPU compiled cells as unsupported; measured compiled coverage still requires a compatible Linux/Colab/container environment.",
+        "Gradient, ULP, and 1e-3/1e-4/1e-5 results currently exist only in one-seed local validation, not a campaign.",
+        "No campaign-level certified-bound events or matched float32/float64 breakdown."
+      ],
+      "completion_gate": "A matched-program factorial report contains forward/gradient outcomes, absolute/relative/ULP errors, dtypes/backends, tolerance source, clean controls, and injected defects for all three fixed thresholds."
+    },
+    {
+      "id": "R9",
+      "request": "Evaluate DL-Issue Atlas by duplicates detected/rejected and candidates guided by the Atlas.",
+      "status": "partial",
+      "verdict": "A paired enabled/disabled protocol, strict schemas, source-freezing utility, collector, and fourteen-test validation bundle now exist. No Atlas-effectiveness measurement exists: paper-reported corpus counts are not an effectiveness evaluation, the raw Atlas dataset/manifest is absent, and the checked summary is validation-only with ready_for_paper_result=false.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/atlas_intervention/collect_atlas_intervention.py",
+          "locator": "validate(), verify_atlas_source(), summarize(), and _paired_effects()",
+          "claim": "Enforces same-seed/model/decoding/harness paired arms, counterbalanced order, separate triage/planning interventions, raw-dataset manifest verification, paired metrics, and fail-closed paper readiness."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/atlas_intervention/test_atlas_intervention.py",
+          "locator": "AtlasInterventionTests (14 tests)",
+          "claim": "Validates all schemas, same-factor pairing, unknown-verification handling, successful verified-source gating, tamper rejection, provenance requirements, source freezing, empty-source rejection, and source-absent fail closure."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/atlas_intervention/validation_output/validation_manifest.json",
+          "locator": "JSON pointers /evidence_label, /contract_tests, /summary_ready_for_paper_result, /effectiveness_claim_allowed, and /claim_boundary",
+          "claim": "Hashes the validation artifacts and records 16/16 tests passing, while explicitly setting validation_only, ready=false, and effectiveness_claim_allowed=false."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/atlas_snapshot.json",
+          "locator": "JSON pointers /measured_duplicate_candidates, /measured_atlas_guided_candidates, /retrieval_intervention_logged, and /source_audit",
+          "claim": "Both requested measurements are null, intervention_logged is false, and the raw dataset/independent manifest are absent."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/vn_funnel/archive_evidence_report.md",
+          "locator": "lines 28-42",
+          "claim": "Explicitly lists duplicate removal, Atlas-guided generation, and independent corpus recomputation as unsupported claims."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1629 and 1763",
+          "claim": "States that reported 7,275 records/2,653 clusters do not establish a causal effect and intervention counts remain null."
+        }
+      ],
+      "gaps": [
+        "Recover and hash the raw Atlas snapshot or explicitly freeze a new reproducible snapshot.",
+        "Run the implemented retrieval enabled/disabled protocol on the same real candidate summaries for duplicate triage.",
+        "Run the implemented separate enabled/disabled generation intervention for Atlas-guided planning and record triage time.",
+        "Do not use the four synthetic fixture events as an effectiveness denominator."
+      ],
+      "completion_gate": "The artifact contains non-null matched/rejected duplicate counts, guided-prompt counts, unique reproduced candidates per 1,000 generations, and triage time under declared interventions."
+    },
+    {
+      "id": "R10",
+      "request": "Add reproducibility information: environment, versions, seeds, runtime, throughput, and artifact.",
+      "status": "partial",
+      "verdict": "The runner captures model hashes, package/runtime metadata, decoding settings, seeds, time, and per-event duration. A reconstructible 480-event immutable checkpoint plus a separate provenance audit preserve hashes, coverage, runtime, throughput, and fail-closed blockers. The audit explicitly records that notebook stdout and the persisted JSONL both contain 480 seed-3407 events. The complete five-seed corpus, environment lock/container digest, total resource hours, and public artifact/DOI remain absent.",
+      "evidence": [
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb",
+          "locator": "cells 6, 7, 9, 10, and 11",
+          "claim": "Pins base/tuned revisions and file hashes; records torch/CUDA/Python/packages/GPU, decoding configuration, run signature, event timing, JSONL checkpoints, and summary outputs."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_120/trdgl_fair_benchmark_120_output.ipynb",
+          "locator": "cells 6 and 10 outputs",
+          "claim": "The output notebook records Tesla T4, pinned revisions, setup time, and a 480/480 seed-3407 runtime transcript. It is treated as transcript provenance while the persisted JSONL remains the counted evidence source."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/campaign_checkpoint/summary.json",
+          "locator": "JSON pointers /source, /runtime, and /coverage/by_seed",
+          "claim": "Hashes and aggregates the immutable 480-event stream, run manifest, executed notebook, frozen code contract, configuration contract, event-wall time, campaign span, and throughput; ready=false."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/benchmark_results/audit_checkpoint_provenance.py",
+          "locator": "audit() and transcript_completion()",
+          "claim": "Recomputes raw, manifest, frozen-code, executed-notebook, model/decoding, seed, and transcript provenance; validated JSONL is the evidence ceiling when stdout and downloaded artifacts disagree."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/main.tex",
+          "locator": "lines 1037-1055, 1673-1676, and 1757-1763",
+          "claim": "Reports selected archived throughput/environment information and explicitly states that no public archival URL/DOI is assigned."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/EXPERIMENT_PROTOCOL.md",
+          "locator": "lines 109-111",
+          "claim": "Lists the required final reproducibility bundle, including lock/container digest, raw generations, gate log, exact commands, total GPU/CPU hours, wall time, and throughput."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/reproducibility/artifact_manifest.schema.json",
+          "locator": "entire JSON Schema 2020-12 document",
+          "claim": "Defines required environment, benchmark/hash, run signature, timing, throughput, resource, artifact-checksum, and completeness fields with explicit nullability."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/reproducibility/validation_output/artifact_manifest.local.json",
+          "locator": "JSON pointers /source_scope, /environment, /benchmark, /run, and /completeness",
+          "claim": "Local validation verifies the collector host and frozen 120-API manifest but leaves campaign signature/timing/throughput/resources pending and ready_for_release=false."
+        },
+        {
+          "path": "TrDGL-FuzzVn_paper/experiments/reproducibility/validation_output/artifact_manifest.smoke.json",
+          "locator": "JSON pointers /run/counts, /run/timing, /run/throughput, and /completeness",
+          "claim": "Deterministically aggregates the four-event smoke stream under one signature; selected_task_matrix_complete=true but full_benchmark_complete=false and ready_for_release=false."
+        }
+      ],
+      "gaps": [
+        "Persist the complete run_manifest.json, events.jsonl, baseline summary, and documentation snapshot in the release artifact.",
+        "Add an environment lockfile or container digest, driver details, exact rerun command, total GPU/CPU hours, and executed-tests/hour.",
+        "Publish a sanitized artifact archive with hashes and a stable URL/DOI."
+      ],
+      "completion_gate": "A one-command release bundle reproduces aggregate tables from immutable raw events and includes all fields listed in EXPERIMENT_PROTOCOL.md line 111."
+    }
+  ],
+  "recommended_execution_order": [
+    {
+      "order": 1,
+      "action": "Finish the frozen 120-API x five-seed x B0-B3 campaign and preserve each seed shard's signature plus the cross-shard configuration-equivalence proof.",
+      "unblocks": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R10"
+      ],
+      "reason": "All downstream replay, error analysis, funnel, and paired comparisons depend on the immutable raw event corpus."
+    },
+    {
+      "order": 2,
+      "action": "Freeze raw events plus run manifest, then generate baseline/group/error summaries and paired B2/B3 statistics.",
+      "unblocks": [
+        "R1",
+        "R2",
+        "R3",
+        "R7",
+        "R10"
+      ],
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "order": 3,
+      "action": "Import the same events into the Vn ledger and replay AST/oracle/Vn/Atlas-triage ablations; retain pending for unavailable post-oracle evidence.",
+      "unblocks": [
+        "R4",
+        "R5"
+      ],
+      "depends_on": [
+        1
+      ]
+    },
+    {
+      "order": 4,
+      "action": "Run the matched numerical-oracle factorial experiment (CPU/CUDA, eager/compiled, forward/gradient, float32/float64, 1e-3/1e-4/1e-5).",
+      "unblocks": [
+        "R8"
+      ],
+      "depends_on": [],
+      "parallelizable_with": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "order": 5,
+      "action": "Triage anomaly-bearing events: reproduce, minimize, duplicate-check, stable/nightly test, and record promotion decisions.",
+      "unblocks": [
+        "R5",
+        "R6",
+        "R9"
+      ],
+      "depends_on": [
+        3
+      ]
+    },
+    {
+      "order": 6,
+      "action": "Recover/freeze the Atlas source, run enabled/disabled duplicate retrieval on identical summaries, then run a separate planning intervention if guidance effectiveness is claimed.",
+      "unblocks": [
+        "R9"
+      ],
+      "depends_on": [
+        1
+      ],
+      "note": "Duplicate triage can use frozen summaries; planning changes generation and must regenerate."
+    },
+    {
+      "order": 7,
+      "action": "Build and publish the final reproducibility bundle and regenerate paper tables only from its immutable artifacts.",
+      "unblocks": [
+        "R10"
+      ],
+      "depends_on": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

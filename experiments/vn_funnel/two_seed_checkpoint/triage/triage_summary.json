@@ -1,0 +1,70 @@
+{
+  "schema_version": "trdgl_assertion_signal_triage_v1",
+  "input_records": 960,
+  "benchmark_funnel": [
+    {
+      "stage": "raw",
+      "pass": 960,
+      "fail": 0,
+      "unknown": 0,
+      "total": 960
+    },
+    {
+      "stage": "parseable",
+      "pass": 625,
+      "fail": 335,
+      "unknown": 0,
+      "total": 960
+    },
+    {
+      "stage": "ast_pass",
+      "pass": 625,
+      "fail": 335,
+      "unknown": 0,
+      "total": 960
+    },
+    {
+      "stage": "runnable",
+      "pass": 595,
+      "fail": 365,
+      "unknown": 0,
+      "total": 960
+    },
+    {
+      "stage": "target_valid",
+      "pass": 482,
+      "fail": 478,
+      "unknown": 0,
+      "total": 960
+    },
+    {
+      "stage": "oracle_bearing",
+      "pass": 89,
+      "fail": 871,
+      "unknown": 0,
+      "total": 960
+    }
+  ],
+  "assertion_signal_count": 4,
+  "decision_evidence": {
+    "path": "TrDGL-FuzzVn_paper\\experiments\\vn_funnel\\two_seed_checkpoint\\triage\\triage_decisions.jsonl",
+    "sha256": "6a28d2f85444f65cc82122d0bfbfd366e6678eb6b9dd891c9f0220abe116c989",
+    "records": 4,
+    "decision_counts": {
+      "pending_pinned_environment_replay": 1,
+      "rejected_invalid_oracle": 3
+    },
+    "anomaly_counts": {
+      "true": 0,
+      "false": 3,
+      "unknown": 1
+    },
+    "provisional_candidate_count": 1,
+    "provisional_candidate_ids": [
+      "CAND-BENCH-TORCH-COMPILE-3407"
+    ],
+    "promoted_count": 0,
+    "independent_review_complete": false
+  },
+  "claim_boundary": "Assertion signals are not confirmed framework bugs. Promotion requires audited reproduction, novelty, minimization, and stable/nightly evidence."
+}

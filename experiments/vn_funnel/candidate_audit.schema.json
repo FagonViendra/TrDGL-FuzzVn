@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://trdgl.local/schemas/candidate_audit.schema.json",
+  "title": "TrDGL-FuzzVn append-only candidate audit event",
+  "type": "object",
+  "required": ["audit_schema", "sequence", "prev_event_sha256", "event_sha256", "candidate_id", "action", "timestamp_utc"],
+  "properties": {
+    "audit_schema": {"const": "trdgl_candidate_audit_v1"},
+    "sequence": {"type": "integer", "minimum": 1},
+    "prev_event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "action": {"enum": ["register", "update_step", "promote"]},
+    "timestamp_utc": {"type": "string", "format": "date-time"},
+    "step": {"enum": ["reproducible", "duplicate_checked", "minimized", "stable_tested", "nightly_tested"]},
+    "status": {"enum": ["partial", "passed", "failed", "not_applicable"]},
+    "initial_state": {
+      "type": "object",
+      "required": ["reproducible", "duplicate_checked", "minimized", "stable_tested", "nightly_tested"],
+      "additionalProperties": {"enum": ["pending", "partial", "passed", "failed", "not_applicable"]}
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["artifact_path", "artifact_sha256", "timestamp_utc", "tool", "tool_version"],
+      "properties": {
+        "artifact_path": {"type": "string", "minLength": 1},
+        "artifact_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "timestamp_utc": {"type": "string", "format": "date-time"},
+        "tool": {"type": "string", "minLength": 1},
+        "tool_version": {"type": "string", "minLength": 1},
+        "notes": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"action": {"const": "register"}}}, "then": {"required": ["initial_state", "source_ledger_sha256"]}},
+    {"if": {"properties": {"action": {"const": "update_step"}}}, "then": {"required": ["step", "status", "evidence"]}},
+    {"if": {"properties": {"action": {"const": "promote"}}}, "then": {"required": ["evidence"]}}
+  ],
+  "additionalProperties": true
+}

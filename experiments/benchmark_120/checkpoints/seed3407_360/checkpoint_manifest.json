@@ -1,0 +1,56 @@
+{
+  "schema_version": "trdgl-checkpoint-v1",
+  "created_utc": "2026-07-08T14:59:23Z",
+  "evidence_label": "incomplete_campaign_checkpoint",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "seed": 3407,
+  "expected_events": 480,
+  "observed_events": 360,
+  "baseline_counts": {"B0": 120, "B1": 120, "B2": 120, "B3": 0},
+  "run_signature": "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475",
+  "last_event": {
+    "finished_utc": "2026-07-08T14:59:22.885869+00:00",
+    "baseline": "B2",
+    "api": "torch.export.export",
+    "task_id": "trdgl_pytorch_120_v1|torch.export.export|3407"
+  },
+  "artifacts": {
+    "events.checkpoint.jsonl": {
+      "bytes": 1537711,
+      "sha256": "f8af772a2f294f4b4c3688f6370f2aa466d5f53a2f162780ecfb947cb2a2fd9b"
+    },
+    "run_manifest.json": {
+      "bytes": 1476,
+      "sha256": "2f4024d694a6b42aca8aeff89205c1facd643c1c48ac2aff0c8440cf85e5231c"
+    },
+    "../../trdgl_fair_benchmark_120.ipynb": {
+      "bytes": 50280,
+      "sha256": "f223245216f4861b329b7497720032ec7dd61548a0ef4cd8818ece8ba9f58a1d"
+    }
+  },
+  "frozen_benchmark_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "environment": {
+    "gpu": "Tesla T4",
+    "python": "3.12.13",
+    "torch": "2.11.0+cu128",
+    "torch_cuda": "12.8",
+    "llama_cpp_python": "0.3.23"
+  },
+  "decoding": {
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "min_p": 0.05,
+    "repeat_penalty": 1.08,
+    "max_tokens": 600
+  },
+  "model_revisions": {
+    "base": "3bb10d594514ef4edb7f3a65d41a7e4eb8c5767a",
+    "tuned": "7e25063a37552beb994259e80c993b2edf41edbf"
+  },
+  "completed_slices": ["B0", "B1", "B2"],
+  "pending_slices": ["B3"],
+  "resume_policy": "Append-only; resume skips existing (baseline, task_id) keys with the same run_signature.",
+  "claim_boundary": "B0/B1/B2 are complete for seed 3407, but B3 and the other four seeds are absent; no final four-baseline comparison is permitted."
+}

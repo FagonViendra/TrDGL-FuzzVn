@@ -1,0 +1,2268 @@
+{
+  "schema_version": "trdgl_numerical_oracle_summary_v2",
+  "evidence_label": "local_validation",
+  "run_id": "numerical-oracle-20260709T102222Z",
+  "source": {
+    "path": "TrDGL-FuzzVn_paper/experiments/numerical_oracle/validation_output/events.local_cpu_eager_compiled.jsonl",
+    "sha256": "07a97520444af5790bb390bd3c3684ce0dff4ee8061b14f4406bc4a55ff280ad",
+    "events": 48
+  },
+  "status_counts": {
+    "error": 0,
+    "fail": 8,
+    "pass": 16,
+    "pending": 0,
+    "unsupported": 24
+  },
+  "seeds": [
+    3407
+  ],
+  "fixed_tolerances": [
+    1e-05,
+    0.0001,
+    0.001
+  ],
+  "certified_event_count": 0,
+  "certified_bound_source_sha256": [],
+  "environment_sha256": "70ab6545c8cdcffba21dbbaff30dc9b063748518bbafec58c647774071d15f96",
+  "coverage": [
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "forward",
+      "input_dtype": "float32",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "forward",
+      "input_dtype": "float32",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "forward",
+      "input_dtype": "float64",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "forward",
+      "input_dtype": "float64",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "gradient",
+      "input_dtype": "float32",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "gradient",
+      "input_dtype": "float32",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "gradient",
+      "input_dtype": "float64",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "compiled",
+      "check_kind": "gradient",
+      "input_dtype": "float64",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 0,
+      "pass": 0,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 3,
+      "pending": 0,
+      "max_abs_error": null,
+      "max_rel_error": null,
+      "max_ulp_error": null
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "forward",
+      "input_dtype": "float32",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 3,
+      "pass": 3,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 8.201523735151817e-08,
+      "max_rel_error": 6.20428577254853e-07,
+      "max_ulp_error": 6
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "forward",
+      "input_dtype": "float32",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 3,
+      "pass": 1,
+      "fail": 2,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.00020008540078117476,
+      "max_rel_error": 0.02098265890620446,
+      "max_ulp_error": 214748
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "forward",
+      "input_dtype": "float64",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 3,
+      "pass": 3,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "forward",
+      "input_dtype": "float64",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 3,
+      "pass": 1,
+      "fail": 2,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.00020000000000000573,
+      "max_rel_error": 0.02098272784868621,
+      "max_ulp_error": 115292150460685
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "gradient",
+      "input_dtype": "float32",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 3,
+      "pass": 3,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 7.884382477452156e-08,
+      "max_rel_error": 4.2655313927105e-06,
+      "max_ulp_error": 57
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "gradient",
+      "input_dtype": "float32",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 3,
+      "pass": 1,
+      "fail": 2,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.00020010125034497506,
+      "max_rel_error": 0.015962982075090722,
+      "max_ulp_error": 214805
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "gradient",
+      "input_dtype": "float64",
+      "control_kind": "clean",
+      "events": 3,
+      "measured": 3,
+      "pass": 3,
+      "fail": 0,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.0,
+      "max_rel_error": 0.0,
+      "max_ulp_error": 0
+    },
+    {
+      "device": "cpu",
+      "execution_mode": "eager",
+      "check_kind": "gradient",
+      "input_dtype": "float64",
+      "control_kind": "injected",
+      "events": 3,
+      "measured": 3,
+      "pass": 1,
+      "fail": 2,
+      "error": 0,
+      "unsupported": 0,
+      "pending": 0,
+      "max_abs_error": 0.00020000000000000573,
+      "max_rel_error": 0.01595874365333258,
+      "max_ulp_error": 115292150460685
+    }
+  ],
+  "completeness": {
+    "all_factorial_dimensions_present": false,
+    "missing_factorial_dimensions": [
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64"
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32"
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64"
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32"
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64"
+      ]
+    ],
+    "all_factorial_dimensions_measured": false,
+    "missing_measured_factorial_dimensions": [
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32"
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64"
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32"
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32"
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64"
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32"
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64"
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32"
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64"
+      ]
+    ],
+    "all_fixed_thresholds_present": true,
+    "all_required_seeds_present": false,
+    "missing_required_seeds": [
+      7711,
+      12011,
+      19001,
+      27103
+    ],
+    "all_matched_threshold_cells_measured": false,
+    "missing_matched_threshold_cell_count": 228,
+    "missing_matched_threshold_cells": [
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cpu",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "forward",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "compiled",
+        "gradient",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "forward",
+        "float64",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float32",
+        27103,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        3407,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        3407,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        3407,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        7711,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        12011,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        19001,
+        0.001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        1e-05
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        0.0001
+      ],
+      [
+        "cuda",
+        "eager",
+        "gradient",
+        "float64",
+        27103,
+        0.001
+      ]
+    ],
+    "certified_bound_present": false,
+    "ready_for_paper_result": false
+  }
+}

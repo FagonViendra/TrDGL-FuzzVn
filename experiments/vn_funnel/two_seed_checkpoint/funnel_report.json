@@ -1,0 +1,163 @@
+{
+  "schema_version": "trdgl_vn_funnel_v1",
+  "records": 960,
+  "funnel": [
+    {
+      "stage": "raw",
+      "pass": 960,
+      "fail": 0,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 1.0
+    },
+    {
+      "stage": "parseable",
+      "pass": 625,
+      "fail": 335,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 0.6510416666666666,
+      "transition_from": "raw",
+      "transition_eligible": 960,
+      "transition_known": 960,
+      "transition_pass": 625,
+      "transition_rate_known": 0.6510416666666666
+    },
+    {
+      "stage": "ast_pass",
+      "pass": 625,
+      "fail": 335,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 0.6510416666666666,
+      "transition_from": "parseable",
+      "transition_eligible": 625,
+      "transition_known": 625,
+      "transition_pass": 625,
+      "transition_rate_known": 1.0
+    },
+    {
+      "stage": "runnable",
+      "pass": 595,
+      "fail": 365,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 0.6197916666666666,
+      "transition_from": "ast_pass",
+      "transition_eligible": 625,
+      "transition_known": 625,
+      "transition_pass": 595,
+      "transition_rate_known": 0.952
+    },
+    {
+      "stage": "target_valid",
+      "pass": 482,
+      "fail": 478,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 0.5020833333333333,
+      "transition_from": "runnable",
+      "transition_eligible": 595,
+      "transition_known": 595,
+      "transition_pass": 482,
+      "transition_rate_known": 0.8100840336134454
+    },
+    {
+      "stage": "oracle_bearing",
+      "pass": 89,
+      "fail": 871,
+      "unknown": 0,
+      "total": 960,
+      "pass_rate_all_raw": 0.09270833333333334,
+      "transition_from": "target_valid",
+      "transition_eligible": 482,
+      "transition_known": 482,
+      "transition_pass": 89,
+      "transition_rate_known": 0.18464730290456433
+    },
+    {
+      "stage": "reproducible",
+      "pass": 0,
+      "fail": 0,
+      "unknown": 960,
+      "total": 960,
+      "pass_rate_all_raw": null,
+      "transition_from": "oracle_bearing",
+      "transition_eligible": 89,
+      "transition_known": 0,
+      "transition_pass": 0,
+      "transition_rate_known": null
+    },
+    {
+      "stage": "non_duplicate",
+      "pass": 0,
+      "fail": 0,
+      "unknown": 960,
+      "total": 960,
+      "pass_rate_all_raw": null,
+      "transition_from": "reproducible",
+      "transition_eligible": 0,
+      "transition_known": 0,
+      "transition_pass": 0,
+      "transition_rate_known": null
+    },
+    {
+      "stage": "minimized",
+      "pass": 0,
+      "fail": 0,
+      "unknown": 960,
+      "total": 960,
+      "pass_rate_all_raw": null,
+      "transition_from": "non_duplicate",
+      "transition_eligible": 0,
+      "transition_known": 0,
+      "transition_pass": 0,
+      "transition_rate_known": null
+    },
+    {
+      "stage": "stable_nightly",
+      "pass": 0,
+      "fail": 0,
+      "unknown": 960,
+      "total": 960,
+      "pass_rate_all_raw": null,
+      "transition_from": "minimized",
+      "transition_eligible": 0,
+      "transition_known": 0,
+      "transition_pass": 0,
+      "transition_rate_known": null
+    },
+    {
+      "stage": "promoted",
+      "pass": 0,
+      "fail": 0,
+      "unknown": 960,
+      "total": 960,
+      "pass_rate_all_raw": null,
+      "transition_from": "stable_nightly",
+      "transition_eligible": 0,
+      "transition_known": 0,
+      "transition_pass": 0,
+      "transition_rate_known": null
+    }
+  ],
+  "rejection_reasons": {
+    "not_recorded": 89,
+    "oracle_bearing": 393,
+    "parseable": 335,
+    "runnable": 30,
+    "target_valid": 113
+  },
+  "vn_gate": {
+    "checked_non_duplicate": 0,
+    "duplicate_rejected": 0,
+    "duplicate_status_unknown": 960,
+    "cluster_ids_recorded": 0
+  },
+  "atlas_intervention": {
+    "nearest_cluster_recorded": 0,
+    "atlas_guided_true": 0,
+    "atlas_guided_false": 0,
+    "atlas_guided_unknown": 960
+  }
+}

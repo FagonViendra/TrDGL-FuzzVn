@@ -1,0 +1,2 @@
+# The review sheet embeds multiline generated code and is treated as an immutable artifact.
+review_sample.csv binary

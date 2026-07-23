@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/trdgl/atlas_validation_bundle.schema.json",
+  "title": "Non-empirical Atlas protocol validation bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "evidence_label", "purpose", "artifact_sha256", "contract_tests", "summary_path", "summary_ready_for_paper_result", "summary_blockers", "raw_atlas_included", "independent_atlas_manifest_included", "effectiveness_claim_allowed", "claim_boundary"],
+  "properties": {
+    "schema_version": {"const": "trdgl_atlas_validation_bundle_v1"},
+    "evidence_label": {"const": "validation_only"},
+    "purpose": {"type": "string", "minLength": 1},
+    "artifact_sha256": {"type": "object", "minProperties": 1, "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "contract_tests": {
+      "type": "object", "additionalProperties": false,
+      "required": ["command", "result", "test_count"],
+      "properties": {
+        "command": {"type": "string", "minLength": 1},
+        "result": {"const": "pass"},
+        "test_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "summary_path": {"type": "string", "minLength": 1},
+    "summary_ready_for_paper_result": {"const": false},
+    "summary_blockers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "raw_atlas_included": {"const": false},
+    "independent_atlas_manifest_included": {"const": false},
+    "effectiveness_claim_allowed": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "trdgl_campaign_shard_index_v1",
+  "evidence_label": "campaign",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "shards": [
+    {
+      "generation_seed": 3407,
+      "run_signature": "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475",
+      "events_path": "../../benchmark_120/checkpoints/seed3407_480/events.checkpoint.jsonl",
+      "run_manifest_path": "../../benchmark_120/checkpoints/seed3407_480/run_manifest.json",
+      "executed_notebook_path": "../../benchmark_120/checkpoints/seed3407_480/executed_notebook.ipynb"
+    },
+    {
+      "generation_seed": 7711,
+      "run_signature": "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+      "events_path": "../../benchmark_120/checkpoints/seed7711_480/events.checkpoint.jsonl",
+      "run_manifest_path": "../../benchmark_120/checkpoints/seed7711_480/run_manifest.json",
+      "executed_notebook_path": "../../benchmark_120/checkpoints/seed7711_480/executed_notebook.ipynb"
+    }
+  ]
+}

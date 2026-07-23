@@ -1,0 +1,24 @@
+{
+  "schema_version": "trdgl_benchmark_import_v1",
+  "importer_version": "trdgl_benchmark_importer_v1",
+  "input_path": "TrDGL-FuzzVn_paper\\experiments\\benchmark_results\\two_seed_checkpoint\\events.combined.jsonl",
+  "input_sha256": "03bbd2b8d20901e521ab7bfbc3a4816a770c657c65ac32c79d058af159de5a8d",
+  "records": 960,
+  "run_signatures": [
+    "1c5e6efad4cf9bedd989725ef1f8bc1b74239c32f6e7a4bcc4ffdd3984273f8f",
+    "221b2ab2bb66e6110da76ea5cde39b20fb3613e8ee3527f8818a039e7b6d8475"
+  ],
+  "baselines": {
+    "B0": 240,
+    "B1": 240,
+    "B2": 240,
+    "B3": 240
+  },
+  "downstream_policy": "reproducible/non_duplicate/minimized/stable_nightly/promoted remain null unless explicitly evidenced in the source event",
+  "outputs": [
+    "normalized_events.jsonl",
+    "event_ledger.csv",
+    "funnel_report.json",
+    "funnel_report.csv"
+  ]
+}

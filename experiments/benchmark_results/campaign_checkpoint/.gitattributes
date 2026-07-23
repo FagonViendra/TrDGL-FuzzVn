@@ -1,0 +1,4 @@
+# These three files are byte-addressed empirical evidence.  Disable newline
+# conversion so their documented SHA-256 values survive checkout on Windows.
+seed3407/executed_notebook.ipynb -text
+events.combined.jsonl -text
