@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-07-23T19:13:44.149535Z",
+  "artifacts": {
+    "probe_results.jsonl": {
+      "sha256": "504c0492a7c3a9de740cb3e637faa8b71b04fdfba17459f955c6c5cf5688ad62",
+      "bytes": 6405
+    },
+    "summary.json": {
+      "sha256": "94957ff2a6891aefcddc9c38a1cafd0b097a9667b7393a63dbb29655809fdb7b",
+      "bytes": 2208
+    }
+  },
+  "models": {
+    "Q3_K_M": {
+      "sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+      "size_bytes": 13286716704
+    },
+    "Q4_K_M": {
+      "sha256": "ea4a99b6dbdd3fedc9c20838e22dd2fcf272ed0d84360d42deaf0b15e955a068",
+      "size_bytes": 16795999008
+    }
+  },
+  "stage_target": "@AI_LAB.PHASE_A.TRDGL_GGUF_STAGE/experiments/b3_stopfix_snowflake/"
+}

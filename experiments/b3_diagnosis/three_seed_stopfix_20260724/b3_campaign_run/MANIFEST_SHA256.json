@@ -1,0 +1,15 @@
+{
+  "generated_utc": "2026-07-23T19:46:49.768236+00:00",
+  "artifacts": {
+    "b3_results.jsonl": {
+      "sha256": "8546fe7fb7e4f6c9cec06641483e3eef79bbbeec3c4bac282ff8965bdc6ecc5e",
+      "bytes": 474780
+    },
+    "b3_run_summary.json": {
+      "sha256": "ca72016128ab39d2107259fb5a21f0260a9ce1cf52d003a2402acc83c5a5783e",
+      "bytes": 710
+    }
+  },
+  "frozen_contract_manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "model_sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b"
+}

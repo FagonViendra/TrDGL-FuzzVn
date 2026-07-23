@@ -1,0 +1,76 @@
+{
+  "experiment": "b3_stopfix_snowflake",
+  "scope": "B3 stop-fix / Q3-Q4 diagnostic (KHÔNG phải campaign B0+B1+B2+B3 đầy đủ)",
+  "generated_utc": "2026-07-23T19:13:44.149535Z",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell",
+  "llama_cpp": "0.3.23 (CUDA sm_120)",
+  "root_cause": "tokenizer thiếu <start/end_of_turn> atomic (turn marker thật <|turn>105/<turn|>106); model fine-tune phat chuoi literal; llama.cpp chi dung o EOG token -> runaway",
+  "fix": "B3Chat: stop tren chuoi marker + don mảnh; khong the remap eos o GGUF",
+  "models": {
+    "Q3_K_M": {
+      "path": "/tmp/b3_gguf/gemma4-26b-a4b-qa.Q3_K_M.gguf",
+      "size_bytes": 13286716704,
+      "sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+      "expected": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+      "match": true
+    },
+    "Q4_K_M": {
+      "path": "/tmp/b3_gguf/gemma4-26b-a4b-qa.Q4_K_M.gguf",
+      "size_bytes": 16795999008,
+      "sha256": "ea4a99b6dbdd3fedc9c20838e22dd2fcf272ed0d84360d42deaf0b15e955a068",
+      "expected": "ea4a99b6dbdd3fedc9c20838e22dd2fcf272ed0d84360d42deaf0b15e955a068",
+      "match": true
+    }
+  },
+  "vocab_evidence": {
+    "Q3_K_M": {
+      "tok_105": "",
+      "tok_106": "",
+      "end_of_turn_tokenized": [
+        236820,
+        643,
+        236779,
+        1340,
+        236779,
+        887,
+        236813
+      ],
+      "end_of_turn_is_atomic": false,
+      "bos_id": 2,
+      "eos_id": 1
+    },
+    "Q4_K_M": {
+      "tok_105": "",
+      "tok_106": "",
+      "end_of_turn_tokenized": [
+        236820,
+        643,
+        236779,
+        1340,
+        236779,
+        887,
+        236813
+      ],
+      "end_of_turn_is_atomic": false,
+      "bos_id": 2,
+      "eos_id": 1
+    }
+  },
+  "before_after": {
+    "Q3_K_M": {
+      "n_prompts": 4,
+      "before_clean": 0,
+      "after_clean": 4,
+      "before_clean_pct": 0.0,
+      "after_clean_pct": 100.0
+    },
+    "Q4_K_M": {
+      "n_prompts": 4,
+      "before_clean": 0,
+      "after_clean": 4,
+      "before_clean_pct": 0.0,
+      "after_clean_pct": 100.0
+    }
+  },
+  "note_q3_q4": "Q3 va Q4 giu 2 stream rieng; khong gop denominator. Q4 la sensitivity/repair validation."
+}

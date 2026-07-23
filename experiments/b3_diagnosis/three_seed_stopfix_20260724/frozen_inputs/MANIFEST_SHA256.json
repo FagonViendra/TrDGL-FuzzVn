@@ -1,0 +1,12 @@
+[
+  {
+    "name": "remaining_b3_tasks.jsonl",
+    "bytes": 2133498,
+    "sha256": "7a06464d367b4748b1c45c133bd4bcd0d793e926cbdf34f990429d551bdbb956"
+  },
+  {
+    "name": "b3_generation_contract.json",
+    "bytes": 1680,
+    "sha256": "757d3f78ba86eda3902648db6688fe61c8f75be26472d7b259e2758d7455e9ce"
+  }
+]

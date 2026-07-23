@@ -1,0 +1,31 @@
+{
+  "experiment": "b3_campaign_run",
+  "baseline": "B3",
+  "model": "Q3_K_M",
+  "generated_utc": "2026-07-23T19:46:49.768236+00:00",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "decoding": {
+    "n_ctx": 2048,
+    "max_tokens": 600,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "min_p": 0.05,
+    "repeat_penalty": 1.08
+  },
+  "task_count": 360,
+  "seeds": {
+    "12011": 120,
+    "19001": 120,
+    "27103": 120
+  },
+  "finish_reason": {
+    "stop": 334,
+    "length": 26
+  },
+  "marker_leak_total": 0,
+  "total_tokens": 90698,
+  "total_gen_time_s": 679.1,
+  "avg_tok_per_s": 133.5,
+  "note": "Chi generation B3 (Q3_K_M) cho 3 seed. Evaluator (chay chuong trinh) la buoc downstream rieng."
+}

@@ -3,8 +3,16 @@
 Working LaTeX source for reorganizing the original English report into the five-part paper structure requested by the supervisor.
 
 - `main.tex`: reorganized five-part manuscript.
+- `teacher_report_20260711/fuzz-report.tex`: concise supervisor-facing report,
+  updated through 24 July 2026.
+- `output/pdf/TrDGL-FuzzVn_teacher_report_20260724.pdf`: compiled
+  supervisor-facing report.
+- `output/pdf/TrDGL-FuzzVn_full_report_20260724.pdf`: compiled full report.
 - `EXPERIMENT_PROTOCOL.md`: frozen protocol and evidence-status checklist for the additional controlled experiments.
 - `experiments/benchmark_120/trdgl_fair_benchmark_120.ipynb`: self-contained Colab notebook with the frozen 120-API/10-group/5-seed manifest and resumable four-baseline runner.
+- `experiments/b3_diagnosis/three_seed_stopfix_20260724/`: verified B3-only
+  serving-repair evidence for seeds 12011, 19001, and 27103. It is not a
+  substitute for the missing paired B0–B2 rows.
 
 ## Provenance
 

@@ -1,0 +1,49 @@
+{
+  "schema_version": "trdgl_b3_generation_contract_v1",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "manifest_sha256": "d9de15ca10bdd4abef2106c58b661197f69d1f278f87eec2b6eb56845f4facac",
+  "documentation_sha256": "73c6ba26b7c38afa4e1b94bf2ea7a2d5480b95398e09293cd922ea961070286b",
+  "task_count": 360,
+  "api_count": 120,
+  "generation_seeds": [
+    12011,
+    19001,
+    27103
+  ],
+  "baseline": "B3",
+  "model": {
+    "repo_id": "trdgl/gemma4-26b-a4b-qa-GGUF",
+    "filename": "gemma4-26b-a4b-qa.Q3_K_M.gguf",
+    "revision": "7e25063a37552beb994259e80c993b2edf41edbf",
+    "file_sha256": "2f35a80c395f31c1b39003d1e4e14df6b06796f343bb670c37d53828a96e482b",
+    "file_size": 13286716704
+  },
+  "decoding": {
+    "n_ctx": 2048,
+    "max_tokens": 600,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "top_k": 40,
+    "min_p": 0.05,
+    "repeat_penalty": 1.08
+  },
+  "seed_backend": "random.seed + numpy.seed + torch.manual_seed + torch.cuda.manual_seed_all + llama_cpp.set_seed + completion(seed)",
+  "serving_fix": {
+    "render": "literal Gemma turn strings matching frozen full_messages",
+    "stop": [
+      "<end_of_turn>",
+      "<start_of_turn>",
+      "<eos>"
+    ],
+    "postprocess": "strip complete and orphaned turn-marker fragments"
+  },
+  "evaluator": {
+    "subprocess_timeout_s": 60,
+    "force_generated_programs_to_cpu": true
+  },
+  "validation": {
+    "existing_b3_events_checked": 240,
+    "prompt_hash_mismatches": 0,
+    "documentation_source": "C:\\Users\\fagon\\OneDrive\\Documents\\New project 2\\TrDGL-FuzzVn_paper\\experiments\\benchmark_120\\checkpoints\\seed7711_480\\documentation_snapshot.json"
+  }
+}

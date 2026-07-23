@@ -6,4 +6,7 @@
 *.fls
 *.fdb_latexmk
 *.pdf
+!output/
+!output/pdf/
+!output/pdf/*.pdf
 compile-*.txt

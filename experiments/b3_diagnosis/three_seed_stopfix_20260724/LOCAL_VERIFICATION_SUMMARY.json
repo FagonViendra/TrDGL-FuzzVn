@@ -1,0 +1,142 @@
+{
+  "generation_rows": 360,
+  "evaluation_rows": 360,
+  "frozen_task_rows": 360,
+  "generation_summary": {
+    "experiment": "b3_campaign_run",
+    "baseline": "B3",
+    "model": "Q3_K_M",
+    "generated_utc": "2026-07-23T19:46:49.768236+00:00",
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "decoding": {
+      "n_ctx": 2048,
+      "max_tokens": 600,
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "top_k": 40,
+      "min_p": 0.05,
+      "repeat_penalty": 1.08
+    },
+    "task_count": 360,
+    "seeds": {
+      "12011": 120,
+      "19001": 120,
+      "27103": 120
+    },
+    "finish_reason": {
+      "stop": 334,
+      "length": 26
+    },
+    "marker_leak_total": 0,
+    "total_tokens": 90698,
+    "total_gen_time_s": 679.1,
+    "avg_tok_per_s": 133.5,
+    "note": "Chi generation B3 (Q3_K_M) cho 3 seed. Evaluator (chay chuong trinh) la buoc downstream rieng."
+  },
+  "evaluation_summary": {
+    "experiment": "b3_campaign_eval",
+    "baseline": "B3",
+    "model": "Q3_K_M",
+    "generated_utc": "2026-07-23T20:08:41.306045+00:00",
+    "benchmark_id": "trdgl_pytorch_120_v1",
+    "total": 360,
+    "status": {
+      "error": 105,
+      "pass": 255
+    },
+    "pass_pct": 70.8,
+    "by_seed": {
+      "12011": {
+        "n": 120,
+        "pass": 85,
+        "pass_pct": 70.8
+      },
+      "19001": {
+        "n": 120,
+        "pass": 86,
+        "pass_pct": 71.7
+      },
+      "27103": {
+        "n": 120,
+        "pass": 84,
+        "pass_pct": 70.0
+      }
+    },
+    "timeout_s": 60,
+    "note": "Evaluator: chay chuong trinh sinh ra, subprocess CPU (CUDA_VISIBLE_DEVICES=''), timeout 60s. Pass = exit 0."
+  },
+  "manifest_checks": [
+    {
+      "manifest": "b3_campaign_eval\\MANIFEST_SHA256.json",
+      "file": "b3_eval_results.jsonl",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "0ccec046d6bebd8f21c4834c307fe85d3ed93bcd6dd5303cedc56fe371dadd99",
+      "expected_sha256": "0ccec046d6bebd8f21c4834c307fe85d3ed93bcd6dd5303cedc56fe371dadd99"
+    },
+    {
+      "manifest": "b3_campaign_eval\\MANIFEST_SHA256.json",
+      "file": "b3_eval_summary.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "1efb30d6bbd17e4dddb5d41d76a1dd4bffe6921d55ae4f58cc0196e57bc84294",
+      "expected_sha256": "1efb30d6bbd17e4dddb5d41d76a1dd4bffe6921d55ae4f58cc0196e57bc84294"
+    },
+    {
+      "manifest": "b3_campaign_run\\MANIFEST_SHA256.json",
+      "file": "b3_results.jsonl",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "8546fe7fb7e4f6c9cec06641483e3eef79bbbeec3c4bac282ff8965bdc6ecc5e",
+      "expected_sha256": "8546fe7fb7e4f6c9cec06641483e3eef79bbbeec3c4bac282ff8965bdc6ecc5e"
+    },
+    {
+      "manifest": "b3_campaign_run\\MANIFEST_SHA256.json",
+      "file": "b3_run_summary.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "ca72016128ab39d2107259fb5a21f0260a9ce1cf52d003a2402acc83c5a5783e",
+      "expected_sha256": "ca72016128ab39d2107259fb5a21f0260a9ce1cf52d003a2402acc83c5a5783e"
+    },
+    {
+      "manifest": "b3_stopfix_snowflake\\MANIFEST_SHA256.json",
+      "file": "probe_results.jsonl",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "504c0492a7c3a9de740cb3e637faa8b71b04fdfba17459f955c6c5cf5688ad62",
+      "expected_sha256": "504c0492a7c3a9de740cb3e637faa8b71b04fdfba17459f955c6c5cf5688ad62"
+    },
+    {
+      "manifest": "b3_stopfix_snowflake\\MANIFEST_SHA256.json",
+      "file": "summary.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "94957ff2a6891aefcddc9c38a1cafd0b097a9667b7393a63dbb29655809fdb7b",
+      "expected_sha256": "94957ff2a6891aefcddc9c38a1cafd0b097a9667b7393a63dbb29655809fdb7b"
+    },
+    {
+      "manifest": "frozen_inputs\\MANIFEST_SHA256.json",
+      "file": "remaining_b3_tasks.jsonl",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "7a06464d367b4748b1c45c133bd4bcd0d793e926cbdf34f990429d551bdbb956",
+      "expected_sha256": "7a06464d367b4748b1c45c133bd4bcd0d793e926cbdf34f990429d551bdbb956"
+    },
+    {
+      "manifest": "frozen_inputs\\MANIFEST_SHA256.json",
+      "file": "b3_generation_contract.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true,
+      "observed_sha256": "757d3f78ba86eda3902648db6688fe61c8f75be26472d7b259e2758d7455e9ce",
+      "expected_sha256": "757d3f78ba86eda3902648db6688fe61c8f75be26472d7b259e2758d7455e9ce"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "experiment": "b3_campaign_eval",
+  "baseline": "B3",
+  "model": "Q3_K_M",
+  "generated_utc": "2026-07-23T20:08:41.306045+00:00",
+  "benchmark_id": "trdgl_pytorch_120_v1",
+  "total": 360,
+  "status": {
+    "error": 105,
+    "pass": 255
+  },
+  "pass_pct": 70.8,
+  "by_seed": {
+    "12011": {
+      "n": 120,
+      "pass": 85,
+      "pass_pct": 70.8
+    },
+    "19001": {
+      "n": 120,
+      "pass": 86,
+      "pass_pct": 71.7
+    },
+    "27103": {
+      "n": 120,
+      "pass": 84,
+      "pass_pct": 70.0
+    }
+  },
+  "timeout_s": 60,
+  "note": "Evaluator: chay chuong trinh sinh ra, subprocess CPU (CUDA_VISIBLE_DEVICES=''), timeout 60s. Pass = exit 0."
+}

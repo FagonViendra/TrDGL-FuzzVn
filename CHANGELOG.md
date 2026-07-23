@@ -1,5 +1,73 @@
 # Changelog
 
+## 2026-07-24 03:15 GMT+7 — B3 serving repair and remaining-seed extension
+
+### Added
+
+- Added the verified 17-file Snowflake evidence bundle at
+  `experiments/b3_diagnosis/three_seed_stopfix_20260724/`.
+- Added B3 Q3_K_M generation and CPU evaluation for seeds `12011`, `19001`,
+  and `27103` (120 APIs per seed).
+- Added the frozen 360-task prompt stream, generation contract, Q3/Q4
+  stop-fix probes, manifests, summaries, and execution notebooks.
+- Updated both LaTeX reports to distinguish the balanced two-seed checkpoint
+  from the repaired-contract B3-only extension.
+- Recompiled the supervisor-facing and full PDFs under `output/pdf/`.
+
+### Recorded results
+
+| Stream | Result |
+|---|---:|
+| B3 Q3_K_M generation | 360/360 |
+| Finish reason | 334 stop; 26 length |
+| Marker leakage | 0/360 |
+| Generated tokens / time | 90,698 / 679.1 s |
+| Mean generation throughput | 133.5 tokens/s |
+| CPU evaluator exit zero | 255/360 (70.8%) |
+| Exit zero by seed | 85/120; 86/120; 84/120 |
+| Q3 stop-fix probe | clean output 0/4 → 4/4 |
+| Q4 stop-fix probe | clean output 0/4 → 4/4 |
+
+The telemetry identifies a serving-contract mismatch: the literal
+`<end_of_turn>` marker is not atomic in either pinned GGUF vocabulary, while
+the original runtime stops only on an EOG token. The repaired wrapper adds
+string stops and strips complete or orphaned marker fragments.
+
+### Evidence boundary
+
+- The original two-seed B0–B3 checkpoint remains unchanged at 960/2,400
+  balanced events.
+- The 360 new rows are B3-only and use a repaired serving contract; they are
+  not pooled with the original B2/B3 comparison.
+- B0/B1/B2 are still missing for seeds `12011`, `19001`, and `27103`.
+- `exit zero` is a CPU subprocess verdict, not automatically a
+  target-valid, oracle-bearing, novel, or confirmed-bug verdict.
+- Q4 is sensitivity/repair evidence and is not part of the Q3 campaign
+  denominator.
+
+### Integrity and operational notes
+
+- `b3_results.jsonl`: 360 rows,
+  SHA-256 `8546fe7fb7e4f6c9cec06641483e3eef79bbbeec3c4bac282ff8965bdc6ecc5e`.
+- `b3_eval_results.jsonl`: 360 rows,
+  SHA-256 `0ccec046d6bebd8f21c4834c307fe85d3ed93bcd6dd5303cedc56fe371dadd99`.
+- All files named by the four nested manifests were independently checked for
+  existence, byte size, and SHA-256.
+- Source ZIP: 382,877 bytes, 17 entries, SHA-256
+  `F7E9C80E63EE0F1E6B2198A0507B84EE206BCD0740857017C0A52AEBA411AB9C`.
+- The initial local downloader lacked `snowflake.snowpark`; SQL `GET` via
+  Snowflake Connector was used instead. The first manifest parser also assumed
+  a list instead of the observed `{"artifacts": {...}}` structure. Both issues
+  were corrected before the final verification.
+- Connector dependency warnings did not affect the verified download. No raw
+  console log was present on the stage. No credential value is stored in the
+  committed notebooks; any Snowflake password previously disclosed outside
+  this repository should still be rotated.
+
+---
+
+## 2026-07-11 — Two-seed evidence lock
+
 ---
 
 ## 1. Summary
