@@ -6,7 +6,7 @@ does not convert validation-only data into a campaign result.
 
 ## Ready in the manuscript
 
-- [x] Five-section structure requested by the supervisor.
+- [x] Five-section structure defined by the reporting plan.
 - [x] Four internal baselines B0--B3 are defined under one frozen harness.
 - [x] The 120-API/10-group/five-seed protocol and 2,400-event denominator are explicit.
 - [x] The ordered 11-stage Vn funnel uses tri-state missingness rather than coercing null to zero.

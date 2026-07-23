@@ -1,18 +1,18 @@
 [
     {
         "RelativePath":  ".gitattributes",
-        "Bytes":  755,
-        "SHA256":  "E476D6B613992E89E8C44955875FA4AE21B4D1F508DF8BAFEB833B8FD2B3704B"
+        "Bytes":  485,
+        "SHA256":  "EA218064EC9E773E328B2B7B3344725561AEC71A92426DA58F5C986417E0358D"
     },
     {
         "RelativePath":  ".gitignore",
-        "Bytes":  117,
-        "SHA256":  "209601871BA52AF6302BEA2BF61C2F06923343F774CDD6551A0C16C26D750C78"
+        "Bytes":  127,
+        "SHA256":  "F91B0F1723CB4454D092BF11A1BB5D03E4BA9AC5870D8E25F422AD237945F876"
     },
     {
         "RelativePath":  "CHANGELOG.md",
-        "Bytes":  8100,
-        "SHA256":  "E97D9D246659FB7D61263D86BAC98CD43EBD3B5C7564AEA95361EE1452373429"
+        "Bytes":  8288,
+        "SHA256":  "91C0B812885029FF7F9B3008078E26C68738712C73F5904F4C0105F956E79FB4"
     },
     {
         "RelativePath":  "compile_360_1.log",
@@ -71,8 +71,8 @@
     },
     {
         "RelativePath":  "EXPERIMENT_PROTOCOL.md",
-        "Bytes":  6962,
-        "SHA256":  "761A0639B4C98A6FCFB84564D1FB676A1EB937A50A0987546FCB83438700BFFB"
+        "Bytes":  6941,
+        "SHA256":  "3732E264267B3B8AF8105B60B44A1312A3CF1999AFCB94888769240E5DE46905"
     },
     {
         "RelativePath":  "experiments\\ablation_replay\\.gitattributes",
@@ -83,11 +83,6 @@
         "RelativePath":  "experiments\\ablation_replay\\collect_two_seed_checkpoint.py",
         "Bytes":  24599,
         "SHA256":  "DAA236F488BDCAF2EDE686234B6C6C6E54386DFC2CB80D5022A31C8A0D159372"
-    },
-    {
-        "RelativePath":  "experiments\\ablation_replay\\paper_integration_snippet.tex",
-        "Bytes":  1512,
-        "SHA256":  "F22B5F362D1FF59AF84CC30EB4D9C82706683E04334E707ADA3FCDC69798FB80"
     },
     {
         "RelativePath":  "experiments\\ablation_replay\\README.md",
@@ -120,11 +115,6 @@
         "SHA256":  "75615106DF07B8D522AE623A0E31642D57F68DEAE5EDE0C7D046C9F13E6F7186"
     },
     {
-        "RelativePath":  "experiments\\ablation_replay\\two_seed_checkpoint\\ablation_table.tex",
-        "Bytes":  1024,
-        "SHA256":  "B49B59A7AF420C86B3C733D559234731E31881D278D7F468E5238501640AA85E"
-    },
-    {
         "RelativePath":  "experiments\\ablation_replay\\two_seed_checkpoint\\checkpoint.md",
         "Bytes":  1114,
         "SHA256":  "7C70EDEE1AD2F73772B8DB0F8BE7AE04490DCABE64174DFB14B74AFF3867AC50"
@@ -153,11 +143,6 @@
         "RelativePath":  "experiments\\ablation_replay\\validation_output\\ablation_summary.csv",
         "Bytes":  3009,
         "SHA256":  "EA7AA3058A3C9C1098C0EDEC2F40A054D3B88DA1EEA1E96EB390D7047E982506"
-    },
-    {
-        "RelativePath":  "experiments\\ablation_replay\\validation_output\\ablation_table.tex",
-        "Bytes":  1013,
-        "SHA256":  "E9D5E0139BCC6480D51561CC51E85F87CB79E5EFE2C535EED81D79C2C6EAB416"
     },
     {
         "RelativePath":  "experiments\\ablation_replay\\validation_output\\fine_tuning_pairs.csv",
@@ -203,11 +188,6 @@
         "RelativePath":  "experiments\\atlas_intervention\\freeze_atlas_source.py",
         "Bytes":  2934,
         "SHA256":  "55306647A4649ED39A9C384F322E37D502A14F641E1604059CA38B7E1EF985E3"
-    },
-    {
-        "RelativePath":  "experiments\\atlas_intervention\\paper_method_snippet.tex",
-        "Bytes":  1690,
-        "SHA256":  "7E93BBFDB3554D5D25FA03381B25461091DDAACB108AFDE4F8BB428D8D4E922B"
     },
     {
         "RelativePath":  "experiments\\atlas_intervention\\README.md",
@@ -348,6 +328,11 @@
         "RelativePath":  "experiments\\b3_diagnosis\\three_seed_stopfix_20260724\\notebook\\trdgl_b3_q3_q4_snowflake.ipynb",
         "Bytes":  16961,
         "SHA256":  "A22F604BF739BE5EE5AC1F2B4C5ED48552D80E995085D01DD9F973015AE19454"
+    },
+    {
+        "RelativePath":  "experiments\\b3_diagnosis\\three_seed_stopfix_20260724\\PROVENANCE.md",
+        "Bytes":  1722,
+        "SHA256":  "0F30A965F53965A5A2500D3C39449ECB301DA19E4772DA22FB8E21F5B62F5D7E"
     },
     {
         "RelativePath":  "experiments\\b3_diagnosis\\three_seed_stopfix_20260724\\README_LOCAL_RESULTS.txt",
@@ -731,13 +716,13 @@
     },
     {
         "RelativePath":  "experiments\\evidence_audit\\requirements_matrix.json",
-        "Bytes":  40622,
-        "SHA256":  "85BAC7A2C4EDAAA18319E699816355E7C7D576789CA4474B8674F07873270D27"
+        "Bytes":  40623,
+        "SHA256":  "16857C731F1FED625B7C0FF4FE329B634062F0F1BBBFBF942110F84D704A5FC1"
     },
     {
         "RelativePath":  "experiments\\evidence_audit\\requirements_matrix.md",
-        "Bytes":  16917,
-        "SHA256":  "B2B1118303655D03B10671F2979EFDAD602D414ED5DDF1CDB9D6FCE137629D38"
+        "Bytes":  16905,
+        "SHA256":  "A9097B17DBB58F6A47CB87B18A935718AFD63F2E89006305EDDBCC038504BCE5"
     },
     {
         "RelativePath":  "experiments\\evidence_audit\\test_refresh_stable_hashes.py",
@@ -746,8 +731,8 @@
     },
     {
         "RelativePath":  "experiments\\evidence_audit\\validate_requirements_matrix.py",
-        "Bytes":  10527,
-        "SHA256":  "0C337E7C116FFBB14FB48004BA6C19EAE1FE7D107010A7EF57888F357AFDBD95"
+        "Bytes":  10529,
+        "SHA256":  "2A792C37311C2B1274965BCE8DDC4DF514A11A136D236B3E7935F1C4D47E4754"
     },
     {
         "RelativePath":  "experiments\\generation_error_analysis\\.gitattributes",
@@ -930,11 +915,6 @@
         "SHA256":  "6FA011BAD45B50EFE9142B8C30DC7FD55A4A009430A901A7A121C6C1346A5AF3"
     },
     {
-        "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\paper_integration_snippet.tex",
-        "Bytes":  2245,
-        "SHA256":  "4CE241516385FF9C57F9F06E225FB271FF88CB9185E3058EE151BE3B19BF079A"
-    },
-    {
         "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\README.md",
         "Bytes":  1611,
         "SHA256":  "443D8EE59B48304CE35E5F7E3F18D0DAB85457DB369CE1674D91FD15DF41B945"
@@ -960,24 +940,9 @@
         "SHA256":  "144C1C555007A31A0FBD88BC17C48B8EBD90BB8587E4CBBB4281504F5AD7DE4C"
     },
     {
-        "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\validation_group_rates.tex",
-        "Bytes":  8857,
-        "SHA256":  "4DC242533AF01FF37DCB9CD0BD84CAED3F479BFFCF51647227A4D370D456C2DF"
-    },
-    {
         "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\validation_report.md",
         "Bytes":  8340,
         "SHA256":  "335FFB1FDAE65B7FCE15C8B2CCBB4C762701E4AEECA99F74EDF75E3F385F986A"
-    },
-    {
-        "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\validation_tables.tex",
-        "Bytes":  6801,
-        "SHA256":  "E5F4AA2F24426AA72E857916D40E5E4E81F278A6C2F139B18443170F5518530C"
-    },
-    {
-        "RelativePath":  "experiments\\generation_error_analysis\\two_seed_checkpoint\\validation_truncation_associations.tex",
-        "Bytes":  1834,
-        "SHA256":  "73F556D78B5D1EB5741648365430162DD4B9EF2BFD603FBD3E3840A22769F772"
     },
     {
         "RelativePath":  "experiments\\generation_error_analysis\\two_seed_review\\.gitattributes",
@@ -1130,11 +1095,6 @@
         "SHA256":  "DD5F012ECB7E99737A46CEFD2248EBE33D124B3E89311CD46E6DCA8CC1260BE0"
     },
     {
-        "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\paper_integration_snippet.tex",
-        "Bytes":  2207,
-        "SHA256":  "0080E47BC23DB8A7EFBF7A58548456E664C080F9E7BAEBF6ABFC59DB95073BC5"
-    },
-    {
         "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\seed_telemetry.csv",
         "Bytes":  1757,
         "SHA256":  "735747556A67FC74009042A4323B667EE83D9927E351F214F275945D3B562EC3"
@@ -1155,24 +1115,9 @@
         "SHA256":  "A484B99FD399C242A03909C89A6C28FDD85FD2BAEFA266210A4139A6944F52E1"
     },
     {
-        "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\validation_group_rates.tex",
-        "Bytes":  8605,
-        "SHA256":  "6ECC77286E0D38913AAB8ED24AA85B1DFB049C1BBA7AD2D6C48C450C9F3D4996"
-    },
-    {
         "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\validation_report.md",
         "Bytes":  7927,
         "SHA256":  "C32201698A5140C0881F0090D35CBBB65DFC4AA6C2C34BA70064D5A01DD17E9D"
-    },
-    {
-        "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\validation_tables.tex",
-        "Bytes":  14225,
-        "SHA256":  "12680187BBF9A30A107D98BD4755D064363421C2535ADC336343B4F3BF859E9F"
-    },
-    {
-        "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\validation_truncation_associations.tex",
-        "Bytes":  1828,
-        "SHA256":  "ED5CFB3EB83DA767403878BEBE7C495D7045674399DC85AD4C0D6D0B302F82FB"
     },
     {
         "RelativePath":  "experiments\\generation_error_analysis\\validation_output\\watcher.err.log",
@@ -1206,8 +1151,8 @@
     },
     {
         "RelativePath":  "experiments\\numerical_oracle\\evidence_matrix.md",
-        "Bytes":  6177,
-        "SHA256":  "05F07807E43238A1603DF0C1F12EE44E10CEFC6852F88E29D3D7BFB04D2BB3DC"
+        "Bytes":  6173,
+        "SHA256":  "C5B62BC3140FE6EB9383FF19CAEE6341F03BCF49248B10FA5BD10939AD404E4E"
     },
     {
         "RelativePath":  "experiments\\numerical_oracle\\five_seed_local_checkpoint\\checkpoint.md",
@@ -1395,11 +1340,6 @@
         "SHA256":  "229F029229B1BD891B6F09386FB0C12821F7EACA2E94E0E962320B1DBB51407F"
     },
     {
-        "RelativePath":  "experiments\\vn_funnel\\paper_snippets.tex",
-        "Bytes":  3755,
-        "SHA256":  "9B2F7CD9AAAEF7DE661774BBD6D04A364D2A6A0D923012D573754BC484F77FA7"
-    },
-    {
         "RelativePath":  "experiments\\vn_funnel\\README.md",
         "Bytes":  6261,
         "SHA256":  "F14CB753457CA925B35E2C67BDCBCA3DCD2BB5C340C6D47097B34ABE1F12C18F"
@@ -1505,11 +1445,6 @@
         "SHA256":  "E584E722FFF19CD36692D205C2964BC9E598620A83BDAEF09C94D3C81753D828"
     },
     {
-        "RelativePath":  "fuzz-report.pdf",
-        "Bytes":  422364,
-        "SHA256":  "D95EA21D7C01B974C9B935AE812B6B4202FBB48FFCCF98FDC0EB7EE7B6927F20"
-    },
-    {
         "RelativePath":  "LICENSE",
         "Bytes":  915,
         "SHA256":  "856D014DE3BC6733A77EE7668CFE47978AA41DE8401F1DB95F7BD4203CB79467"
@@ -1525,133 +1460,13 @@
         "SHA256":  "908CE559E09596DE23BE05591E75F2F4AF53DE63EA167D1F69969E5F8FBC4CA4"
     },
     {
-        "RelativePath":  "main.aux",
-        "Bytes":  29859,
-        "SHA256":  "91D8939202406465C254D443B95E07DA85163C1669F195AE96C6479562DB47C8"
-    },
-    {
-        "RelativePath":  "main.log",
-        "Bytes":  52945,
-        "SHA256":  "A9AEF0C1D7D4E9595B20846F9B49DCDBA5D277ABE5045D2D8F89CB24C1D52D29"
-    },
-    {
-        "RelativePath":  "main.out",
-        "Bytes":  16820,
-        "SHA256":  "F8333608F5DC7AA116F7F62F96B54882A7404B068E4B4550E79B5A8BFC4C2CC3"
-    },
-    {
-        "RelativePath":  "main.pdf",
-        "Bytes":  497516,
-        "SHA256":  "FE53A9415142BC1822C3BD29CC72F346B04F8A883F34E1E5A7FEBE64A9C31419"
-    },
-    {
-        "RelativePath":  "main.tex",
-        "Bytes":  156488,
-        "SHA256":  "E4E4BF733DDCD87D325C391F99A124148EF13535CE68AD764844C67E609D6597"
-    },
-    {
-        "RelativePath":  "main.toc",
-        "Bytes":  7700,
-        "SHA256":  "72987BB20E94A2F99517649277D5D2FD54C8B5FCA4282E14793ACE822A6EAD93"
-    },
-    {
-        "RelativePath":  "output\\pdf\\TrDGL-FuzzVn_full_report_20260724.pdf",
-        "Bytes":  497516,
-        "SHA256":  "FE53A9415142BC1822C3BD29CC72F346B04F8A883F34E1E5A7FEBE64A9C31419"
-    },
-    {
-        "RelativePath":  "output\\pdf\\TrDGL-FuzzVn_teacher_report_20260724.pdf",
-        "Bytes":  422364,
-        "SHA256":  "D95EA21D7C01B974C9B935AE812B6B4202FBB48FFCCF98FDC0EB7EE7B6927F20"
-    },
-    {
         "RelativePath":  "README.md",
-        "Bytes":  2103,
-        "SHA256":  "D37327119F7BA0F084E1F611C480A58AE388D9370D1C673E77CADCF0C161D80F"
+        "Bytes":  2064,
+        "SHA256":  "71FE800FD7CC55DE443FC23C22F652C6FBE023AD7A850B556B5146E2516EBCDC"
     },
     {
         "RelativePath":  "SUBMISSION_GAPS.md",
-        "Bytes":  5721,
-        "SHA256":  "E93BCC7E6190B683F5E15E3555D7388B1D099ECFE5927319E3FF64B54FE53690"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\cas-common.sty",
-        "Bytes":  76666,
-        "SHA256":  "25B391DB1953A0320C97915F2FFF197EF478E1142B13E5ED9C0877AADD38D9E3"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\cas-dc.cls",
-        "Bytes":  4397,
-        "SHA256":  "E5B5170AE4D3E4A3C55B44768DEA79D50E272EFC0348B756E23DA3161E2A94B5"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\cas-model2-names.bst",
-        "Bytes":  31802,
-        "SHA256":  "6F6204EB7670D762042AB363C2D05CF87196052BFBDF6DBEE51A1327A8CE479A"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\figs\\atlas\\paper_fig_1_atlas_matrix_burgundy_times.pdf",
-        "Bytes":  77206,
-        "SHA256":  "D672A9148347C674C267A29CD1161A54004BFB421F6621849737BD0A3BB73D01"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\figs\\atlas\\paper_fig_4_canonical_cluster_anchors_modern_burgundy.pdf",
-        "Bytes":  20482,
-        "SHA256":  "5B72E2D206DACC5F327FF6B4593684F1125C84676F74980B6A9C673D1009FF22"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\figs\\atlas\\paper_fig_5_temporal_surface_trends_modern_burgundy.pdf",
-        "Bytes":  20428,
-        "SHA256":  "3975F7A7D99B247A98A247E432BBDC527823D40E7154EAD1E1C62C999AAEF739"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\figs\\atlas\\README_pdf_exports.json",
-        "Bytes":  777,
-        "SHA256":  "FE23A8709D93A7BFC3E0F945646DAA969F7A23D464EB8DBDA411E2139FE64158"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-refs.bib",
-        "Bytes":  2945,
-        "SHA256":  "64DFDA6CDDA08C5B5D9030B67022BB2FE33B1D74EBDB5E8A2B16A62FC80D2704"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.abs",
-        "Bytes":  2229,
-        "SHA256":  "C9BB8097072E60A22576708EF31718D9F5584644C92E002FA7BD386732904E50"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.aux",
-        "Bytes":  11447,
-        "SHA256":  "F504909E672D12744AF9C05168A08BCD628AC0A358F88D4E8FDEF6D3C50F43C3"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.bbl",
-        "Bytes":  4456,
-        "SHA256":  "6D151D63818D41B5F88F03BDFFBF6DA7552B94671C104DBF573664F5D58A39D7"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.blg",
-        "Bytes":  1264,
-        "SHA256":  "EB4EB6670609279BA26E581A963BEE2CD4DBC8326060FB89067D4AE209BD2F93"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.log",
-        "Bytes":  52256,
-        "SHA256":  "6459C4721C0E0BDC2A2CFF362B4A3976C29FD390A2621A7ACE590798B12D1F6D"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.out",
-        "Bytes":  0,
-        "SHA256":  "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\fuzz-report.tex",
-        "Bytes":  51095,
-        "SHA256":  "F9F7CD9162E39BAAAE10EEEE0358DD15345499033A09BAA93F8CFDD86303DE8D"
-    },
-    {
-        "RelativePath":  "teacher_report_20260711\\README.md",
-        "Bytes":  603,
-        "SHA256":  "36E19F34DD742FAD8750E0DEF0C391A9D1633E0DE2FA304B7F7EE6577437D79C"
+        "Bytes":  5723,
+        "SHA256":  "6AB328E433ABD0F4F57D8470A2696E75240A28F97A1A1F5E19C9CB20E9B40739"
     }
 ]

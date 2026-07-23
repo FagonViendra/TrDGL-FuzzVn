@@ -10,9 +10,11 @@
   and `27103` (120 APIs per seed).
 - Added the frozen 360-task prompt stream, generation contract, Q3/Q4
   stop-fix probes, manifests, summaries, and execution notebooks.
-- Updated both LaTeX reports to distinguish the balanced two-seed checkpoint
+- Added a provenance note that distinguishes prompt reuse from output reuse and
+  records the environment change.
+- Updated the local reports to distinguish the balanced two-seed checkpoint
   from the repaired-contract B3-only extension.
-- Recompiled the supervisor-facing and full PDFs under `output/pdf/`.
+- PDF, TeX, and local report-build artifacts are excluded from Git tracking.
 
 ### Recorded results
 
@@ -35,6 +37,16 @@ string stops and strips complete or orphaned marker fragments.
 
 ### Evidence boundary
 
+- The continuation reuses the frozen task IDs, documentation snapshot, and
+  exact B2 full-prompt hashes for all 120 APIs. It does not use generated B1 or
+  B2 programs as inputs.
+- The tuned Q3_K_M model SHA-256 and decoding settings are unchanged from the
+  original B3 checkpoint.
+- Generation moved from the Colab T4 path to the Snowflake workflow on an
+  NVIDIA RTX PRO 6000 Blackwell to reduce runtime.
+- The continuation is not a GPU-only replication because the serving wrapper
+  also changes stop handling and marker cleanup; evaluation is a separate CPU
+  subprocess stage.
 - The original two-seed B0–B3 checkpoint remains unchanged at 960/2,400
   balanced events.
 - The 360 new rows are B3-only and use a repaired serving contract; they are
@@ -122,7 +134,7 @@ Follows a progress-report format:
 4. Experimental setup & results (two-seed lock)
 5. Threats, reproducibility, limitations, conclusion
 
-Full engineering details remain in `../main.tex`.
+The full report source is retained locally and excluded from Git.
 
 ---
 
@@ -163,34 +175,15 @@ Items explicitly marked as incomplete in the report:
 
 ---
 
-## 6. Delivered Files
+## 6. Local Report Artifacts
 
-Contents of `teacher_report_20260711/`:
-
-| File | Role |
-|---|---|
-| `fuzz-report.pdf` | **Main report** (~10 pages) |
-| `CHANGELOG_TEACHER_20260711.md` | Diff: previous draft → current (this file) |
-| `fuzz-report.tex` + `fuzz-refs.bib` | Source for recompilation |
-| `figs/atlas/*.pdf` | Atlas figures (paper snapshot) |
-
-Rebuild command (PowerShell, from this directory):
-
-```powershell
-pdflatex -interaction=nonstopmode -halt-on-error fuzz-report.tex
-bibtex fuzz-report
-pdflatex -interaction=nonstopmode -halt-on-error fuzz-report.tex
-pdflatex -interaction=nonstopmode -halt-on-error fuzz-report.tex
-```
-
-Suggested filenames for submission:
-
-- `TrDGL-FuzzVn_teacher_report_20260711.pdf`
-- `CHANGELOG_TEACHER_20260711.md`
+Report sources, compiled PDFs, figures used only by the report, and LaTeX build
+files are retained locally and excluded from Git. The repository contains the
+machine-readable evidence and this changelog.
 
 ---
 
-## 7. Next Steps (listed in PDF, not yet completed)
+## 7. Next Steps at This Checkpoint
 
 1. Micro-rerun B3 (1 hour), crossed order + stop/template telemetry
 2. Replay candidate in pinned T4/PyTorch environment

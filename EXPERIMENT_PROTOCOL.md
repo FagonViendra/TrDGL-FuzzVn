@@ -1,6 +1,6 @@
 # TrDGL-FuzzVn experiment protocol
 
-This protocol separates archived measurements from experiments that still require a controlled rerun. It is the execution checklist for completing every experimental item requested by the supervisor without mixing incompatible runs or inventing unavailable counters.
+This protocol separates archived measurements from experiments that still require a controlled rerun. It is the execution checklist for completing the defined experimental items without mixing incompatible runs or inventing unavailable counters.
 
 ## Evidence status
 

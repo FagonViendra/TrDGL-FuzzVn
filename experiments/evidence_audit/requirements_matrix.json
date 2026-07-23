@@ -1,5 +1,5 @@
 {
-  "schema_version": "trdgl_supervisor_evidence_gap_v2",
+  "schema_version": "trdgl_experimental_evidence_gap_v2",
   "audit_date": "2026-07-10",
   "scope": "Current workspace and paper working tree; no external services or unmounted archives were assumed.",
   "path_base": "C:/Users/fagon/OneDrive/Documents/New project 2",

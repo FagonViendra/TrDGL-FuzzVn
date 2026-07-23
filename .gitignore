@@ -6,7 +6,8 @@
 *.fls
 *.fdb_latexmk
 *.pdf
-!output/
-!output/pdf/
-!output/pdf/*.pdf
+*.tex
+/*report_20260711/
+output/pdf/
+__pycache__/
 compile-*.txt

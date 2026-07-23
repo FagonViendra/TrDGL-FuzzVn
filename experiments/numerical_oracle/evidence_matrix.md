@@ -41,7 +41,7 @@ device. Unsupported is a coverage blocker, not a zero effect.
   detected 40/40 at `1e-5`, 40/40 at `1e-4`, and 0/40 at `1e-3`.
 
 These artifacts do not contain CPU results, gradient checks, ULP reporting, or
-the fixed `1e-3`/`1e-4`/`1e-5` matched comparison requested by the supervisor.
+the fixed `1e-3`/`1e-4`/`1e-5` matched comparison defined by the protocol.
 
 ## Paper-only claim
 

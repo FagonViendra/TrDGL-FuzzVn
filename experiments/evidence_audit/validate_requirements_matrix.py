@@ -1,4 +1,4 @@
-"""Fail-closed validation for the supervisor evidence-gap matrix."""
+"""Fail-closed validation for the experimental evidence-gap matrix."""
 
 from __future__ import annotations
 

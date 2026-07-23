@@ -1,23 +1,13 @@
 .gitattributes text eol=lf
 .gitignore text eol=lf
-*.pdf binary
 ARTIFACT_AUDIT_README.txt text eol=lf
 ARTIFACT_MANIFEST_SHA256.json text eol=lf
 CHANGELOG.md text eol=lf
 README.md text eol=lf
-main.tex text eol=lf
-main.aux -text
-main.log -text
-main.out -text
-main.toc -text
+EXPERIMENT_PROTOCOL.md text eol=lf
 SUBMISSION_GAPS.md text eol=lf
-teacher_report_20260711/README.md text eol=lf
-teacher_report_20260711/fuzz-report.abs -text
-teacher_report_20260711/fuzz-report.aux -text
-teacher_report_20260711/fuzz-report.log -text
-teacher_report_20260711/fuzz-report.tex text eol=lf
 experiments/b3_diagnosis/three_seed_stopfix_20260724/** -text
-output/pdf/** binary
+experiments/numerical_oracle/*.md text eol=lf
 experiments/evidence_audit/*.py text eol=lf
 experiments/evidence_audit/*.json text eol=lf
 experiments/evidence_audit/*.md text eol=lf

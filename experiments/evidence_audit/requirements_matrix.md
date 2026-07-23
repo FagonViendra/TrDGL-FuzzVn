@@ -1,4 +1,4 @@
-# Supervisor experimental-requirement evidence audit
+# Experimental-requirement evidence audit
 
 Audit date: 2026-07-10. Scope: the current workspace and paper working tree.
 No external service, unmounted archive, or unpublished result is assumed.
