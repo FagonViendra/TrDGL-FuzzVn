@@ -15,6 +15,8 @@
 - Updated the local reports to distinguish the balanced two-seed checkpoint
   from the repaired-contract B3-only extension.
 - PDF, TeX, and local report-build artifacts are excluded from Git tracking.
+- Repository history was rewritten to remove previously committed PDF, TeX,
+  BibTeX, and report-build artifacts; local copies remain outside Git.
 
 ### Recorded results
 
